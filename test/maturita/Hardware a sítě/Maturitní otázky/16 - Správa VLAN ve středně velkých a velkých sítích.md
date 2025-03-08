@@ -1,0 +1,4 @@
+- princip hierarchického návrhu sítě a jeho vlastnosti
+- správa VLAN na Cisco switchích
+- protokol DTP a jeho dopady na bezpečnost sítě
+- Layer 3 Switching – vlastnosti a způsoby nasazení

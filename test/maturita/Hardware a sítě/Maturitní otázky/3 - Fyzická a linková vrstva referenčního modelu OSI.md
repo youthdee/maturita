@@ -1,0 +1,4 @@
+- účel, funkce, standardy
+- přenosové cesty, druhy spojů (linky)
+- fyzická a logická topologie sítě LAN a WAN
+- přístupové metody v LAN a WLAN

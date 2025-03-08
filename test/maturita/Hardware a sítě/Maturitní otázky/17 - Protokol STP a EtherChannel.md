@@ -1,0 +1,3 @@
+- pojem redundantní síť a možné problémy v ní
+- koncepce a použití STP, druhy STP protokolů
+- EtherChannel – popis a využití

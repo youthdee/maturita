@@ -1,0 +1,4 @@
+- princip přenosu dat v počítačové síti
+- komunikační protokoly a jejich funkce
+- síťové modely ISO/OSI a TCP/IP a jejich protokoly
+- standardizační organizace

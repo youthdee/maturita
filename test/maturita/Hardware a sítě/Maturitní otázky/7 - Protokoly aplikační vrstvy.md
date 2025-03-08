@@ -1,0 +1,3 @@
+- účel, funkce a charakteristika protokolů aplikační vrstvy
+- přehled protokolů aplikační vrstvy
+- výběr transportního protokolu pro aplikace

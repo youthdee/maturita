@@ -1,0 +1,3 @@
+- účel, funkce síťové vrstvy
+- protokoly síťové vrstvy a jejich datové jednotky
+- princip paketového přenosu dat

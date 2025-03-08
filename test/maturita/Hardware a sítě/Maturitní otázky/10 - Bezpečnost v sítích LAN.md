@@ -1,0 +1,3 @@
+- druhy útoků v LAN
+- druhy útoků na L2, možnosti předcházení útokům na LAN
+- zabezpečení přístupu na switche a routery

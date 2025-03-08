@@ -1,0 +1,4 @@
+- charakteristika Ethernetu, rámec Ethernetu
+- MAC adresy – formát, druhy
+- ARP
+- switch – základní principy, metody předávání rámců

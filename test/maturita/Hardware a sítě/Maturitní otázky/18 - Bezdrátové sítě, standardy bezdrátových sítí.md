@@ -1,0 +1,3 @@
+- současné technologie bezdrátových sítí
+- přístupová metoda CSMA/CA v bezdrátových sítích
+- standardy bezdrátových sítí (802.11)

@@ -1,0 +1,154 @@
+#### 1) Možnosti správy operačního systému Windows pomocí systémových nástrojů v grafickém a textovém rozhraní
+
+##### Možnosti správy OS Windows pomocí systémových nástrojů v grafickém rozhraní
+- Správce úloh
+	- Slouží ke sledování operačního systému Windows
+	- Lze jej spustit například klávesovou zkratkou Ctrl+Shift+Esc
+	- Obsahuje záložky jako jsou Procesy, Výkon, Historie Aplikací, Po spuštění, Uživatelé, Detaily
+- Průzkumník souborů
+	- Používá se pro kopírování, přesun a vytváření složek, pohyb po souborovém systému, správa souborů složek a podsložek, správa aplikací na úložištích, zobrazení náhledu u některých typů souborů
+	- Jde přes něj i naformátovat disk
+- Tento Počítač
+	- Slouží k zajištění přístupu k nejrůznějším zařízením a diskům nainstalovaným v počítači
+	- Lze spustit přes průzkumník souborů
+- Možnost Spustit jako správce
+	- Pro spuštění a manipulaci se soubory či složkami s vyššími oprávněními
+	- Lze spustit klepnutím pravého tlačítka na soubor a vybráním nabídky spustit jako správce
+- Ovládací panely
+	- Obsahuje několik kategorií pro konfiguraci operačního systému Windows jako například Systém a zabezpečení, Síť a Internet, Hardware a Zvuk, Programy, Uživatelské účty, Usnadnění přístupu, Hodiny a oblast, Vzhled a přizpůsobení
+	- Zde jsou všechny známe konfigurační okna jako Systém, Správce zařízení, Programy a funkce, Zařízení a tiskárny, Zvuk, Funkce Windows a aktualizace, Výchozí programy, Nástroj Bitlocker Drive Encryption
+- Aplikace Nastavení
+	- Zde lze nastavovat ostatní věci týkající se konfigurace operačního systému Windows, jako například Možnosti Nastavení a Konfigurace obrazovky, Možnosti napájení, Systémové informace, výchozí programy, Vzhled a motiv
+- Nástroje pro správu
+	- Položka ovládacích panelů obsahující soubor nástrojů pro sledování a konfiguraci činnosti operačního systému Windows
+	- Například Správa počítače, Prohlížeč událostí, Místní uživatelé a skupiny, sledování výkonu, služba komponent a zdroje dat, služby, správa tisku, diagnostika paměti Windows, Konfigurace systému (MSCONFIG), Registr, Regedit
+- Microsoft Management Console (MMC)
+	- Nástroje a programy se zde ozančují jako moduly snap-in, přičemž se tyto moduy přidávají do konzoly
+	- Při prvním spuštění je konzola prázdná
+	- Konzolu je poté možné uložit a použít později pro různé scénáře pro správu operačního systému
+- Správa disků
+	- Umožňuje zobrazit stav disku, přiřadit či změnit písmenka disku (Mapovat), přidat disk nebo diskové pole, nastavit diskového oddílu jako aktivní, inicializovat disk
+
+##### Možnosti správy OS Windows pomocí systémových nástrojů v textovém rozhraní
+- Příkazový řádek (CMD)
+	- Předchůdce powershellu
+	- Některé základní příkazy:
+		- - help
+		- command /? (zobrazení nápovědy ke kontkétnímu příkazu)
+		- cls
+		- exit
+		- ctrl c
+		- dir
+		- cd 
+		- md (made directory)
+		- rd (remove directory)
+		- move 
+		- ren (rename)
+		- type (zobrazení typu souboru)
+		- more (zobrazení obsahu souboru)
+		- copy
+		- xcopy (kopírování souborů nebo celých adresářových stromů)
+		- robocopy (robust copy, hromadné kopírování)
+		- chkdisk
+		- format
+		- diskpart (spuštění samostatného programu pro práci s diskovými oddíly)
+		- tasklist
+		- taskkill
+		- del
+		- dism (pro práci s obrazy systému používaná před jejich nasazením)
+		- sfc (ověření a oprava systémových souborů Windows)
+		- shutdown
+- PowerShell
+	- Prostředí s příkazovým řádkem, které má daleko více funkcí (skriptování a automatizace)
+	- Pracuje s cmdlety, pro které je možné nadefinovat aliasy
+	- Obsahuje vlastní prostředí pro skriptování nazývané PowerShell ISE
+	- Lze spustit klávesovou zkratkou okno + x a výběrem
+- Klávesovou zkratkou CTRL+SHIFT+ENTER se spustí v režimu správce
+- U obou dvou textových rozhraních je podpora zástupných znaků (* a ?)
+
+#### 2) Možnosti správy UNIX-like OS pomocí systémových nástrojů v grafickém a textovém rozhraní
+
+##### Možnosti správy UNIX-Like OS pomocí systémových nástrojů v grafickém rozhraní
+- Nástroj Disks
+	- Umožňuje správu diskových oddílů, připojování či odpojování disků, formátování diskových oddílů, fotazování se na stav disku technologií S.M.A.R.T (Self Monitoring Analysis Reporting Technology)
+- Nástroj Gnome-keyring
+	- pro zabezpečení a ověření uživatelů
+- Nastavení systému 
+	- Centrální rozhraní pro správu uživatelů, sítě, zobrazení, zvuku
+- GNOME System Monitor
+	- Monitorování procesů, zatížení CPU, RAM a diskových operací
+- GParted
+	- Správa diskových oddílů
+- Nástroj nmtui
+	- Pro konfiguraci síťových rozhraní, systémového názvu
+
+##### Možnosti správy UNIX-Like OS pomocí systémových nástrojů v textovém rozhraní
+- Sledování využití prostoru na discích
+	- Příkaz "df" (disk free)
+		- Zobrazí celkové využití disku souborovým systémem v bajtech, celkovou velikost souborového systému, volný a obsazený prostor a mount point každého úložiště
+		- Příznak "-h" pro human-readable formu
+		- - častým problémem může být nedostatek inodes (všechny soubory jsou mapovány na inodes, která obsahují metadata souboru)
+	- Příkaz "du" (disk usage)
+		- Lze použít pro zjištění, které soubory zabírají nejvíce místa
+- Sledování využití RAM a CPU ( Nástroj "top")
+	- zobrazuje stav systému v reálném čase
+	- Pro sledování využití RAM a odkládacího prostore je možné použíz i příkaz "free" s příznakem "-g" pro human-readable formu
+	- Alternativně nástroj "Htop"
+- Sledování procesů (Nástroj "ps" a "pstree")
+	- Zobrazuje vlastníka procesu, PID, parent PID, využití CPU, čas spuštění, tty, kumulovaný čas CPU, příkaz asociovaný s procesem
+	- Procesy lze spravovat pomocí následujících signálů:
+		- SIGTERM (15)
+		- SIGINT (2)
+		- SIGKILL (9)
+		- SIGHUP (1
+		- SIGTSTP (20)
+		- SIGSTOP (19)
+		- SIGCONT (18)
+	- Příklad: "kill -9 {PID}"
+	- Příčinu výpdaku či selhání lze odhalit pomcí logů v adresáři "/var/log"
+- Nástroj pro správu služeb (systemctl)
+	- Enable (Povolení)
+	- Restart (Restartování)
+	- Status (Status)
+	- Start (Spouštění)
+- Nástroj pro zobrazení chyb v konfiguračních souborech (journalctl)
+- Základní příkazy pro správu:
+	- passwd (změna hesla)
+	- ps (správa procesů)
+	- kill (ukončení procesů)
+	- ifconfig (zobrazení IP adresních parametrů)
+	- iwconfig (konfigurace a prohlížení nastavení bezdrátového adaptéru)
+	- chmod (změna oprávnění u souborů)
+	- chown (změna vlastníka či skupiny)
+
+#### 3) Možnosti a konfigurace přístupu v režimu správce pro běžné uživatele, příkaz sudo a jeho konfigurace.
+##### Možnosti a konfigurace přístupu v režimu správce pro běžné uživatele
+- Příkaz "chattr" zabraňuje přejmenování, přesunu, smazání a úpravě souboru
+	- "chattr +i {file}" soubor nelze přesunout, přejmenovat, upravit ani smazat a to ani rootem
+	- "chattr +a {file}" do souboru lze přidávat pouze další obsah
+	- "lsattr {file}" zobrazí speciální oprávnění u daného souboru 
+
+##### Přístup k účtu root
+- příkaz "su"
+- Přesun do domovského adresáře příkazem "su -"
+- Tyto příkazy lze použít pokud uživatel zná heslo uživatele root, což představuje bezpečnostní riziko, daleko vhodnější je použít příkaz "sudo" umožňující běžnému uživateli vykonat příkaz jako jiný uživatel (typicky superuser, kde se vyžaduje zadání svého hesla)
+- Po použití příkazu sudo se uživateli povoluje v souboru /etc/sudoers (doporučuje se upravovat příkazem visudo)
+	- Definování cest pro sudo:  
+	    - Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/usr/local/bin"  
+	    - Určuje, ve kterých adresářích lze spouštět příkazy pomocí sudo.
+	- Obecné pravidlo pro root uživatele:  
+	    - root ALL=(ALL) ALL  
+	    - Uživatel root může spouštět jakýkoliv příkaz s jakýmikoliv oprávněními.
+	- Pravidlo pro všechny uživatele:  
+	    - ALL ALL=(ALL) ALL  
+	    - Každý uživatel může spouštět jakékoliv příkazy s jakýmikoliv oprávněními (což se běžně nenastavuje z bezpečnostních důvodů).
+	- Omezený přístup pro konkrétního uživatele:  
+	    - user1 ALL=/bin/yum update  
+	    -  Uživatel user1 smí spustit pouze příkaz yum update jako root.
+	- Spouštění příkazu bez nutnosti zadávat heslo:  
+	    - user2 ALL=NOPASSWD:/bin/updatedb  
+	    - Uživatel user2 může spouštět příkaz updatedb bez nutnosti zadání hesla.
+	- Pravidlo pro celou skupinu uživatelů:  
+	    - %admin ALL=(ALL) ALL  
+	    - Všichni členové skupiny admin mohou spouštět jakýkoliv příkaz s jakýmikoliv oprávněními.
+- Zobrazení oprávnění, která má uživatel přístupné pod sudo příkazem "sudo -l"

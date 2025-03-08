@@ -1,0 +1,4 @@
+- účel počítačových sítí 
+- typy sítí
+- prvky používané v počítačových sítích
+- trendy v oblasti počítačových sítí

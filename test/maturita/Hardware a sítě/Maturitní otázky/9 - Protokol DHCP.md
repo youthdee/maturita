@@ -1,0 +1,3 @@
+- význam služby DHCP
+- průběh komunikace v DHCPv4
+- průběh komunikace v DHCPv6

@@ -1,0 +1,3 @@
+- účel IP adresace, zápis, struktura a druhy IPv4 adres
+- IPv6 – důvody vzniku, zápis, struktura a druhy IPv6 adres
+- subnetace, VLSM

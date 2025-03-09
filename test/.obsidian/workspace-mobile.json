@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
+                "file": "maturita/Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS"
+              "title": "11 - Přepínané sítě"
             }
           }
         ]
@@ -148,15 +148,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1abc0ad05afc67a6",
+  "active": "cbbbfe403f88f206",
   "lastOpenFiles": [
+    "maturita/Hardware a sítě/Maturitní otázky/5 -Síťová vrstva referenčního modelu OSI.md",
+    "maturita/Hardware a sítě/Maturitní otázky/4 - Ethernet.md",
+    "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
     "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
     "byz/resell/zalando kody.md",
     "maturita/Software/Maturitní otázky/6 - Model klient-server u operačních systémů, instalace, monitorování a řešení problémů u serverů.md",
     "maturita/Software/Maturitní otázky/5 - Operační systémy v mobilních zařízení.md",
     "maturita/Software/Maturitní otázky/4 - Zabezpečení operačních systémů.md",
     "maturita/Software/Maturitní otázky/3 - Správa operačních systému Windows a UNIX-like OS.md",
-    "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
     "byz/resell/Platforms.md",
     "maturita/Software/Maturitní otázky/14 - Popis architektury a základních služeb MS Azure.md",
     "maturita/Hardware a sítě/Maturitní otázky/12 - Statický routing, Inter-VLAN routing.md",

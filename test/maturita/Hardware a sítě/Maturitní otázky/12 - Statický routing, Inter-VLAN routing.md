@@ -32,6 +32,7 @@
 - Výchozí směr (Routery mohou použít výchozí bránu)
 
 #### 3) Charakteristika, konfigurace a možnosti použití statického routingu
+TODO
 #### 4) Inter-VLAN routing, varianty Inter-VLAN routingu
 
 ##### Charakteristika Inter-VLAN Routingu

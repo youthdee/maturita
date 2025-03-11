@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "maturita/Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
+                "file": "maturita/Hardware a sítě/Maturitní otázky/1 - Zálkadní pojmy počítačových sítí.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - Přepínané sítě"
+              "title": "1 - Zálkadní pojmy počítačových sítí"
             }
           }
         ]
@@ -148,10 +148,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cbbbfe403f88f206",
+  "active": "1abc0ad05afc67a6",
   "lastOpenFiles": [
-    "maturita/Hardware a sítě/Maturitní otázky/5 -Síťová vrstva referenčního modelu OSI.md",
     "maturita/Hardware a sítě/Maturitní otázky/4 - Ethernet.md",
+    "maturita/Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
+    "maturita/Hardware a sítě/Maturitní otázky/5 -Síťová vrstva referenčního modelu OSI.md",
     "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
     "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
     "byz/resell/zalando kody.md",

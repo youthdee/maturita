@@ -120,6 +120,42 @@
 	- Příkaz "no vlan {id}" pro odstranění VLAN se zadaným Id (přiřazený port poté přestane fungovat)
 
 #### 3) Protokol DTP a jeho dopady na bezpečnost sítě
-TODO
+
+##### Charakteristika DTP
+- Proprietární Cisco protokol
+- Umožňuje automatickou konfiguraci trunkového režimu mezi Cisco Switchi (přepínači)
+- Používán pro automatické nastavení trunkového portu mezi dvěma Cisco switchi (přepínači) na základě vzorců komunikace
+##### Režimy DTP
+- Auto
+	- Port se pokusí automaticky navázat trunk spoj, pokud je druhý port nastaven na trunk nebo dostane požadavek na nastavení spoje jako trunk
+- Desirable
+	- Port aktivně vyhledává možnost vytvoření trunku
+- On
+	- Trunk je povolen bez jakéhokoliv vyjednávání
+- Off
+	- Trunk je zakázan
+- Nonegotiate
+	- Neporvádí se žádné vyjednávání trunkového spoje, port je nastaven na trunk ale vyjednávání probíhá ručně
+
+##### Dopady DTP na bezpečnost sítě
+- Nepředvídatelné chování portů
+	- Porty se mohou automaticky přepnout do trunkového režimu, což může způsobit bezpečnostní hrozby
+- Rizika VLAN Hoppingu
+	- DTP může být zneužito pro VLAN hopping útoky, kdy útočník může získat přístup do jiných VLAN než je povoleno
+- Vytváření neautorizovaných trunků
+	- Pokud není DTP správně nakonfigurováno, může to umožnit neautorizovaným zařízením navázat trunk se switchem (přepínačem), čímž získají přístup k více síťovým segmentům
+
 #### 4) Layer 3 Switching – vlastnosti a způsoby nasazení
-TODO
+
+##### Charakteristika L3 Switchingu
+- Kombinuje vlastnosti tradičního směrování a přepínání
+- Na rozdíl od L2 switche je L3 switch schopný směrovat pakety mezi různými subnety na síťové vrstvě
+- Rychlý přenos dat
+	- Používá hardwarové tabulky pro směrování
+- Zjednodušená správa sítě
+	- Je schopen zastoupit roli routeru a tím sloučit router a switch do jednoho zařízení
+
+##### Způsoby nasazení L3 Switche
+- Inter-VLAN Routing
+- Datová centra a cloudová řešení
+- Kombinace s firewall řešeními

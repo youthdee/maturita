@@ -32,7 +32,26 @@
 - Výchozí směr (Routery mohou použít výchozí bránu)
 
 #### 3) Charakteristika, konfigurace a možnosti použití statického routingu
-TODO
+##### Charakteristika statického směrování
+- Ruční nastavení (správce sítě ručně definuje cesty k cílovým sítím)
+- Jednoduchost (nevyžaduje nasazení žádných směrovacích protokolů)
+- Nízká zátěž procesoru a paměti (Router neprovádí výpočty jako u dynamického směrování)
+- Vhodné pro malé sítě (efektivní u minimálně měnících se topologiích)
+- Nevhodné pro rozsáhlé a dynamické sítě (každá změna sítě vyžaduje ruční úpravy)
+##### Konfigurace statického směrování
+- Příkaz "show ip route" pro vypsání aktuální směrovací tabulky
+- Příkaz "ip route {cílová síť} {maska sítě} {next-hop IP | výstupní rozhraní}"
+- Příkaz "show running config | include ip route" a "show ip route static" pro ověření konfigurace
+
+##### Možnosti použití statického směrování
+- Malé sítě a SOHO prostředí
+	- Jednoduchá správa bez nutnosti dynamických protokolů
+- Zabezpečené a kritické cesty
+	- Mezi firewally, kde je důležitá kontrola směrování
+- Záložní trasy
+	- V kombinaci s dynamickým směrováním jako failover
+- Point-to-Point spoje
+	- Nemá smysl využívat dynamického směrování mezi dvěma spoji
 #### 4) Inter-VLAN routing, varianty Inter-VLAN routingu
 
 ##### Charakteristika Inter-VLAN Routingu

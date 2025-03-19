@@ -42,7 +42,7 @@
 	- Součástí je pokročilé řešení zabezpečení, souladu a ochrany soukromí
 	- Disponuje základními dovednostmi v oblasti produktivity a spolupráce
 	- Učí se nové dovednosti
-- Firma Microsoft zachovává přísná pravidla týkající se umělé inteligence a vyvyjí pouze systémy prospěšné pro uživatele
+- Firma Microsoft zachovává přísná pravidla týkající se umělé inteligence a vyvíjí pouze systémy prospěšné pro uživatele
 	- Zajišťuje kontroly možných hrozeb
 	- vylepšuje data a modely
 	- opravuje chybné chování
@@ -113,13 +113,73 @@
 #### 3) možnosti nasazení a aktualizace aplikací Microsoft 365
 
 ##### Možnosti nasazení aplikací
+- Aplikace uživatelé můžou instalovat jednotlivě
+- Z místního zdroje pomocí nástroje Configuration Manager
+	- Instalační soubory se stáhnou z místní sítě
+- Z cloudu pomocí nástroje ODT (Office Deployment Tool)
+	- Instalace ze sítě CDN (Content Delivery Network)
+- Z místního zdroje pomocí nástroje ODT (Office Deployment Tool)
+- Automatická instalace z cloudu (instalace probíhá z portálu office)
 ##### Možnosti aktualizací aplikací
-
+- Typy aktualizací:
+	- Aktualizace zabezpečení (Security Updates)
+	- Aktualizace kvality
+- Aktualizační kanály:
+	- Current Channel:
+		- Aktualizace funkcí se doručují okamžitě po jejich vydání
+		- Aktualizace zabezpečení a kvality se obvykle vydávají dvakrát až třikrát měsíčně
+	- Monthly Enterprise Channel
+		- Aktualizace měsíčně vždy druhé úterý v měsíci
+	- Semi-Annual Enterprise Channel
+		- Aktualizace v ledmu a červenci vždy druhé úterý v měsíci
 #### 4) Správa koncových uzlů, Principy správy a Možnosti nasazení ve službě Microsoft 365.
 
 ##### Správa koncových uzlů
 - Microsoft nabízí ucelené řešení správy koncových zařízení
 	- A to umožňuje spravovat, zabezpečovat a monitorovat všechny koncové uzly včetně uzlů používaných pro práci a na dálku (případně i na mobilních zařízeních)
-- Nástroje jako MS Intune, Configuration Manager, Endpoint Analytics, MS Entra ID
+- Nástroje:
+	- Microsoft Intune:
+		- Cloudově orientované řešení pro správu koncových uzlů umožňující správu přístupu uživatelů k firemním prostředkům a pro zjednodušení správy aplikací a zařízení
+	- Configuration Manager:
+		- On-premise řešení pro správu zařízení v lokální síti či Internetu
+		- Lze jej použít pro nasazení aplikací, aktualizací softwaru, nastavení souladu, získání přehledu, analýzu stavu zařízení
+	- Co-management:
+		- Kombinace Confgiruation Manager a Microsfot Intune
+	- Tenant-attach:
+		- Funkce umožňující umístnění dat o zařízení do cloudu a spravovat je z konzole v cloudu
+		- Umožňuje zajistit zabezpečení zařízení s OS Windows prostřednictvím Intune Admin Center
+	- Endpoint Analytics
+		- Cloudová služba poskytující informace a doporučení ohledně zdraví a výkon zařízení s klientskou verzí OS windows
+	- Windows Autopilot
+		- Cloudová služba pro instalaci a konfiguraci nových zařízení, včetně možnosti návratu do továrního nastavení
+	- Microsoft Entra ID
+		- Cloudová služba používaná službou Intune pro správu identit uživatelů, zařízení a skupin, kterým jsou přiřazovány zásady Intune
+	- Intune admin center
+		- Webové rozhraní pro přidávání uživatelů a skupin, jejich správu, vytváření a monitorování zásad
 ##### Principy správy
 ##### Možnosti nasazení ve službě Microsoft 365
+- Deployment rings
+	- Skupiny zařízení, které se aktualizují současně
+	- Obsahuje tři skupiny:
+		- Preview (pro plánování a vývoj s cílem vyhodnotit nové funkce dostupné v aktualizacích)
+		- Limited (pro pilotní ověření)
+		- Broad (pro hromadné nasazení)
+- Moderní způsoby nasazení kombinující klasické on-premise a cloudové služby:
+	- Windows Autopilot:
+		- Uživatel instaluje OS Windows bez přítomnosti správce
+	- In-Place upgrade:
+		- Automatizovaný upgrade na novější verzi OS Windows se zachováním existujících dat, nastavení a aplikací
+- Dynamické způsoby nasazení umožňující konfiguraci aplikací a nastavení pro konkrétní účel
+	- Aktivace pomocí předplatného
+		- Možnost přepínání mezi edicemi v závislosti na přihlášeném uživateli
+	- Přihlášení do Entra ID s podporou automatické správy mobilních zařízení (MDM)
+		- Automatické přihlášení zařízení do Entra ID s konfigurací pomocí MDM na základě ID a hesla uživatele
+	- Konfigurace pomocí balíčku
+		- Vytvoření balíčků obsahujících aplikace, konfiguraci a nastavení pro jednotlivá zařízení
+	- Klasické způsoby nasazení pomocí stávajících nástrojů pro nasazení obrazu operačního systému:
+		- Instalace nového počítače
+			- Instalace nového OS na nový počítač
+		- Obnovení počítače
+			- Uložení stavu stávajícího operačního systému, přemazání disku a obnova stavu systému
+		- Výměna počítače
+			- Výměna starého počítače za nový s uložením stavu starého počítače a obnovou tohoto stavu na nový počítač

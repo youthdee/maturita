@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "maturita/Hardware a sítě/Maturitní otázky/1 - Zálkadní pojmy počítačových sítí.md",
+                "file": "maturita/Hardware a sítě/Maturitní otázky/3 - Fyzická a linková vrstva referenčního modelu OSI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - Zálkadní pojmy počítačových sítí"
+              "title": "3 - Fyzická a linková vrstva referenčního modelu OSI"
             }
           }
         ]
@@ -148,8 +148,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1abc0ad05afc67a6",
+  "active": "cbbbfe403f88f206",
   "lastOpenFiles": [
+    "maturita/Hardware a sítě/Maturitní otázky/1 - Zálkadní pojmy počítačových sítí.md",
     "maturita/Hardware a sítě/Maturitní otázky/4 - Ethernet.md",
     "maturita/Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
     "maturita/Hardware a sítě/Maturitní otázky/5 -Síťová vrstva referenčního modelu OSI.md",

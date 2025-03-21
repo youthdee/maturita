@@ -149,46 +149,45 @@
 	- Platí, že **nelze provést upgrade** **32 bitové** verze **na 64 bitovou verzi** a na **W10 lze upgradovat** z **W7** a **W8** (Nikoliv W XP či W Vista)
 	- **Upgrade** lze provést **pomocí nástroje Pomocník** **pro aktualizaci systému**, který **lze získat** na webu
 		- Například **upgrade z W7** nebo **W8 na Windows 10** lze provést **stažením Průvodce Pomocník** pro aktualizaci systému Windows 10, který lze získat na webu Microsoft
-	- Počítače s OS W XP nebo W Vista není možné upgradovat na W 10
-		- v tomto případě je třeba provést čistou instalaci (instalační disk lze vytvořit pomocí nástroje Media Creation Tool)
-	- Způsoby upgradu:
-		- In-place upgrade
-			- Aktualizace operačního systému a současně přenos aplikací i nastavení a ovladačů do nového operačního systému
-			- Lze automatizovat nástrojem SCCM (System Center Configuration Manager)
-			- Tento způsob upgradu se provádí z W7, W8 na W10
-		- Čistá instalace
-			- Dojde k úplnému vymazání dat z disku
-- Instalace OS Windows
-	- Možnosti instalace OS Windows:
-		- Síťová instalace
-			- PXE instalace (Preboot Execution Enviroment)
-				- instalační soubory se nacházejí na serveru, klient k nim přistupuje vzdáleně pomocí softwarového balíčku (Remote Installation Services), který zajišťuje uložení instalačních souborů a poskytuje vše potřebné pro přístup k instalačním souborům
-				- Vzhledem k tomu, že na klientském PC není žádný operační systém, je třeba pro spuštění počítače vytvořit speciální prostředí, které zajistí spuštění počítače, připojení do sítě a komunikaci se serverem (PXE)
-			- Bezobslužná instalace
-				- Instalační program setup.exe je nutné spustit s volbami uživatele přednastavenými v souboru odpovědí
-				- Instalační program pak hledá tyto odpovědi na dotazy kladené během instalace v tomto souboru a nechce je tím pádem od uživatele
-				- Pro vytvoření souboru odpovědí pro instalaci lze použít System Image Manager (SIM)
-				- soubor odpovědí se pak kopíruje na server do sdílené složky určené pro distribuci, kde se buď spustí soubor unattended.bat přímo na klientském PC (nastaví se tak pevný disk a instalace probíhá přes síť) nebo vytvořit spouštěcí disk, který spustí počítač a připojí ho ke sdílené složce určené pro distribuci
-			- Vzdálená instalace
-		- Instalace z obrazu uloženého na diskovém oddílu v počítači
-			- Zde se používá obraz OS Windows uložený na diskovém oddílu (často skrytém oddílu)
-			- Při použití tohoto obrazu se operační systém obnoví do stavu, v jakém byl při výrobě počítače (tovární nastavení)
-			- jedná se o diskový oddíl, který je nepřístupný uživateli (recovery partition)
-		- Pokročilé možnosti spuštění (Windows Advanced Startup Options)
-		- Obnovit počítač do továrního nastavení
-		- Obnovení Systému
-		- Upgrade
-		- Opravná instalace
-		- Obnovení počítače do továrního nastavení
-	- Po dokončení instalace je nutno provést aktualizaci operačního systému službou Microsoft Windows Update
-	- Také je nutno ověřit, zda je správně nainstalovaný veškerý hardware nástrojem Správce Zařízení
-
+	- Počítače s OS **W XP** nebo **W Vista** **není možné** **upgradovat** na **W10**
+		- v tomto případě je třeba provést **čistou instalaci** (instalační disk lze vytvořit pomocí nástroje **Media Creation Tool**)
+	- **Způsoby upgradu**:
+		- **In-place upgrade**
+			- **Aktualizace** **operačního systému** a současně **přenos aplikací i nastavení** a ovladačů do **nového operačního systému**
+			- Lze **automatizovat** nástrojem **SCCM** (**System Center Configuration Manager**)
+			- Tento způsob upgradu se **provádí z W7, W8 na W10**
+		- **Čistá instalace**:
+			- Dojde k **úplnému vymazání dat** z disku
+- **Instalace OS Windows**
+	- Možnosti instalace **OS Windows**:
+		- **Síťová instalace**
+			- **PXE instalace** (**Preboot Execution Enviroment**)
+				- **instalační soubory** se nacházejí na **serveru**, klient k nim přistupuje **vzdáleně** pomocí **softwarového balíčku** (**Remote Installation Services**), který **zajišťuje uložení instalačních souborů** a poskytuje vše potřebné pro **přístup k instalačním souborům**
+				- Vzhledem k tomu, že na klientském PC není **žádný operační systém**, je třeba pro spuštění počítače **vytvořit speciální prostředí**, které zajistí **spuštění počítače**, **připojení do sítě** a **komunikaci se serverem** (**PXE**)
+			- **Bezobslužná instalace**
+				- Instalační program **setup.exe** je nutné spustit s **volbami uživatele** přednastavenými **v souboru odpovědí**
+				- **Instalační program** pak **hledá** tyto **odpovědi** na dotazy kladené během instalace **v tomto souboru** a nechce je tím pádem od uživatele
+				- Pro **vytvoření souboru odpovědí** pro instalaci lze použít **System Image Manager** (**SIM**)
+				- Soubor odpovědí se pak **kopíruje na server** do **sdílené složky** určené pro distribuci, kde se **buď spustí soubor unattended.bat** přímo na **klientském PC** (nastaví se tak **pevný disk** a **instalace probíhá přes síť**) nebo **vytvořit spouštěcí disk**, který **spustí počítač** a připojí ho ke sdílené složce určené **pro distribuci**
+			- **Vzdálená instalace**:
+		- I**nstalace z obrazu** uloženého **na diskovém oddílu v počítači**
+			- Zde se používá **obraz OS Windows** uložený na **diskovém oddílu** (často **skrytém oddílu**)
+			- Při použití tohoto obrazu se **operační systém obnoví do stavu**, v jakém **byl při výrobě počítače** (**tovární nastavení**)
+			- jedná se o **diskový oddíl**, který je **nepřístupný** uživateli (**recovery partition**)
+		- **Pokročilé možnosti spuštění** (**Windows Advanced Startup Options**):
+			- **Obnovit** počítač do **továrního nastavení**
+			- **Obnovení** Systému
+			- **Upgrade**
+			- **Opravná instalace**
+	- Po **dokončení** instalace je nutno provést **aktualizaci** **operačního systému** službou **Microsoft Windows Update**
+	- Také je nutno ověřit, zda je **správně nainstalovaný** veškerý **hardware** nástrojem **Správce Zařízení**
+//TODO možnosti aktualizace Windows viz. SW MS 365
 ##### UNIX-like OS - Možnosti upgradu a instalace
-- Možnosti instalace:
-	- Čistá instalace z bootovacího média (USB/DVD)
-	- Dual-Boot (Instalace vedle Windows s možností volby OS při startu)
-	- Virtuální stroj (VirtualBox, VMWare)
-- Možnosti Upgradu:
-	- Přímý upgrade (do-release-upgrade)
-	- LTS na LTS (Operační systémy s dlouhodobou podporou lze upgradovat mezi sebou)
-	- Reinstalace při zachování dat
+- **Možnosti instalace**:
+	- **Čistá** instalace z **bootovacího média** (**USB/DVD**)
+	- **Dual-Boot** (Instalace **vedle Windows** s možností **volby OS** při startu)
+	- **Virtuální stroj** (**VirtualBox, VMWare**)
+- **Možnosti Upgradu**:
+	- **Přímý upgrade** (**do-release-upgrade**)
+	- **LTS** na **LTS** (Operační systémy s **dlouhodobou podporou** lze **upgradovat mezi sebou**)
+	- **Reinstalace** při **zachování dat**

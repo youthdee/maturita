@@ -112,43 +112,43 @@
 	- kromě **nápovědy** pro daný **příkaz** obsahují **hypertextové odkazy** pro **navigaci** mezi **jednotlivými sekcemi** dokumentace
 	- Příklad "**info coreutils**" obsahuje **podrobný popis každého nástroje**, který **je součástí coreutils**
 ##### UNIX-like OS - Základní pojmy z oblasti UNIX-like operačních systémů
-- Distribuce
-	- soubor balíčků softwaru tvořících jeden systém (kernel, utility, software)
-- Rodina Distribucí
-	- Skupina operačních systémů založených na společném základu, které sdílejí podobné balíčkové systémy a filozodii
-	- Například Debian, Red Hat nebo Arch Linux
-- Balíček
-	- Předem sestavený program nebo sada programů
-	- Lze ho získat přes Internet z centrálních repozitářů, kde jsou již sestavené, otestované a udržované a pro každou distribuci (popřípadě v podobě zdrojového kódu pro ruční instalaci)
-- Závislost
-	- Vlastnost balíčků mezi sebou (jeden balíček může mít závislost na jiném, nebo na nějaké knihovně)
-- Repozitář
-	- Online Úložiště softwarových balíčků, odkud lze instalovat, aktualizovat a spravovat software v systému pomocí balíčkovacího nástroje
-- Nástroje pro správu balíčků
-	- Každá rodina distribucí má jiný balíčkovací systém, které jsou nekompatibilní
-		- Debian má .deb
-		- CentOS má .rpm
-	- Slouží ke správě a instalaci (včetně aktualizace a odebrání) softwaru (balíčků) v operačním systému
-	- Dokážou zárověň řešit závislosti mezi balíčky pro zajištění funkčnosti
-	- Pro správu balíčků se používají dva typy nástrojů:
-		- Low-level tools
-			- Provádí na pozadí vlastí instalaci, upgrade a odstranění souborů balíčků
-			- pro Debian dpkg, pro CentOS rpm
-		- High-level tools
-			- Zajišťují řešení závislostí a vyhledávání metadat
-			- Pro Debian apt-get nebo aptitude, pro CentOS yum
-- Kernel
-	- Jádro operačního systému, které spravuje hardware, procesy, pameť a I/O operace
-	- Například Linux Kernel
+- **Distribuce**
+	- **soubor balíčků** softwaru **tvořících** jeden systém (**kernel**, **utility**, **software**)
+- **Rodina Distribucí**
+	- **Skupina operačních systémů** založených na **společném základu**, které **sdílejí** podobné **balíčkové systémy** a **filozodii**
+	- Například **Debian**, **Red Hat** nebo **Arch Linux**
+- **Balíček**
+	- **Předem sestavený program** nebo **sada programů**
+	- Lze ho získat přes **Internet** z **centrálních repozitářů**, kde jsou **již sestavené**, **otestované** a **udržované** a pro **každou distribuci** (popřípadě **v podobě zdrojového kódu** pro ruční instalaci)
+- **Závislost**
+	- **Vlastnost balíčků** mezi sebou (jeden balíček **může mít závislost na jiném**, nebo na **nějaké knihovně**)
+- **Repozitář**
+	- **Online Úložiště** **softwarových balíčků**, odkud lze **instalovat**, **aktualizovat** a **spravovat** software v systému pomocí **balíčkovacího nástroje**
+- **Nástroje pro správu balíčků**
+	- Každá rodina **distribucí** má **jiný balíčkovací systém**, které jsou **nekompatibilní**
+		- **Debian** má **.deb**
+		- **CentOS** má **.rpm**
+	- Slouží ke **správě** a **instalaci** (včetně **aktualizace** a **odebrání**) softwaru (balíčků) **v operačním systému**
+	- Dokážou zároveň **řešit závislosti** mezi balíčky pro **zajištění funkčnosti**
+	- Pro správu balíčků se používají **dva typy nástrojů**:
+		- **Low-level tools**
+			- Provádí **na pozadí vlastí instalaci**, **upgrade** a **odstranění** souborů balíčků
+			- pro **Debian dpkg**, pro **CentOS rpm**
+		- **High-level tools**
+			- Zajišťují **řešení závislostí** a **vyhledávání metadat**
+			- Pro **Debian apt-get** nebo **aptitude**, pro **CentOS yum**
+- **Kernel**
+	- **Jádro operačního systému**, které **spravuje hardware**, **procesy**, **pameť** a **I/O operace**
+	- Například **Linux Kernel**
 	
 
 #### 3) Možnosti instalace a upgradu operačních systémů Windows a UNIX-like OS
 ##### Možnosti instalace a upgradu OS Windows
-- Upgrade OS Windows
-	- Dostupné možnosti upgradu závisí na konkrétní verzi operačního systému
-	- Platí, že nelze provést upgrade 32 bitové verze na 64 bitovou verzi a na W10 lze upgradovat z W7 a W8 (Nikoliv W XP či W Vista)
-	- Upgrade lze provést pomocí nástroje Pomocník pro aktualizaci systému, který lze získat na webu
-		- Například upgrade z W7 nebo W8 na Windows 10 lze provést stažením Průvodce Pomocník pro aktualizaci systému Windows 10, který lze získat na webu Microsoft
+- **Upgrade OS Windows**
+	- Dostupné **možnosti upgradu** závisí na **konkrétní verzi operačního systému**
+	- Platí, že **nelze provést upgrade** **32 bitové** verze **na 64 bitovou verzi** a na **W10 lze upgradovat** z **W7** a **W8** (Nikoliv W XP či W Vista)
+	- **Upgrade** lze provést **pomocí nástroje Pomocník** **pro aktualizaci systému**, který **lze získat** na webu
+		- Například **upgrade z W7** nebo **W8 na Windows 10** lze provést **stažením Průvodce Pomocník** pro aktualizaci systému Windows 10, který lze získat na webu Microsoft
 	- Počítače s OS W XP nebo W Vista není možné upgradovat na W 10
 		- v tomto případě je třeba provést čistou instalaci (instalační disk lze vytvořit pomocí nástroje Media Creation Tool)
 	- Způsoby upgradu:

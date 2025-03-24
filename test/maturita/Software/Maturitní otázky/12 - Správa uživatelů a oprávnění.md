@@ -1,24 +1,20 @@
 #### 1) Správa uživatelů a skupin v OS Windows
-
 ##### Správa uživatelů v OS Windows
-- Umožňují přihlásit se do počítače nebo do domény
-- Slouží k ověření identity uživatele a následně k zjišťování, kčemu bude uživatel přistupovat a jakou úroveň pověření vlastní
-- Uživatelský účet lze také použít pro audit
-- V soudobých sítích s prvky s nainstalovaných operačním systémem Windows se používají místní a doménové uživatelské účty
-
+- Umožňují **přihlásit** se do **počítače** nebo do **domény**
+- Slouží k **ověření identity uživatele** a následně k **zjišťování**, kčemu bude **uživatel přistupovat** a **jakou úroveň pověření** vlastní
+- **Uživatelský účet** lze také použít pro **audit**
+- V **soudobých sítích** s prvky s nainstalovaných operačním systémem **Windows** se používají **místní** a **doménové uživatelské účty**
 ##### Správa uživatelů v OS Windows - Profil uživatele
-- Soubor složek a dat obsahujících prostředí plochy a nastavení aplikací
-- Ukládají se v něm použitá síťová připojení (při přihlášení má uživatel k dispozici namapované jednoty vedoucí ke sdíleným složkám)
-
+- **Soubor složek** a **dat obsahujících prostředí plochy** a **nastavení aplikací**
+- Ukládají se v něm **použitá síťová připojení** (při přihlášení má uživatel k dispozici **namapované jednoty vedoucí ke sdíleným složkám**)
 ##### Správa uživatelů v OS Windows - Účty počítačů
-- Podoné jako uživatelské účty
-- Používají se pro ověření a audit přistupu počítače k síti Windows a k prostředkům domény
-- Každý počítač musí mít jedinečný účet počítače
-- Lze také použít pro audit
-
+- **Podobné jako uživatelské účty**
+- Používají se pro **ověření** a **audit přistupu počítače k síti** Windows a k **prostředkům domény**
+- Každý počítač **musí mít jedinečný účet** počítače
+- Lze také použít pro **audit**
 ##### Správa skupin v OS Windows
-- Množina či seznam uživatelských účtů nebo účtů počítačů
-- Na rozdíl od kontejnerů se do skupiny neukládají žádné údaje týkající se uživatele či pocítače
+- **Množina** či **seznam uživatelských účtů** nebo **účtů počítačů**
+- Na rozdíl od **kontejnerů** se do skupiny **neukládají žádné údaje** týkající se **uživatele** či **pocítače**
 	- Skupina své členy pouze vypíše
 - Skupiny se s výhodou používají ke zjednodušení správy (zejména přidělování oprávnění a práv)
 - Typy skupin
@@ -34,7 +30,6 @@
 	- Domain Local
 	- Permissions
 - V případě používání univerzálních skupin se použije zkratka "AGUDLP"
-
 ##### Správa skupin v OS Windows - Skupiny integrované v operačním systému
 - Výchozí integrované skupiny mají již nastavena určitá práva a oprávnění:
 	- Domain admins
@@ -43,11 +38,9 @@
 	- Backup operators
 	- Authenticated users
 	- Everyone
-
 ##### Správa skupin v OS Windows - Zásady skupiny
 - Nejmocnější funkce Active Directory používané pro konfiguraci prostředí účtů uživatelů a počítačů
 - Pokytují centralizovanou správu a konfiguraci OS a uživatelů v Active Directory
-
 ##### Správa skupin v OS Windows - Možnosti použití zásad skupiny
 - Lze uplatnit na úrovni pracovní stanice, popřípadě na různých úrovních (místa, domény nebo organizační jednotky)
 - Na úrovni míst, domén či organizačních jednotek je daleko více možností nastavení než na úrovní místní
@@ -56,7 +49,6 @@
 	- Zásady skupiny na úrovní místa
 	- Zásady skupiny na úrovni domény
 	- Zásady skupiny na úrovni organizační jednotky
-
 #### 2) Přehled oprávnění ve Windows na úrovni souborového systému a na úrovni sdílení
 ##### Oprávnění
 - Typ přístupu, který má objekt nebo atribut objektu přiřazen
@@ -64,7 +56,6 @@
 - Přehled všech uživatelů a operací, které mohou tito uživatelé na daném objektu provádět je uložen v seznamu ACL
 	- V něm jsou tak uvedeni všichni užiatelé a skupiny, kteří mají přístup k objektu
 - Lze přiřadit oprávnění pro povolení nebo odepření přístupu (odepření má vždy přednost)
-
 ##### Typy oprávnění NTFS
 - Excplicitní oprávnění
 	- přiděluje se přímo souboru či složce
@@ -74,12 +65,10 @@
 	- Výsledná oprávnění
 	- Pokud jsou uživatelské členy více skupin, pak se pro přístup ke kontkrétnímu objektu aplikují různá oprávnění
 	- Výsledkem kombinace oprávnění jsou efektivní oprávnění, která tak zahrnují explicitní a zděděná oprávnění
-
 ##### Sdílení složek
 - Ke složkám uloženým na serveru uživatelé nepřistupují přímo, ale pomocí sdílení složky
 - Doporučuje se nastavit oprávnění na úrovni souborového systému NTFS ale i oprávnění pro sdílení
 - Pro přístup se používá notace UNC ve tvaru "\\název_serveru\název_sdílené_složky"
-
 ##### Oprávnění ke sdílení
 - Při nastavování oprávnění jsou k dispozici následující oprávnění:
 	- úplné řízení
@@ -88,7 +77,6 @@
 ##### Pokročilé nastavení sdílení
 - Přístup ke sdíleným složkám zajišťují služby Workstation (přístup ke sdíleným složkám tiskárnám) a Server (zajišťuje sdílení složek a tiskáren)
 - Ve Windows Serveru je třeba síťové služby povolit v sekci "Pokročilé nastavení sdílení v Centru sítí a sdílení"
-
 ##### Skryté sdílení
 - Aby mohla být složka či disk skryta musí jejich název ro sdílení končit znakem "$"
 - Ke složce se přistupuje standardním způsobem (UNC)
@@ -123,12 +111,10 @@
 	- zákaz účtu uzamknutím hesla (-l nebo --lock)
 	- odemknutí hesla (-u nebo --unlock)
 	- odstranění uživatelského účtu a všech souborů příkazem "userdel --remove {username}"
-
 ##### Správa skupin
 - příkaz "groupadd {name}" pro vytvoření nové skupiny
 - příkaz "chown" pro změnu vlastníka skupiny
 - příkaz "groupdel {group name}" pro odstranění skupiny
-
 ##### Oprávnění pro soubory a základní atributy
 - Atributy souborů lze zobrazit příkazel "ls -l" a atributy jsou ukryty v prvních deseti znacích:
 	- První znak označuje typ souboru:
@@ -138,7 +124,6 @@
 		- zařízení typu znak "-c" (char device, považuje za data proud bytů, např. terminál) 
 		- zařízení typu blok "-b" (block device, které pracuje s daty v blocích, např. úložiště)
 	- Zbylých devět znaků obsahuje vždy trojici oprávnění (read, write, execute) pro vlastníka souboru, skupinu vlastnící soubor a pro ostatní uživatele
-
 ##### Změna oprávnění
 - Příkaz "chmod {new_model} file"
 	- {new_model} je řetězec, který obsahuje čílo v osmičkové soustavě nebo výraz definující nová oprávnění
@@ -176,7 +161,6 @@
 - Odebrání všech oprávnění příkazem "setfacl -b {soubor}"
 - Příklad nastavení ACL na adresář pro uživatele (přiřazení oprávnění read, write a execute)
 	- "setfactl -m u:{user}:rwx /home/backups/"
-
 ##### Diskové kvóty v UNIX-LIKE OS
 - pomocí diskových kvót se omezuje uživatelům či skupinám kapacita disku, kterou mají k dispozici, aby nedošlo k zaplnění
 - Softlimit je limit na vyčerpání kvóty

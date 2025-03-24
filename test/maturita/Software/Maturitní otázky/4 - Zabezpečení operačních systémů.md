@@ -1,4 +1,4 @@
-##### 1) Bezpečnostní hrozby, malware a ochrana proti malwaru, síťové útoky, sociální inženýrství
+#### 1) Bezpečnostní hrozby, malware a ochrana proti malwaru, síťové útoky, sociální inženýrství
 ##### Bezpečnostní hrozby
 - **Neaktuální antivirus**
 - **Neaktuální** **operační systém**
@@ -70,7 +70,7 @@
 	- **Vishing** (Technika **telefonicky** prováděného phishingu)
 	- **Pretexting** (získávání **cizích osobních údajů pod falešnou záminkou**)
 	- **Evil twin** (cracker **falešně napodobuje** vlastnosti **otevřené Wi-Fi** sítě, kam se má uživatel připojit. Jedná se o **specifický phishing**)
-##### 2) Základní postupy při zabezpečení operačních systémů – zásady zabezpečení, fyzické zabezpečení, metody ochrany a bezpečného odstraňování dat
+#### 2) Základní postupy při zabezpečení operačních systémů – zásady zabezpečení, fyzické zabezpečení, metody ochrany a bezpečného odstraňování dat
 ##### Zásady zabezpečení
 - **Sada pravidel** umožňujících **bezpečnost sítě**, **dat** a **počítačů v organizaci**
 - Konstantě **aktualizovaný dokument** na **bázi změn v technologií**, **biznisu** a **požadavků zaměstnanců**
@@ -116,7 +116,7 @@
 		- Pro bezpečné **smazání SSD** se používá **secure erase**.
 		- **Optická média**, **eMMC**, **USB disky** je nutné **fyzicky zničit** (skartace/spálení).
 		- Data mohou být i v **tiskárnách** a **multifunkčních zařízeních** – je třeba je **pravidelně mazat**.
-##### 3) Konfigurace zabezpečení a zásad zabezpečení serverů a klientských stanic.
+#### 3) Konfigurace zabezpečení a zásad zabezpečení serverů a klientských stanic.
 ##### Klientské stanice
 - Počítače by měly být **zabezpečeny proti krádeži**
 - Uživatelé by měly **uzamknout počítač** v případě **nepřitomnosti**

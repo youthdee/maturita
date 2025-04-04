@@ -3,19 +3,16 @@
 ##### Model Klient/Server
 - Síť obsahující servery a klienty
 - Síť obsahující server je ideální pro sdílení prostředků a dat, přičemž je dokáže centrálně zabezpečit
-
 ##### Server
-- Počítač poskytující služby
-- Při výběru serveru je vhodné vybrat hardware a software na základě role serveru. kterou bude plnit a na základě výkonu počítačů, které budou serverové služby využívat
-- Role serveru je hlavní úkol, který server plní
+- **Počítač poskytující služby**
+- Při výběru serveru je vhodné vybrat **hardware a software na základě role serveru**. kterou bude plnit a na základě výkonu počítačů, které budou serverové služby využívat
+- **Role serveru** je **hlavní úkol**, který server plní
 	- Přičemž server může plnit současně více rolí (souborové, tiskové, webové, poštovní, databázové...)
-
 ##### Server - Výběr hardwaru
 - Je třeba si uvědomit tyto požadavky:
 	- Server je určen k tomu, aby poskytoval síťové služby více uživatelům současně
 	- Pokud server havaruje nebo se stane nedostupným, ovlivní tato skutečnost klientské počítače, které využívají tento server
 	- Je třeba tyto problémy předvídat, aby se s nimi dalo vypořádat co nejrychleji
-
 ##### Server - výběr softwaru
 - Nejprve je třeba si vybrat operační systém, poté role, které bude operační systém a server plnit a naposled ostatní požadovaný software
 ##### Server - Základní subsystémy serveru
@@ -46,24 +43,18 @@
 		- Sběrnice (Bus) slouží pro přenos dat mezi procesorem a pamětí a I/O zařízeními
 - Po selhání libovolného subsystému havaruje celý server
 - Každý z těchto subsystémů se může stát úzkým hrdlem, které ovlivní výkon celého serveru
-
 ##### Server - Funkce
 - Programy, které nejsou přímou součástí role
 - Požívají se pro rozšíření funkčnosti rolí a tedy i celého serveru
-
 ##### Klient
 - Počítač využívající služby
-
-
 #### 2) Monitorování a řešení problémů u serverů s OS Windows a UNIX-like OS včetně vhodných nástrojů
-
 ##### Metodika řešení problémů
 1) Vyhledat problém
 2) Vyhodnotit konfiguraci systému
 3) Vypsat nebo vytypovat možná řešení problémů a zkusit problém izolovat odstraněním daného hardwaru nebo softwaru
 4) Vykonat naplánované operace
 5) Prověřit výsledek
-
 ##### Windows Server - vhodné nástroje pro řešení problémů a monitorování
 - Systémové informace (MSINFO32.EXE)
 	- Zobrazuje podrobné údaje o konfiguraci PC, komponentách operačního systému, ovladačích atd.
@@ -119,9 +110,7 @@
 	- Status (Status)
 	- Start (Spouštění)
 - Nástroj pro zobrazení chyb v konfiguračních souborech (journalctl)
-
 #### 3) Technologie a komponenty používané pro zajištění nepřetržitého provozu serveru
-
 ##### Odolnost serveru vůči chybám
 - Pro zajištění maximální odolnosti je třeba zjistit:
 	- Které komponenty pravděpodobně havarují
@@ -137,7 +126,6 @@
 	- Operace, při níž se vytváři kopie dat tak, aby se tyto kopie daly později použít k obnovení původních dat, která se poškodila
 	- Provádí se na zálohovací servery, externí disky, cloud, magnetickou pásku
 	- Při plánování zálohování se doporučuje oddělit soubory aplikací a datové soubory
-
 ##### Cluster
 - Seskupení počítačů, které společně pracují jako jeden počítač
 - V závislosti na použité technologii mohou clustery zajistit dostupnost a vyrovnání zátěže
@@ -146,11 +134,9 @@
 	- Clustery s ochranou proti výpadku (failover clusters)
 	- Clustery pro vyrovnání zátěže (load-balancing clusters)
 ##### 4) Možnosti vzdáleného přístupu a správy serveru
-
 ##### Unix-Based OS - SSH
 - Příkaz "ssh {user}@{domain_name} -p {port}"
 - Lze nakonfigurovat připojení v souboru ".ssh/config"
-
 ##### Windows Server - Remote Access Server (RAS)
 - Umožňuje uživatelům se připojit k počítačové síti vzdáleně prostřednictvím různých protokolů a připojení
 - Po připojení k serveru pro vzdálený přístup přes Internet se uživatelé zároveň dostanou do sítě firmy

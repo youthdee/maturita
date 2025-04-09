@@ -1,96 +1,84 @@
 #### 1) Typy a charakteristika místních a síťových úložišť, diskové pole RAID a jeho varianty
 
 ##### Stavba Disku
-- Inicializace disku (MBR nebo GPT) pro způsob vytváření diskových oddílů
-- Vytvoření oddílů
-- Naformátování oddílů
-
+- **Inicializace disku** (MBR nebo GPT) pro způsob vytváření diskových oddílů
+- **Vytvoření oddílů**
+- **Naformátování oddílů**
 ##### Typy úložišť pro pevné disky ve Windows
-- Základní disky
-- Dynamické disky
-	- Používají se pro vytvoření softwarového diskového pole RAID
+- **Základní disky**
+- **Dynamické disky**
+	- Používají se pro vytvoření **softwarového diskového pole RAID**
 	- je možné měnit velikost bez nutnosti restartu operačního systému
 	- Lze vytvářet následujících pět typů svazků:
-		- Jednoduchý svazek
-		- Rozložený svazek
-		- Prokládaný svazek
-		- Zrcadlený svazek
-		- Svazek typu RAID 5
-
+		- **Jednoduchý** svazek
+		- **Rozložený** svazek
+		- **Prokládaný** svazek
+		- **Zrcadlený** svazek
+		- **Svazek typu RAID 5**
 ##### Charakteristika místních úložišť
-- HDD (Hard Disk Drive) je z poloviny elektronické a z poloviny mechanické zařízením která pro princip ukládání dat na otáčející se plotně využívají princip magnetického záznamu
-- SSD (Solid State Drive) je zařízení, které je čistě elektronické
+- **HDD** (Hard Disk Drive) je z **poloviny elektronické** a z **poloviny mechanické** zařízením která pro princip ukládání dat na otáčející se plotně využívají princip magnetického záznamu
+- **SSD** (Solid State Drive) je zařízení, které je **čistě elektronické**
 ##### Charakteristika síťových úložišť
-- SAN (Storage Area Network)
-	- Architektura používaná u diskových polí, páskových či optických knihoven, které se pak jeví jako disky připojené přímo k serveru
-	- Vždy používají nějakou podobu diskového pole RAID, případně nějakou jinou technologii, která zajistí redundanci
-	- Obvykle obsahuje náhradní disky (spare drives)
-	- Kvůli zajištění maximální rychlosti používají protokol SCSI (iSCSI) nebo rozhraní Fibre Channel
-	
-- NAS (Network Attached Storage)
-	- Úložiště pracující na úrovni souborů, které se připojuje k počítačové sítí
-	- Umožňuje přistupovat k uloženým sdíleným diskům či složkám
-	- Realizováno obvykle pomocí protokolu SMB
-	- Obvykle obsahuje několik disků zapojených v diskovém poli RAID
+- **SAN** (Storage Area Network)
+	- Architektura používaná u **diskových polí**, **páskových** či **optických** knihoven, které se pak jeví jako disky připojené přímo k serveru
+	- Vždy používají nějakou podobu diskového pole **RAID**, případně nějakou jinou technologii, která zajistí redundanci
+	- Obvykle obsahuje **náhradní disky** (**spare drives**)
+	- Kvůli zajištění maximální rychlosti používají protokol **SCSI** (iSCSI) nebo rozhraní **Fibre Channel**
+- **NAS** (**Network Attached Storage**)
+	- Úložiště pracující na **úrovni souborů**, které se **připojuje k počítačové sítí**
+	- Umožňuje **přistupovat k uloženým sdíleným diskům či složkám**
+	- Realizováno obvykle pomocí protokolu **SMB**
+	- Obvykle obsahuje několik disků zapojených v diskovém poli **RAID**
 	- Obvykle se tato úložiště spravují přes webové rozhraní
-- Fibre Channel
-	- Komunikační rozhraní o přenosové rychlosti až 128 Gb/s
-	- Používá transportní protokol FCP (Fibre Channel Protocol), který umožňuje používání příkazů SCSI
-- ISCSI (Internet Small Computing System Interface)
+- **Fibre Channel**
+	- Komunikační rozhraní o přenosové rychlosti až **128 Gb/s**
+	- Používá transportní protokol **FCP** (Fibre Channel Protocol), který umožňuje **používání příkazů SCSI**
+- **ISCSI** (Internet Small Computing System Interface)
 	- Síťový standard založený na protokolu IP
 	- Používaný pro propojení datových úložišť
-- SCSI (Small Computing System Interface)
+- **SCSI** (Small Computing System Interface)
 	- Standardní rozhraní a sad příkazů pro výměnu dat mezi externími zařízeními a počítačovou sběrnicí
-
 ##### Disková pole - RAID (Redundant Array of Independent Disks)
-- Diskové pole, které používá současně dva či více disků, z nichž vytvoří systém odolný vůči selhání disků a s maximálním výkonem 
-- Diskové pole lze realizovat jak softwarově, tak hardwarově
-
+- Diskové pole, které používá **současně dva či více disků**, z nichž vytvoří **systém odolný vůči selhání disků** a s **maximálním výkonem** 
+- Diskové pole lze **realizovat jak softwarově**, **tak hardwarově**
 ##### RAID 0 (Prokládání - Stripping)
-- Ukládá data rovnoměrně na všechny disky, které vytváří jeden velký virtuální souborový systém, kde jsou všechny jednotlivé bloky rozprostřeny přes všechny disky
-- Neexistuje možnost kontroly paritou ani odolnost vůči chybám
+- **Ukládá data rovnoměrně na všechny disky**, které vytváří jeden velký virtuální souborový systém, kde jsou všechny jednotlivé bloky rozprostřeny přes všechny disky
+- **Neexistuje možnost kontroly** paritou ani odolnost vůči chybám
 - Nejedná se tedy o skutečnou podobu diskového pole RAID
-- Výhodou je vysoký výkon
-
+- Výhodou je **vysoký výkon**
 ##### RAID 1 (Zrcadlení disku)
-- Při zrcadlení disku se kopíruje obsah disku nebo diskového oddílu na další disk
-- Při ukládání se tedy tato data ukládají na oba disky současně
-- Při havárii jednoho disku počítač přistupuje k datům uloženým na druhém disku
-- Výhodou je rychlost čtení
-
+- Při zrcadlení disku se **kopíruje obsah disku nebo diskového oddílu na další disk**
+- Při ukládání se tedy tato data ukládají na **oba disky současně**
+- Při havárii jednoho disku počítač **přistupuje k datům uloženým na druhém disku**
+- Výhodou je **rychlost čtení**
 ##### RAID 5
-- Podobný RAIDU 0
-- Jeden disk se použije pro uložení paritních dat (oprava chyb), který zajišťuje odolnost diskového pole vůči chybám
-- Paritní data se ukládají na všechny disky kvůli maximalizaci výkonu (Aby výpočet paritiy nezůstával pouze na jednom disku)
+- Jeden disk se použije pro **uložení paritních dat** (**oprava chyb**), který **zajišťuje odolnost diskového pole vůči chybám**
+- **Paritní data** se ukládají na **všechny disky** kvůli **maximalizaci výkonu**
 - Při selhání jednoho disku je možné pokračovat v daném úkonu, díky výpočtům parity z dat na zbývajících discích se zabrání ztrátě dat
-
 ##### Hybridní RAID
-- RAID 1 + RAID 0
+- **RAID 1 + RAID 0**
 	- Zrcadlená sada (1), na níž se provádí prokládání (0)
-- RAD 0 + RAID 1
+- **RAID 0 + RAID 1**
 	- Prokládaná sada (0), na níž se provádí zrcadlení (1)
-
 ##### Hot Spare
-- Náhradní disk, kterým je možné za běhu nahradit vadný disk
+- **Náhradní disk**, kterým je možné **za běhu nahradit vadný disk**
 - Tento disk lze kombinovat s diskovým polem RAID
 - Po selhání disku si server automaticky vezme náhradní disk, kterým jej nahradí a následně obnoví chybějící data
-
 #### 2) Konfigurace diskového pole RAID ve Windows a v UNIX-like OS
-
 ##### Windows OS
-- Disk Management
-- Inicializace disku (MBR nebo GPT)
-- Převod na dynamický disk - New RAID-5 Volume (vybrání disků, celkem tři)
-- Vytvoření jednoduchého svazku
-- Přiřazení identifikátoru (písmena) jednotky nebo cesty
-- Formátování disku (NTFS, exFAT, FAT32, FAT16)
-- Zvětšní svazku
+- **Disk Management**
+- **Inicializace disku** (MBR nebo GPT)
+- **Převod na dynamický disk** - New RAID-5 Volume (vybrání disků, celkem tři)
+- **Vytvoření jednoduchého svazku**
+- **Přiřazení identifikátoru** (písmena) jednotky nebo cesty
+- **Formátování disku** (NTFS, exFAT, FAT32, FAT16)
+- **Zvětšní svazku**
 ##### UNIX-Like OS
-1) Vytvoření diskového pole příkazem "mdadm" 
+1) **Vytvoření diskového pole** příkazem  "**mdadm**"
 	- mdadm -create -verbose {disk1} -leveléstripe -radi.-devices=2 {disk2} {disk3}
-2) Ověření vytvoření pole RAID příkazy "mdadm -detail {disk}" nebo "cat /proc/mdstat"
-3) Formátování zařízení požadovaným souborvým systémem (vytvoření diskových oddílů, formátování souborových systémů, konfigurace oddílů swap)
-4) Sledování činnosti pole monitorovací službou
+2) **Ověření vytvoření** pole RAID příkazy "**mdadm** --**detail** {disk}" nebo "cat /proc/mdstat"
+3) **Formátování** zařízení požadovaným souborovým systémem (vytvoření diskových oddílů, formátování souborových systémů, konfigurace oddílů swap)
+4) **Sledování činnosti** pole monitorovací službou
 	- A přidání výstupu z příkazu "mdadm --detail --scan" do souboru "/etc/mdadm/mdadm.conf"
 5) Složení diskového pole z existujících komponent ("mdadm -assemble -scan")
 6) Zajištění spuštění služby při startu počítače
@@ -100,7 +88,6 @@
 - Rozpojit diskové pole pole lze následujícími způsoby:
 	- příkaz "mdadm --stop {disk}" pro zastavení
 	- příkaz "mdadm --remove" pro odebrání
-
 ##### UNIX-Like OS - Varianty diskového pole RAID
 - RAID 0 (využití u real-time aplikací, kde je výkon důležitější)
 	- mdadm --create --verbose /dev/md0 --level=stripe --raid-devices=2 /dev/sdb1 /dev/sdc1
@@ -114,27 +101,18 @@
 	- mdadm --create --verbose /dev/md0 --level=10 --raid-devices=4 /dev/sd[be]1 --spare-devices=1 /dev/sdf1
 #### 3) Konfigurace prostor úložiště ve Windows a LVM v UNIX-like OS
 
-##### Windows - Stavba disku
-- Na každém disku je třeba před prvním použitím vytvořit diskové oddíly nebo svazky a naformátovat je
-- Aby byl disk použitelný, je třeba nejdříve:
-	- Inicializovat disk (MBR nebo GPT)
-	- Vytvořit oddíly (svazky)
-	- Naformátovat oddíly (vytvořit souborový systém)
-
 ##### Windows - Vytváření diskových oddílů
-- Při vytváření diskových oddílů dochází k dělení fyzického při virtuálního disku na logické jednotky (diskové oddíly)
+- Při vytváření diskových oddílů dochází k dělení fyzického disku na logické jednotky (diskové oddíly)
 - Každý diskový oddíl se chová jako samostatný disk ke kterému je možné přidělit jedinečný identifikátor (písmeno)
 - Způsob rozdělení disku se nachází v tabulce "partition table"
 - Při formátování disku se vytváří souborový systém svazku vytvořením tabulky metadat a dat pro alokaci souborů (File Allocation Table, která udává umístění souborů a složek ve svazku)
-
 ##### Windows - Konfigurace Prostoru úložiště
-- Nástroj správa disků
+- **Nástroj správa disků**
 - Prostory úložiště jsou technologií diskového pole doporučovanou operačním systémem Windows
-	- Vytváří fondy fyzických pevných disků, z nichž je následně možné vytvořit virtuální disky (prostory úložiště)
+	- Vytváří **fondy fyzických pevných disků**, z nichž je následně možné **vytvořit virtuální disky** (prostory úložiště)
 ##### Windows - Způsoby vytváření diskových oddílů
-- Master Boot Record (MBR)
-- GUID Partition Table (GPT)
-
+- **Master Boot Record** (MBR)
+- **GUID Partition Table** (GPT)
 ##### Unix-Like OS - Logical volume Management (LVM)
 - Řešení pro správu místa v uložištích, hlavní výhodou je možnost měnit velikost vzniklých logických celků
 - Struktura LVM:

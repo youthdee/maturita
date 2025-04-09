@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "maturita/Software/Maturitní otázky/16 - Správa a řízení služby Azure.md",
+                "file": "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 16 - Správa a řízení služby Azure"
+              "title": "Backlinks for 1 - Operační systémy - základní pojmy, funkce, licencování"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "byz/resell/Platforms.md",
+                "file": "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Platforms"
+              "title": "Outgoing links from 1 - Operační systémy - základní pojmy, funkce, licencování"
             }
           },
           {
@@ -161,7 +161,8 @@
               "title": "Outline of Platforms"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,9 +181,9 @@
   },
   "active": "9c62db1556817327",
   "lastOpenFiles": [
-    "Untitled 1.md",
-    "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
     "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
+    "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
+    "Untitled 1.md",
     "maturita/Software/Maturitní otázky/17 - Cloudová služba Microsoft 365.md",
     "maturita/Hardware a sítě/Maturitní otázky/4 - Ethernet.md",
     "maturita/Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",

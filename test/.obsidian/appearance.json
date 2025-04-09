@@ -1,4 +1,7 @@
 {
-  "cssTheme": "Ukiyo",
-  "theme": "moonstone"
+  "cssTheme": "Obsidianite",
+  "theme": "moonstone",
+  "accentColor": "#000000",
+  "baseFontSize": 17,
+  "baseFontSizeAction": true
 }

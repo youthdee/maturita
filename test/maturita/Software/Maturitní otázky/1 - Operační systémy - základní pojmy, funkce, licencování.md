@@ -1,92 +1,75 @@
 #### 1) Účel operačního systému, víceuživatelský (multiuser) operační systém, multitasking, multiprocessing, multithreading
-
 ##### Účel operačního systému
 - **Vytvořit rozhraní** a **zajistit komunikaci** mezi **uživatelem**, **aplikacemi** a **hardwarem**
-- **Vytvořit** na pevném **disku** **strukturu souborů**, která umožňuje **ukládání dat**
-- Umožnit uživateli **komunikaci** se **softwarem** a **hardwarem**
+- **Vytvořit** na pevném **disku** **strukturu souborů**
 - Vyhledat požadovanou **aplikaci** a **načíst** ji do **RAM** počítače
-
 ##### Základní pojmy
 -  **Multi-user** (Víceuživatelský operační systém)
-	- V **operačním systému** je zřízeno **více uživatelských účtů** (často má každý uživatel vlastní uživatelský účet)
-	- Díky tomu může na počítači **používat** **aplikace** a **periferní** (přídavná) **zařízení více uživatelů**
+	- V **operačním systému** je zřízeno **více uživatelských účtů** 
+	- **aplikace** a **periferní** **zařízení  může používat více uživatelů**
 	- Umožňuje **pracovat** na počítači **více uživatelům** **současně**
 - **Multitasking**
-	- Na počítači může **běžet více aplikací současně**
+	- Může **běžet více aplikací současně**
 - **Multiprocessing**
-	- Operační systém **podporuje** počítače **s dvěma a více CPU**
-- Multithreading
-	- Některé **aplikace** mohou být **rozděleny** **do několika částí**, které **operační systém načítá** **pouze** **v případě** **potřeby**
-	- Umožňuje, aby mohly **různé části programu běžet současně**
-
+	- Operační systém **podporuje počítač s více procesory**
+- **Multithreading**
+	- **Aplikace rozděleny do dílčích částí**, které jsou **načteny v případě potřeby**
+	- Různé části programu mohou **běžet paralelně**
 #### 2) Základní funkce operačního systému
-
 ##### Základní funkce OS
-- **Komunikace mezi aplikacemi a hardwarem**:
-	- pro **komunikaci** mezi **aplikacemi** a **hardwarem** se používají **ovladače zařízení**
-	- **Detekce hardwaru** a **instalace ovladačů** probíhá v soudobých operačních systémech **automaticky** **prostřednictvím PnP** (Plug and Play)
-		- V opačném případě je nutné nainstalovat ovladač ručně
+- **Komunikace mezi aplikacemi a hardwarem** **pomocí ovladačů**:
+	- **Detekce hardwaru** a **instalace ovladačů** probíhá **automaticky** **prostřednictvím PnP** (Plug and Play)
 - **Správa souborů a složek pro ukládání dat**
-	- Operační systém **vytváří na disku** **strukturu** pro **ukládání dat** **v podobě souborů**, které se **organizují do složek**
-	- **Na disku** se tak **vytvoří** **stromová struktura** složek, podsložek a souborů
+	- **Struktura** pro **ukládání dat** **v podobě souborů**, **organizovaných do složek**
 - **Uživatelské rozhraní**
-	- Slouží **pro komunikaci uživatele s operačním systémem, hardwarem a aplikacemi**
-	- Dělí se na **dva typy**:
-		- **Command-line Interface** "CLI" (textové rozhraní v podobě příkazového řádku)
-		- **Graphical User Interface** "GUI" (grafické rozhraní v podobě ikon a nabídek)
+	- **Komunikaci uživatele s operačním systémem, hardwarem a aplikacemi**
+		- **Command-line Interface**
+		- **Graphical User Interface**
 - **Správa aplikací**
-	- Operační systém **načítá** požadovanou **aplikaci** do paměti **RAM** a **přiděluje** ji potřebné **systémové prostředky**
-	- **Aplikace** **přistupují k prostředkům** spravovaným operačním systémem **prostřednictvím API** (Application Programming Interface), což je **soubor knihoven** pro **přístup k systémovým prostředkům**
-	- Aby byla aplikace **kompatibilní**, musí používat **správné API**
-	- Příklad API:
+	- Načtení požadované **aplikace** do paměti **RAM** a **přidělení** systémových prostředků
+	- **Aplikace** **přistupují k prostředkům** **prostřednictvím API**
 		- **OpenGL** (Multiplatformní specifikace pro grafiku)
 		- **DirectX** (Specifikace pro grafiku ve Windows)
 		- **Windows API** (rozhraní pro práci s ovládacími prvky GUI, správu souborů a uživatelské rozhraní)
 #### 3) Charakteristika a filozofie licencování operačních systémů a softwaru obecně
 
-##### **Komerční Software** (**proprietární**)
-- Software s **uzavřeným zdrojovým kódem**
-- Uživatel **nemá přístup ke zdrojovému kódu**
-- **Autor** programu **uživateli** (nabyvateli licence) **prostřednictvím licence předepisuje podmínky používání programu** (např. EULA od firmy Microsoft)
-- Patří sem například Windows od firmy Microsoft
+##### Komerční Software** (**proprietární**)
+- **Uzavřený zdrojový kód**, ke kterému **uživatel nemá přístup**
+- **Autor** programu **uživateli** předepisuje **podmínky používání** programu **prostřednictvím licence** (např. EULA od firmy Microsoft)
+	- **Windows**
 ##### Filozofie operačního systému Windows
-- Operační systém **Windows** existuje ve **32 bit** a **64 bit** edicích
-- Na trh bylo uvedeno přes **25** **různých verzí Windows**, z nich se ale **nabízí pouze 9**
+- **32bit** a **64bit** verze
+- Uvedeno přes **25** **různých verzí Windows**, **nabízí se pouze 9**
 ##### Open Source Software
-- **Alternativa** ke **komerčnímu softwaru** co se týče **vývoje a distribuce**
+- **Alternativa** ke **komerčnímu softwaru** (**vývoje a distribuce**)
 - **Nabyvatel** licence **není omezen** ve **způsobu používání programu** a má **přístup** ke **zdrojovému kódu** programu
 	- může **používat** program k **libovolnému účelu**
 	- může **pořizovat** **kopie a šířit je**
 	- může **vytvářet** **odvozená díla** a ty pak **šířit**
 	- má **přístup** ke **zdrojovému kódu** programu
 	- může **kombinovat** program s **jinými programy**
-- **Vývoj svobodného softwaru** je spojen se jménem **Richard Stallman** (Vývojář a propagátor svobodného softwaru)
+- Vývoj spojen se jménem **Richard Stallman** (Vývojář a propagátor svobodného softwaru)
 ##### Druhy aplikací dle licence
 - **Original Equipment Manufacturer** (OEM)
 	- **Běžné verze programů** nabízené s **novým HW**
 - **Demoverze**
 	- **Zdarma**, **omezená funkčnost**
-- **Zkušební verze** (trial)
+- **Zkušební verze**
 	- **Plnohodnotná**, **časově omezená** verze
 - **Shareware**
-	- Typicky **plnohodnotná verze**
-	- po **uplynutí lhůty** nutno autorovi **zaplatit za užití**
+	- **Plnohodnotná verze**, po **uplynutí lhůty** nutno autorovi **zaplatit za užití**
 - **Freeware**
-	- Software **dosutpný plně zdarma**
-	- Lze **zdarma** **užívat i šířit**
+	- **Dostupný plně zdarma**, Lze **zdarma** **užívat i šířit**
 - **Public domain**
 	- Software **bez autorských dispozic**
-	- **Práva** autora **expirovala** nebo se jich **vzdal**
 - **Free & Open Source**
-	- **Volně šiřitelný** software **včetně zdrojového kódu**
-	- Organizace, které působí v této oblasti: **Free and Open Source Software** (**FOSS**) a **Free/Libre/Open source Software** (**FLOSS**)
-	- **GNU General Public License** (**GPL**)
+	- **Volně šiřitelný**, **včetně zdrojového kódu**
+	- **FOSS**, **FLOSS**
+- **GNU General Public License** (**GPL**)
 		- Jedna z **nejpopulárnějších** **licencí**
 		- k dispozici ve **třech verzích**
-	- **GNU Lesser General Public License** (**LGPL**)
+- **GNU Lesser General Public License** (**LGPL**)
 		- Umožňuje **likování** **free softwaru** s **non-free knihovnami**
-	
-
 ##### Filozofie UNIX-Like systémů - UNIX
 - Jedním z hlavních **pilířů Open Source** je Linux, který **vychází z UNIXu**
 - UNIX je operační systém **vyvinutý** v **Bellových laboratořích** americké firmy **AT&T** v roce **1969**

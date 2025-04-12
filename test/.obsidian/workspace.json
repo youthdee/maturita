@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "maturita/Software/Maturitní otázky/12 - Správa uživatelů a oprávnění.md",
+                "file": "maturita/Hardware a sítě/Maturitní otázky/1 - Zálkadní pojmy počítačových sítí.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12 - Správa uživatelů a oprávnění"
+              "title": "1 - Zálkadní pojmy počítačových sítí"
             }
           }
         ],
@@ -181,6 +181,15 @@
   },
   "active": "9c62db1556817327",
   "lastOpenFiles": [
+    "maturita/Hardware a sítě/Maturitní otázky/2 - Síťové protokoly a komunikace v síti.md",
+    "maturita/Hardware a sítě/Maturitní otázky/1 - Zálkadní pojmy počítačových sítí.md",
+    "maturita/Software/Maturitní otázky/19 - Služby WWW, FTP.md",
+    "maturita/Software/Maturitní otázky/20 - Virtualizace a kontejnery.md",
+    "maturita/Software/Maturitní otázky/18 - Služby DNS, DHCP.md",
+    "maturita/Software/Maturitní otázky/17 - Cloudová služba Microsoft 365.md",
+    "maturita/Software/Maturitní otázky/16 - Správa a řízení služby Azure.md",
+    "maturita/Software/Maturitní otázky/15 - Služby Azure pro zajištění identity, přístupu a zabezpečení.md",
+    "maturita/Software/Maturitní otázky/12 - Správa uživatelů a oprávnění.md",
     "maturita/Software/Maturitní otázky/11 - Adresářové služby.md",
     "maturita/Software/Maturitní otázky/10 - Zavádění operačního systému.md",
     "maturita/Software/Maturitní otázky/9 - Záloha a obnovení serveru.md",
@@ -193,20 +202,11 @@
     "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
     "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
     "Untitled 1.md",
-    "maturita/Software/Maturitní otázky/17 - Cloudová služba Microsoft 365.md",
     "maturita/Hardware a sítě/Maturitní otázky/4 - Ethernet.md",
     "maturita/Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
     "maturita/Hardware a sítě/Maturitní otázky/3 - Fyzická a linková vrstva referenčního modelu OSI.md",
     "maturita/Hardware a sítě/Maturitní otázky/5 -Síťová vrstva referenčního modelu OSI.md",
     "maturita/Hardware a sítě/Maturitní otázky/6 - Protokoly transportní vrstvy.md",
-    "maturita/Hardware a sítě/Maturitní otázky/7 - Protokoly aplikační vrstvy.md",
-    "maturita/Hardware a sítě/Maturitní otázky/8 - IP adresace a subnetace.md",
-    "maturita/Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
-    "maturita/Hardware a sítě/Maturitní otázky/10 - Bezpečnost v sítích LAN.md",
-    "maturita/Hardware a sítě/Maturitní otázky/12 - Statický routing, Inter-VLAN routing.md",
-    "maturita/Hardware a sítě/Maturitní otázky/13 - Dynamický routing.md",
-    "maturita/Hardware a sítě/Maturitní otázky/14 - Access Control Lists (ACL).md",
-    "maturita/Hardware a sítě/Maturitní otázky/15 - Služba NAT v IPv4.md",
     "vysokeskoly",
     "byz/resell",
     "resell",

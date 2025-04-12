@@ -85,10 +85,10 @@
 	- `chown` pro změnu vlastníka či skupiny
 #### 3) Možnosti a konfigurace přístupu v režimu správce pro běžné uživatele, příkaz sudo a jeho konfigurace.
 ##### Možnosti a konfigurace přístupu v režimu správce pro běžné uživatele
-- Příkaz "chattr" zabraňuje přejmenování, přesunu, smazání a úpravě souboru
-	- "chattr +i {file}" soubor nelze přesunout, přejmenovat, upravit ani smazat a to ani rootem
-	- "chattr +a {file}" do souboru lze přidávat pouze další obsah
-	- "lsattr {file}" zobrazí speciální oprávnění u daného souboru 
+- Nástroj `chattr` **zabraňuje přejmenování**, **přesunu, smazání a úpravě souboru**
+	- `chattr +i {file}` - nelze přesunout, přejmenovat, upravit ani smazat a to ani rootem
+	- `chattr +a {file}` - lze přidávat pouze další obsah
+	- `lsattr {file}` zobrazí speciální oprávnění u daného souboru 
 ##### Přístup k účtu root
 - **Příkaz** `su`:
 	- Přesun do domovského adresáře příkazem `su -`

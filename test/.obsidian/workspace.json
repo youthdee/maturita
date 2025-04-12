@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
+                "file": "maturita/Software/Maturitní otázky/12 - Správa uživatelů a oprávnění.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS"
+              "title": "12 - Správa uživatelů a oprávnění"
             }
           }
         ],
@@ -181,6 +181,14 @@
   },
   "active": "9c62db1556817327",
   "lastOpenFiles": [
+    "maturita/Software/Maturitní otázky/11 - Adresářové služby.md",
+    "maturita/Software/Maturitní otázky/10 - Zavádění operačního systému.md",
+    "maturita/Software/Maturitní otázky/9 - Záloha a obnovení serveru.md",
+    "maturita/Software/Maturitní otázky/8 - Správa diskových oddílů.md",
+    "maturita/Software/Maturitní otázky/7 - Správa uložišť.md",
+    "maturita/Software/Maturitní otázky/6 - Model klient-server u operačních systémů, instalace, monitorování a řešení problémů u serverů.md",
+    "maturita/Software/Maturitní otázky/5 - Operační systémy v mobilních zařízení.md",
+    "maturita/Software/Maturitní otázky/4 - Zabezpečení operačních systémů.md",
     "maturita/Software/Maturitní otázky/3 - Správa operačních systému Windows a UNIX-like OS.md",
     "maturita/Software/Maturitní otázky/2 - Základní charakteristiky a principy ovládání operačního systému Windows a UNIX-like OS.md",
     "maturita/Software/Maturitní otázky/1 - Operační systémy - základní pojmy, funkce, licencování.md",
@@ -199,14 +207,6 @@
     "maturita/Hardware a sítě/Maturitní otázky/13 - Dynamický routing.md",
     "maturita/Hardware a sítě/Maturitní otázky/14 - Access Control Lists (ACL).md",
     "maturita/Hardware a sítě/Maturitní otázky/15 - Služba NAT v IPv4.md",
-    "maturita/Hardware a sítě/Maturitní otázky/20 - VPN a IPsec.md",
-    "maturita/Hardware a sítě/Maturitní otázky/19 - Standardy a technologie sítí WAN.md",
-    "maturita/Hardware a sítě/Maturitní otázky/18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
-    "maturita/Hardware a sítě/Maturitní otázky/17 - Protokol STP a EtherChannel.md",
-    "maturita/Hardware a sítě/Maturitní otázky/16 - Správa VLAN ve středně velkých a velkých sítích.md",
-    "maturita/Hardware a sítě/Maturitní otázky/2 - Síťové protokoly a komunikace v síti.md",
-    "maturita/Hardware a sítě/Maturitní otázky/1 - Zálkadní pojmy počítačových sítí.md",
-    "vysokeskoly/Zakladní Informace.md",
     "vysokeskoly",
     "byz/resell",
     "resell",

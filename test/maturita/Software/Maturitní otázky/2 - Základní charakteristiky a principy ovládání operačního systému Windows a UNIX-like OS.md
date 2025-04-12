@@ -14,7 +14,7 @@
 	- 2012
 	- Proměna uživatelského rozhraní
 	- Kompatibilitu s dotykovými obrazovkami, tablety a mobilními zařízeními
-	- Méně populární aneúspěšná verze
+	- Méně populární a neúspěšná verze
 3) **Windows 8.1**:
 	- 2013
 	- Obrazovka, na kterou byli uživatelé zvyklí a plnohodnotná nabídka start

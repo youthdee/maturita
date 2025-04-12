@@ -1,7 +1,7 @@
 #### 1) Správa uživatelů a skupin v OS Windows
 ##### Správa uživatelů v OS Windows
 - Umožňují **přihlásit** se do **počítače** nebo do **domény**
-- Slouží k **ověření identity uživatele** a následně k **zjišťování**, kčemu bude **uživatel přistupovat** a **jakou úroveň pověření** vlastní
+- Slouží k **ověření identity uživatele** a následně k **zjišťování**, k čemu bude **uživatel přistupovat** a **jakou úroveň pověření** vlastní
 - **Uživatelský účet** lze také použít pro **audit**
 - V **soudobých sítích** s prvky s nainstalovaných operačním systémem **Windows** se používají **místní** a **doménové uživatelské účty**
 ##### Správa uživatelů v OS Windows - Profil uživatele

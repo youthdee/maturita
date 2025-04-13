@@ -1,58 +1,61 @@
 #### 1) Účel IP adresace, zápis, struktura a druhy IPv4 adres
 
 ##### Účel IP adresace
-- Slouží k jednoznačné identifikaci síťového rozhraní v síti a umožňuje směrování paketů mezi různými sítěmi
-- IP adresy jsou logické a jsou přidělovány síťovému rozhraní operačním systémem dle konfigurace nebo automaticky
-- Každý uzel v lokální síti musí mít unikátní IP adresu, která patří do stejné IP sítě
-- Každý přímo dostupný uzel v Internetu musí mít unikátní IP veřejnou adresu
+- Slouží k **jednoznačné identifikaci** síťového rozhraní v síti a umožňuje **směrování paketů** mezi různými sítěmi
+- **IP adresy jsou logické** a jsou přidělovány síťovému rozhraní operačním systémem **dle konfigurace** nebo **automaticky**
+- Každý uzel v lokální síti musí **mít unikátní IP adresu**, která patří do stejné IP sítě
+- Každý přímo dostupný uzel v Internetu musí mít **unikátní IP veřejnou adresu**
 ##### IPv4 adresy
-- IPv4 adresa je 32 bitové číslo, tvořené 4 osmibitovými částmi (oktety), oddělenými tečkou
+- **IPv4 adresa je 32 bitové číslo, tvořené 4 osmibitovými částmi (oktety), oddělenými tečkou**:
 	- Jednotlivé oktety se zapisují dekadicky (0 až 255)
-- IPv4 adresa má dvě logické části:
-	- Adresu sítě (vyšší bity vlevo), tuto část adresy mají všechny uzly v jedné logické síti stejnou, označována jako prefix (síťový prefix)
-	- Adresu uzlu v síti (nižší bity vpravo), touto částí adresy se jednotlivé uzly v logické síti liší
-- Hranice mezi oběma částmi IPv4 adresy je určena maskou podsítě, která je dána délkou prefixu:
-	- Zapisuje se na konec adresy za lomítko a nabývá hodnot 0 až 32
-	- Délka prefixu určuje kolik jedničkových bitů zleva je v masce podsítě
-	- Zapisuje se ve stejném formátu jako IPv4 adresa v dekadické podobě
-- Síťový rozsah (velikost sítě) je dán celkovým počtem IP adres, které je možné v síti vytvořit
-- První adresa v síťovém rozsahu je vždy adresou sítě (vždy končí sudým číslem)
-- Poslední adresa v rozsahu je vždy adresou broadcastu (vždy končí lichým číslem)
-
+- **IPv4 adresa má dvě logické části**:
+	1) Adresu sítě (vyšší bity vlevo), tuto část adresy mají všechny uzly v jedné logické síti stejnou, označována jako prefix (síťový prefix)
+	2) Adresu uzlu v síti (nižší bity vpravo), touto částí adresy se jednotlivé uzly v logické síti liší
+- **Hranice mezi oběma částmi IPv4 adresy je určena maskou podsítě, která je dána délkou prefixu**:
+	1) Zapisuje se na konec adresy za lomítko a nabývá hodnot 0 až 32
+	2) Délka prefixu určuje kolik jedničkových bitů zleva je v masce podsítě
+	3) Zapisuje se ve stejném formátu jako IPv4 adresa v dekadické podobě
+- Síťový rozsah (velikost sítě) je dán celkovým **počtem IP adres**, které je možné v síti vytvořit
+- **První adresa** v síťovém rozsahu je vždy **adresou sítě** (**vždy končí sudým číslem**)
+- **Poslední adresa** v rozsahu je vždy adresou **broadcastu** (**vždy končí lichým číslem**)
 ##### Druhy IPv4 Adres
-- Unicast:
+1) **Unicast**:
 	- Individuální adresa síťového rozhraní, pakety odeslané na unicast adresu obdrží právě jeden uzel v síti
-- Multicast:
+2) **Multicast**:
 	- Slouží k adresování definovaných skupin síťových rozhraní, pakety odeslané na multicast adresu jsou doručeny všem členům skupiny
 	- Např. 224.0.0.1 je adresa pro všechny prvky v linkovém segmentu sítě
 	- Multicast adresa není nikdy používána jako zdrojová adresa
-- Broadcast:
+3) **Broadcast**:
 	- Pakety odeslané na broadcast adresu jsou doručeny všem uzlům v logické síti
 	- V případě limitovaného broadcastu (255.255.255.255) jsou pakety doručeny všem uzlům v broadcastové doméně (všem uzlům v síťovém segmentu)
 	- V případě řízeného broadcastu (poslední adresa v síťovém rozsahu) jsou pakety doručeny všem uzlům v konkrétní IP síti
 
 ##### Dělení IPv4 adres do tříd
-- Některé síťové rozsahy či jednotlivé adresy jsou rezervovány pro použití v privátních sítích a některé mají speciální význam
-- Privátní rozsahy nejsou globálně routovatelné v Internetu
+- Některé síťové rozsahy či jednotlivé adresy jsou **rezervovány** pro použití v **privátních sítích** a některé mají **speciální význam**
+- Privátní rozsahy nejsou **globálně routovatelné** v Internetu
 - Přidělováním IP adres typu A a B se velmi plýtvalo s veřejnými IPv4 adresami a začaly brzy docházet
-- Řešením je NAT (Network Address Translation) což je přechod na classless (systémy v Internetu ignorují pravidla pro třídy adres) pro fungování routingu v Internetu a vývoj IPv6
+- Řešením je **NAT** (Network Address Translation) což je přechod na **classless** (systémy v Internetu ignorují pravidla pro třídy adres) pro fungování routingu v Internetu a vývoj IPv6
 - Jednotlivé třídy:
-	- Třída A (0.0.0.0/8 do 127.0.0.0/8)
-	- Třída B (128.0.0.0/16 do 191.255.0.0/16)
-	- Třída C (192.0.0.0/24 do 223.255.255.0/24)
-	- Třída D (224.0.0.0 do 239.0.0.0)
-	- Třída E (240.0.0.0 do 255.0.0.0)
-
+	1) Třída A:
+		- `0.0.0.0/8` do `127.0.0.0/8`
+	2) Třída B:
+		- `128.0.0.0/16` do `191.255.0.0/16`
+	3) Třída C:
+		- `192.0.0.0/24` do `223.255.255.0/24`
+	4) Třída D:
+		- `224.0.0.0` do `239.0.0.0`
+	5) Třída E:
+		- `240.0.0.0` do `255.0.0.0`
 ##### Privátní síťové rozsahy IPv4 adres
-- Rozsahy pro použití na adresaci v lokální sítích:
-	- 10.0.0.0/8
-	- 172.16.0.0/12
-	- 192.168.0.0/16
-- Speciálním druhem IPv4 adresy je loopback:
-	- Pro tento typ adres je rezervován rozsah 127.0.0.0/8
+- **Rozsahy pro použití na adresaci v lokální sítích**:
+	- `10.0.0.0/8`
+	- `172.16.0.0/12`
+	- `192.168.0.0/16`
+- **Speciálním druhem IPv4 adresy je loopback**:
+	- Pro tento typ adres je rezervován rozsah `127.0.0.0/8`
 	- Jedná se o lokální logickou smyčku z původního zařízení zpět ke zdroji
-- Pro automaticky přiřazované IPv4 adresy slouží rozsah 169.254.0.0/16 (link-state local address), známé jako APIPA (Automatic Private IP Addressing)
-- Pro default route se používá adresa 0.0.0.0/0 (této adrese vyhoví všechny pakety)
+- Pro automaticky přiřazované IPv4 adresy slouží rozsah `169.254.0.0/16` (link-state local address), známé jako APIPA (Automatic Private IP Addressing)
+- Pro default route se používá adresa `0.0.0.0/0` (této adrese vyhoví všechny pakety)
 #### 2) IPv6 – důvody vzniku, zápis, struktura a druhy IPv6 adres
 
 ##### Možnosti zápisu IPv6 adresy

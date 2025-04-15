@@ -1,5 +1,4 @@
 #### 1) Účel IP adresace, zápis, struktura a druhy IPv4 adres
-
 ##### Účel IP adresace
 - Slouží k **jednoznačné identifikaci** síťového rozhraní v síti a umožňuje **směrování paketů** mezi různými sítěmi
 - **IP adresy jsou logické** a jsou přidělovány síťovému rozhraní operačním systémem **dle konfigurace** nebo **automaticky**
@@ -59,80 +58,76 @@
 #### 2) IPv6 – důvody vzniku, zápis, struktura a druhy IPv6 adres
 
 ##### Možnosti zápisu IPv6 adresy
-
+//TODO
 ##### Struktura IPv6 adres
-- IPv6 adresa má 128 bitů, je tvořena 8 slovy:
-	- Každé slovo má 16 bitů a zapisuje se jako čtyřznakové hexadecimální číslo
+1) **IPv6 adresa má 128 bitů, je tvořena 8 slovy**:
+	- Každé slovo má `16 bitů` a zapisuje se jako čtyřznakové hexadecimální číslo
 	- Jednotlivá slova jsou oddělena dvojtečkami
-- IPv6 adresa má 3 logické části (zleva):
+2) **IPv6 adresa má 3 logické části** (**zleva**):
 	- Globální routovací prefix (global prefix):
-		- Přidělován ISP
-		- 48 bitů až 64 bitů
-		- Podsíť se vytvoří zvětšením prefixu o velikost podsítě (maximálně 16 bitů)
-	- Identifikátor podsítě (subnet ID)
-		- 16 bitů
-	- Identifikátor rozhraní (Interface ID)
-		- 64 bitů
+		- Přidělován `ISP`
+		- `48 bitů` až `64 bitů`
+		- Podsíť se vytvoří zvětšením prefixu o velikost podsítě (maximálně `16 bitů`)
+	- Identifikátor podsítě (`subnet ID`)
+		- `16 bitů`
+	- Identifikátor rozhraní (`Interface ID`)
+		- `64 bitů`
 - Hodnota prefixu od ISP udává veřejně routovatelnou síť
-- Identifikátor rozhraní ma velikost 64 bitů a zde ho vytvořit několika způsoby:
+1) Identifikátor rozhraní má velikost `64 bitů` a zde ho vytvořit několika způsoby:
 	- Manuální statické přiřazení
-	- Transformování MAC adresy pomocí EUI-64
+	- Transformování `MAC` adresy pomocí `EUI-64`
 	- Vygenerování operačním systémem náhodnou hodnotou
-
 ##### Důvody vzniku IPv6 Adres
-- IPv6 adresy jsou koncipovány tak, aby jich nikdy nebyl nedostatek (IPv4 adresy začaly brzy docházet)
-- Z principu musí mít každé síťové rozhraní veřejně routovatelnou IPv6 adresu
-
+- IPv6 adresy jsou koncipovány tak, aby jich nikdy **nebyl nedostatek** (IPv4 adresy začaly brzy docházet)
+- Z principu musí mít každé síťové rozhraní **veřejně routovatelnou IPv6 adresu**
 ##### Druhy cílových IPv6 adres
-- Unicast:
-	- Obdobné jako v IPv4
+1) **Unicast**:
+	- Obdobné jako v `IPv4`
 	- Reprezentováno global unicast adresou uzlu
-- Multicast:
-	- Obdoné jako v IPv4
+2) **Multicast**:
+	- Obdoné jako v `IPv4`
 	- Umožňuje odesílání paketu více uzlům najednou (uzly mohou být kdekoliv v Internetu)
 	- Definovaných skupinových adres je mnoho, některé z nich jsou uzlům nastavovány povinně
 	- Skupiny mohou být veřejné i privátní
-	- Broadcast v IPv6 neexistuje, je nahrazen multicast adresou všech uzlů v lokálním linkovém segmentu sítě
-- Anycast:
+	- Broadcast v `IPv6` neexistuje, je nahrazen multicast adresou všech uzlů v lokálním linkovém segmentu sítě
+3) **Anycast**:
 	- Výběrová adresa, která označuje skupinu síťových zařízení
-	- Při routingu jsou pakety doručeny nejbližšímu zařízení s anycast adresou (využití u služby DNS)
+	- Při routingu jsou pakety doručeny nejbližšímu zařízení s anycast adresou (využití u služby `DNS`)
 	- Nemají vlastní síťový rozsah
-
 ##### IPv6 adresy na síťových rozhraních
-- Každé síťové rozhraní v IPv6 má přiřazeno několik (často povinných) IPv6 adres, některé si generuje automaticky:
-	- Global Unicast Adresa:
+- Každé síťové rozhraní v IPv6 má přiřazeno **několik** (často povinných) `IPv6` adres, některé si generuje automaticky:
+	1) **Global Unicast Adresa**:
 		- Veřejně routovatelná adresa, zajišťuje jednoznačnou identifikaci v Internetu
 		- Jedná se o Globální Prefix s identifikátorem rozhraní
-	- Link Local Adresa:
+	2) **Link Local Adresa**:
 		- Automaticky generovaná povinná adresa
 		- Používaná pro komunikaci v lokální síti, nelze ji routovat přes Internet
-		- Používá rozsah FE80::/10, ke kterému je přidán identifikátor rozhraní
-	- Povinné Multicast Adresy:
-		- Používají společný prefix FF00::/8
-		- FF02::1 je multicast adresa všech uzlů v lokálním linkovém segmentu sítě (nahrazuje broadcast)
-		- FF01::1 je multicast adresa pro vyzývaný uzel (ND)
-		- FF02::1:ffxx:xxxx je multicast adresa, kde poslední 3 bajty jsou převzaty z konce MAC adresy síťového rozhraní
-	- IPv6 Loopback adresa
+		- Používá rozsah `FE80::/10`, ke kterému je přidán identifikátor rozhraní
+	3) **Povinné Multicast Adresy**:
+		- Používají společný prefix `FF00::/8`
+		- `FF02::1` je multicast adresa všech uzlů v lokálním linkovém segmentu sítě (nahrazuje broadcast)
+		- `FF01::1` je multicast adresa pro vyzývaný uzel (ND)
+		- `FF02::1:ffxx:xxxx` je multicast adresa, kde poslední 3 bajty jsou převzaty z konce MAC adresy síťového rozhraní
+	4) `IPv6` **Loopback adresa**:
 		- Adresa ::1/128
-	- IPv6 Default gateway využívá adresu ::/0
+	5) `IPv6` Default gateway využívá adresu ::/0
 #### 3) Subnetace, VLSM
 ##### Subnetace v IPv4
-- Subnetace se používá pro potřebu rozdělení větší logické sítě na několik menších logických sítí
+- Subnetace se používá pro potřebu **rozdělení** větší logické sítě na několik **menších logických sítí**
 - Dva způsoby, jak rozdělit síť na subnety:
-	- FLSM (Fixed-Length Subnet Masking):
+	1) **FLSM** (Fixed-Length Subnet Masking):
 		- Každý subnet má stejnou masku a tím pádem je v každém subnetu stejný počet hostitelů
-	- VLSM (Variable-Length Subnet Masking):
+	2) **VLSM** (Variable-Length Subnet Masking):
 		- Efektivnější způsob využití přiděleného síťového rozsahu
 		- Maska podsítě se určí dle požadovaného počtu IP adres v subnetu (omezeno mocninou čísla 2)
-- Při subnetaci je nutné dodržet nepřekrývání, což znamená, že IP adresa uzlu v jednom subnetu se nesmí vyskytovat v jiném subnetu
-
+- Při subnetaci je nutné dodržet **nepřekrývání**:
+	- Což znamená, že IP adresa uzlu v jednom subnetu se nesmí vyskytovat v jiném subnetu
 ##### VLSM
 1) Napsat prefix a dekadickou podobu masky jednotlivých subnetů
 2) Napsat skutečný počet adresovatelných zařízení v subnetu
 3) Napsat počet subnetů
 4) Napsat adresu každého subnetu
-
 ##### Postup VLSM
-- Subnety seřadit podle velikosti a oddělovat od největšího subnetu
-- K subnetu najít nejbližší mocninou čísla 2 k počtu požadovaných zařízení a zjistit tím prefix (32 - mocnina dvou)
-- První adresou je adresa sítě a poslední adresou je adresa broadcastu
+1) Subnety seřadit podle velikosti a oddělovat od největšího subnetu
+2) K subnetu najít nejbližší mocninou čísla 2 k počtu požadovaných zařízení a zjistit tím prefix (32 - mocnina dvou)
+3) První adresou je adresa sítě a poslední adresou je adresa broadcastu

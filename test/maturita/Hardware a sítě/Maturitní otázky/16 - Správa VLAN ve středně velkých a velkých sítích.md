@@ -1,54 +1,47 @@
 #### 1) Princip hierarchického návrhu sítě a jeho vlastnosti
-
 ##### Potřeba škálovatelnosti sítí
-- Zaměstnanci potřebují přistupovat k datům mnoha způsoby, kdykoliv, kdekoliv a na libovolném zařízení
-- Potřeba bezpečných , spolehlivých a vysoce dostupných sítí, které musí vyhovovat nejen stávajícím, ale i boduoucím požadavkům
-- Podnikání organizace se v čase mění, roste počet zaměstnanců a přibývá počet poboček
-- Návrh sítě musí být proveden tak, aby síť rostla s organizací
-- Síť je škálovatelná vzhledek k měnícím se požadavkům
+- Zaměstnanci potřebují přistupovat k datům mnoha způsoby, **kdykoliv**, **kdekoliv** a na **libovolném** zařízení
+- Potřeba **bezpečných** , **spolehlivých** a **vysoce dostupných sítí**, které musí vyhovovat nejen stávajícím, ale i budoucím požadavkům
+- Návrh sítě musí být proveden tak, **aby síť rostla s organizací**
 - Hlavní funkce škálovatelného návrhu sítě:
-	- Přidání rozšiřitelných, modulárních síťových prvků (možnost přidání modulu předchází nutnosti upgradu celého zařízení)
-	- Nasazení hierarchického, modulárního návrhu sítě (umožňuje rozšíření přidáním nových zařízení bez vlivu na stávající síť)
-	- Návrh hierarchického IPv4/IPv6 adresního schématu (pečlivé plánování adresaci v síti předchází nutnosti provádění změn)
-	- Segmentace sítě, nasazení IP směrování a firewallu (omezuje šíření broadcastů v síti, na routerech filtrace provozu)
+	1) **Přidání rozšiřitelných, modulárních síťových prvků**:
+		- Možnost přidání modulu předchází nutnosti upgradu celého zařízení
+	2) **Nasazení hierarchického, modulárního návrhu sítě**:
+		- Umožňuje rozšíření přidáním nových zařízení bez vlivu na stávající síť
+	3) **Návrh hierarchického** `IPv4`/`IPv6` **adresního schématu**:
+		- Pečlivé plánování adresaci v síti předchází nutnosti provádění změn
+	4) **Segmentace sítě, nasazení** `IP` **směrování a** `firewallu`
+		- Omezuje šíření broadcastů v síti, na routerech filtrace provozu
 ##### Přepínané sítě bez hranic
-- Cisco Borderless Network:
+- **Cisco Borderless Network**:
 	- Síťová architektura, která se přizpůsobí požadavkům
-- Sjednocuje pevné (wired) a bezdrátové sítě
-- Využívá hierarchické stavby, je škálovatelná a odolná
-- Borderless sítě jsou hierarchické, modulární, flexibilní a odolné
-- Jejich implemetnace nabízí vlastnosti moderních sítí (škálovatelnost, bezpečnost a spravovatelnost)
+- Využívá **hierarchické** stavby, je **škálovatelná** a **odolná**
+- Jejich implemetnace nabízí vlastnosti moderních sítí:
+	- **Škálovatelnost**, **bezpečnost** a **spravovatelnost**
 - Implementují vrstevný přístup k síťovému návrhu:
-	- Access
-	- Disribution
-	- Core
+	1) `Access`
+	2) `Disribution`
+	3) `Core`
 - Dva základní modely:
-	- Třívstvý
-	- Douvrstvý
-- Volba modelu záleží podle finančních možností a potřeb dané organizace
-- Dříve jednoduché L2 sítě (hubs, repeaters, bridges)
-- Dnes přepínané, segmentované sítě (switches, routers, APs)
-
+	1) `Třívstvý`
+	2) `Douvrstvý`
 ##### Funkce vrstev
-- Access:
+1) `Access`:
 	- Poskytuje síťový přístup koncovým uživatelům a zařízením
-	- Switche (přepínače) této vrstvy jsou propojeny se switchi (přepínači) vrstvy následující
-- Distribution:
-	- Implementuje směrování, QoS a zabezpečení
-	- Sdružuje rozsáhlé síťové rozvody, omezuje L2 broadcastové domény
-- Core:
+	- Switche této vrstvy jsou propojeny se switchi vrstvy následující
+2) `Distribution`:
+	- Implementuje směrování, `QoS` a zabezpečení
+	- Sdružuje rozsáhlé síťové rozvody, omezuje` L2` broadcastové domény
+3) `Core`:
 	- Zajišťuje vysokorychlostní, páteřní síťové propojení
-	- Zprostředkuje připojení do sítí WAN a Internetu
-
+	- Zprostředkuje připojení do sítí `WAN` a Internetu
 ##### Třívrstvá síť
-- Vrstvy Distribution a Core existují oddělelně
-- Topologie je rozšířená hvězda (Extended Star)
-
+- Vrstvy `Distribution` a` Core` existují **oddělelně**
+- Topologie je rozšířená hvězda (`Extended Star`)
 ##### Dvouvrstvá síť
-- Vrstvy Distribution a Core jsou sdruženy
-- Výhodné řešení v menších, lokalizovaných sítích
-- Označováno jako "Collapsed Network Design"
-
+- Vrstvy `Distribution` a` Core` jsou **sdruženy**
+- Výhodné řešení v **menších**, **lokalizovaných** sítích
+- Označováno jako "**Collapsed Network Design**"
 #### 2) Správa VLAN na Cisco switchích
 
 ##### Druhy VLAN
@@ -120,42 +113,36 @@
 	- Příkaz "no vlan {id}" pro odstranění VLAN se zadaným Id (přiřazený port poté přestane fungovat)
 
 #### 3) Protokol DTP a jeho dopady na bezpečnost sítě
-
 ##### Charakteristika DTP
-- Proprietární Cisco protokol
-- Umožňuje automatickou konfiguraci trunkového režimu mezi Cisco Switchi (přepínači)
-- Používán pro automatické nastavení trunkového portu mezi dvěma Cisco switchi (přepínači) na základě vzorců komunikace
+- **Proprietární Cisco protokol**
+- Umožňuje **automatickou konfiguraci trunkového režimu** mezi Cisco Switchi na základě vzorců komunikace
 ##### Režimy DTP
-- Auto
+1) `Auto`:
 	- Port se pokusí automaticky navázat trunk spoj, pokud je druhý port nastaven na trunk nebo dostane požadavek na nastavení spoje jako trunk
-- Desirable
+2) `Desirable`:
 	- Port aktivně vyhledává možnost vytvoření trunku
-- On
+3) `On`:
 	- Trunk je povolen bez jakéhokoliv vyjednávání
-- Off
+4) `Off`:
 	- Trunk je zakázan
-- Nonegotiate
+5) `Nonegotiate`:
 	- Neporvádí se žádné vyjednávání trunkového spoje, port je nastaven na trunk ale vyjednávání probíhá ručně
-
 ##### Dopady DTP na bezpečnost sítě
-- Nepředvídatelné chování portů
+1) **Nepředvídatelné chování portů**:
 	- Porty se mohou automaticky přepnout do trunkového režimu, což může způsobit bezpečnostní hrozby
-- Rizika VLAN Hoppingu
-	- DTP může být zneužito pro VLAN hopping útoky, kdy útočník může získat přístup do jiných VLAN než je povoleno
-- Vytváření neautorizovaných trunků
-	- Pokud není DTP správně nakonfigurováno, může to umožnit neautorizovaným zařízením navázat trunk se switchem (přepínačem), čímž získají přístup k více síťovým segmentům
-
+2) **Rizika** `VLAN` `Hoppingu`:
+	- `DTP` může být zneužito pro `VLAN hopping` útoky, kdy útočník může získat přístup do jiných `VLAN` než je povoleno
+3) **Vytváření neautorizovaných trunků**:
+	- Pokud není `DTP` správně nakonfigurováno, může to umožnit neautorizovaným zařízením navázat trunk se switchem, čímž získají přístup k více síťovým segmentům
 #### 4) Layer 3 Switching – vlastnosti a způsoby nasazení
-
 ##### Charakteristika L3 Switchingu
-- Kombinuje vlastnosti tradičního směrování a přepínání
-- Na rozdíl od L2 switche je L3 switch schopný směrovat pakety mezi různými subnety na síťové vrstvě
-- Rychlý přenos dat
+1) Kombinuje **vlastnosti tradičního směrování a přepínání**
+2) Schopný **směrovat pakety** mezi různými subnety na síťové vrstvě
+3) **Rychlý přenos dat*:*
 	- Používá hardwarové tabulky pro směrování
-- Zjednodušená správa sítě
+4) **Zjednodušená správa sítě**:
 	- Je schopen zastoupit roli routeru a tím sloučit router a switch do jednoho zařízení
-
 ##### Způsoby nasazení L3 Switche
-- Inter-VLAN Routing
-- Datová centra a cloudová řešení
-- Kombinace s firewall řešeními
+1) Inter-VLAN Routing
+2) Datová centra a cloudová řešení
+3) Kombinace s firewall řešeními

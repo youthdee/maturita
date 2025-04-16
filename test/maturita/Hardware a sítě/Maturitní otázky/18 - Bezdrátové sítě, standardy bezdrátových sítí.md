@@ -1,58 +1,52 @@
 #### 1) Současné technologie bezdrátových sítí
-
 ##### Způsoby bezdrátového přenosu
-- Zvukový přenos (hustotní vlny šířící se vzdušným či vodním prostředím)
-- Optický přenos (světelné vlny šířící se průhledným prostředím)
-- Přenos pomocí magnetického pole (střídavé magnetické pole na kratší vzdálenost)
-- Rádiový přenos (vysokofrekvenční elektromagnetické vlny ve vzdušném prostředí nebo vakuu)
-
+1) **Zvukový přenos**:
+	- Hustotní vlny šířící se vzdušným či vodním prostředím
+2) **Optický přenos**:
+	- Světelné vlny šířící se průhledným prostředím
+3) **Přenos pomocí**:
+	- Magnetického pole (střídavé magnetické pole na kratší vzdálenost
+4) **Rádiový přenos**:
+	-  Vysokofrekvenční elektromagnetické vlny ve vzdušném prostředí nebo vakuu
 ##### Bezdrátové sítě Bluetooth
-- Standard IEEE 802.15.1 (již společností nespravovaný)
-- Bluetooth trademark patří Bluetooth SIG
-- Frekvence od 2,4 do 2,48 GHz (ISM pásmo - Industrial, Scientific, Medical)
-- Určen pro PAN (Personal Area Network)
-	- Až 7 zařízení ve společné síti, role master/slave
-- Dosah až 100 m
-
+- Standard `IEEE 802.15.1`
+- Frekvence od `2,4` do `2,48 GHz`: 
+	- `ISM` pásmo - Industrial, Scientific, Medical
+- Určen pro `PAN` (Personal Area Network):
+	- Až 7 zařízení ve společné síti, role `master`/`slave`
+- Dosah až `100 m`
 ##### Bezdrátové sitě WLAN (Wi-Fi)
-- Standard IEEE 802.11
-	- 802.11b (až 11 Mb/s)
-	- 802.11g (až 54 Mb/s)
-	- 802.11n (až 600 Mb/s)
-	- 802.11ac (až 1,69 Gb/s)
-- Wi-Fi trademark asociace Wi-Fi Alliance (Wi-Fi Certified pouze pro certifikovaná zařízení)
-- Frekvenční pásma 2,45 GHz a 5 GHz
-	- ISM pásma (Industrial, Scientific and Medical)
-	- U-NII pásma (Unlicensed National Information Infrastructure)
-- Dva možné režimy provozu: Infratrukturní režim a ad-hoc režim
-- Název bezdrátové sítě je dán Service Set ID (SSID)
-- Zabezpečení:
-	- WEP (Wired Equivalent Privacy)
+1) `Standard IEEE 802.11`
+	1) `802.11b` (až 11 Mb/s)
+	2) `802.11g` (až 54 Mb/s)
+	3) `802.11n` (až 600 Mb/s)
+	4) `802.11ac` (až 1,69 Gb/s)
+2) **Frekvenční pásma** `2,45 GHz` a `5 GHz`
+	- `ISM` pásma (Industrial, Scientific and Medical)
+	- `U-NII` pásma (Unlicensed National Information Infrastructure)
+3) Dva možné **režimy provozu**:
+	- Infratrukturní režim
+	- Ad-hoc režim
+4) **Název** bezdrátové sítě je dán **Service Set ID** (`SSID`)
+5) **Zabezpečení**:
+	1) `WEP` (Wired Equivalent Privacy)
 		- Zranitelné, nepoužívá se
-	- Wi-Fi Protected Access (WPA, WPA2, WPA3)
+	2) Wi-Fi Protected Access (`WPA`, `WPA2`, `WPA3`)
 		- V režimu PSK se volí SSID a heslo
 		- V režimu Enterpise autentizace probíhá přes RADIUS server
-	- Wi-fi Protected Setup (WPS)
-
+	3) Wi-fi Protected Setup (`WPS`)
 ##### Celluar
-- Komunikace probíhá pomocí radiových vln na nejlbližší mobilní věž
-- 3G/4G/5G a LTE
-
+- Komunikace probíhá pomocí radiových vln na nejbližší mobilní věž
+- `3G`/`4G`/`5G` a `LTE`
 ##### Satelit
-- Typicky používané v oblastech kde není dostupné kabelové a DSL připojení
-- K přístupu k Internetu uživatelé potřebují satelitní disk, dva modemy (uplink, downlink) a koaxialní kabel mezi diskem a modemem
-- Router se připojí k satelitnímu disku, který je namířen k satelitu, který se nachází ve vesmíru
+- K přístupu k Internetu uživatelé potřebují **satelitní disk**, **dva modemy** (`uplink`, `downlink`) a **koaxialní kabel** mezi diskem a modemem
+- Router se připojí k **satelitnímu disku**, který je namířen k satelitu, který se nachází ve vesmíru
 #### 2) Přístupová metoda CSMA/CA v bezdrátových sítích
-
-##### Carrier Sence Multiple Access with Collision Avoidance (CSMA/CA)
-- Uzel před zahájením vysílání nejprve alokuje kanál
-- Násobný přístup ke sdílenému médiu s redukcí kolizí (Wi-Fi)
-- Zlepšuje přenosové vlastnosti metody CSMA, potlačení kolizí zvyšuje dostupnost média
-- Při detekci cizího vysílání čeká na náhodný čas, poté opět zjišťuje dostupnost média
+##### CMSA/CA (Carrier sense multiple access with collision avoidance)
+- Metoda **vícenásobného přístupu** s detekcí **nosné** a **předcházením kolize**
+- Pokud se na médiu nenachází žádný datový signál a médium je tedy volné, uzel vyšle po médiu upozornění, že hodlá médium použít
+- Jakmile obdrží oznámení, že může vysílat, začne posílat data
 - Během vysílání neprovádí detekci kolizí, rámec se odešle bez ohledu na stav média
-- Pokud se na médiu nenachází žádný datový signál a médium je tedy volné, uzel vyšle po médiu upozornění, že hodlá médium využít
-	- Jakmile obdrží oznámení, že může vysílat, začne posílat data
-- Tato metoda se používá u WLAN technologií standardu 802.11
 #### 3) Standardy bezdrátových sítí (802.11)
 
 | Standard               | Frekvence       | Max. rychlost | Šířka kanálu | Poznámky                            |
@@ -68,10 +62,8 @@
 
 ##### MIMO (Multiple Input Multiple Output)
 - Použití více antén pro zvýšení přenosové rychlosti
-
 ##### MU-MIMO (Multi-User Multiple Input Multiple Output)
 - Umožňuje komunikaci s více zařízeními současně
-
 ##### OFDMA (Orthogonal Frequency Multiple Access)
 - Efektivnější rozdělení frekvence mezi uživatele
 

@@ -1,90 +1,88 @@
 #### 1) Princip Routingu
-
 ##### Druhy cílů IP paketu
-- Hostitel sám sobě
+1) **Hostitel sám sobě**:
 	- Odesílatel je zároveň adresátem paketu
-- Místní hostitel
+2) **Místní hostitel**:
 	- Adresát je ve stejné síti jako odesílatel
-- Vzdálený hostitel
+3) **Vzdálený hostitel**:
 	- Adresát je v jiné síti než odesílatel
-
 ##### Výchozí brána
-- Síťový uzel schopný směrování paketů (Router, L3 Swtich)
-- Předává pakety určené uzlům jiných sítí, u malých sítí rovnou do Internetu
-- Každý uzel místní sítě musí mít nastavenou výchozí bránu, staticky nebo pomocí služby DHCP, jinak bude tento síťový uzel schopen pracovat pouze v místní síti
+1) Síťový uzel **schopný směrování paketů** (Router, L3 Swtich)
+2) Předává pakety určené **uzlům jiných sítí**, u malých sítí rovnou do Internetu
+3) Každý uzel místní sítě musí mít **nastavenou výchozí bránu**, staticky nebo pomocí služby DHCP
 #### 2) Routovací tabulka
-
 ##### Charakteristika Směrovací Tabulky
-- Obsahuje pravidla potřebná pro směrování, bez nich nelze komunikovat s uzly jiných sítí
-- Pravidla vyjadřují směr dalšího doručování
-	- Cílová adresa a maska jako selektor pravidla
-	- Adresa brány a rozhraní pro předání paketu
-	- Metrika pro vyjádření priority pravidla
-- Pravidlo 0.0.0.0/0 představuje výchozí bránu pro pakety, pro něž není specifičtější pravidlo
-
+- Obsahuje pravidla potřebná pro **směrování**, bez; nich nelze komunikovat s uzly jiných sítí
+- Pravidla vyjadřují směr dalšího doručování:
+	1) **Cílová adresa** a **maska** jako selektor pravidla
+	2) **Adresa brány** a **rozhraní** pro předání paketu
+	3) **Metrika pro vyjádření priority** pravidla
+- Pravidlo `0.0.0.0/0` představuje výchozí bránu pro pakety, pro něž není specifičtější pravidlo
 ##### Druhy směrovacích pravidel
-- Místní směry (Directly-Connected Routes):
+1) **Místní směry** (Directly-Connected Routes):
 	- Odvozeny z aktivních rozhraních routeru (směrovače)
 	- Do směrovací tabulky přidány automaticky
-- Vzdálené směry (Remote Routes)
+2) **Vzdálené směry** (Remote Routes)
 	- Mohou být přidány manuálně
 	- Je také možná automatická výměna mezi směrovači
-- Výchozí směr (Routery mohou použít výchozí bránu)
-
+3) **Výchozí směr** (Default Route):
+	- Routery mohou použít výchozí bránu
 #### 3) Charakteristika, konfigurace a možnosti použití statického routingu
 ##### Charakteristika statického směrování
-- Ruční nastavení (správce sítě ručně definuje cesty k cílovým sítím)
-- Jednoduchost (nevyžaduje nasazení žádných směrovacích protokolů)
-- Nízká zátěž procesoru a paměti (Router neprovádí výpočty jako u dynamického směrování)
-- Vhodné pro malé sítě (efektivní u minimálně měnících se topologiích)
-- Nevhodné pro rozsáhlé a dynamické sítě (každá změna sítě vyžaduje ruční úpravy)
+1) **Ruční nastavení**:
+	- Správce sítě ručně definuje cesty k cílovým sítím
+2) **Jednoduchost**:
+	- Nevyžaduje nasazení žádných směrovacích protokolů
+3) **Nízká zátěž procesoru a paměti**:
+	- Router neprovádí výpočty jako u dynamického směrování
+4) **Vhodné pro malé sítě**:
+	- Efektivní u minimálně měnících se topologiích
+5) **Nevhodné pro rozsáhlé a dynamické sítě**: 
+	- Každá změna sítě vyžaduje ruční úpravy)
 ##### Konfigurace statického směrování
-- Příkaz "show ip route" pro vypsání aktuální směrovací tabulky
-- Příkaz "ip route {cílová síť} {maska sítě} {next-hop IP | výstupní rozhraní}"
-- Příkaz "show running config | include ip route" a "show ip route static" pro ověření konfigurace
-
+- `show ip route` pro vypsání aktuální směrovací tabulky
+- `ip route {cílová síť} {maska sítě} {next-hop IP | výstupní rozhraní}` pro konfiguraci směrovacího pravidla
+- `show running config | include ip route` a `show ip route static` pro ověření konfigurace
 ##### Možnosti použití statického směrování
-- Malé sítě a SOHO prostředí
+1) **Malé sítě a SOHO prostředí**:
 	- Jednoduchá správa bez nutnosti dynamických protokolů
-- Zabezpečené a kritické cesty
+2) **Zabezpečené a kritické cesty**:
 	- Mezi firewally, kde je důležitá kontrola směrování
-- Záložní trasy
+3) **Záložní trasy**:
 	- V kombinaci s dynamickým směrováním jako failover
-- Point-to-Point spoje
+4) **Point-to-Point spoje**:
 	- Nemá smysl využívat dynamického směrování mezi dvěma spoji
 #### 4) Inter-VLAN routing, varianty Inter-VLAN routingu
-
 ##### Charakteristika Inter-VLAN Routingu
-- Uzel v jedné VLAN nemůže přímo komunikovat s jinou VLAN, jedná se o navzájem izolované místní sítě operující na spojové vrstvě
-- V Případě IPv4 a IPv6 lze nasadit směrování mezi VLANy
-- Existují tři základní scénáře Inter-VLAN routingu:
-	- Legacy (Router pracuje klasicky a neví nic o VLAN infrastruktuře)
-	- Router-on-a-Stick (Na Router vede VLAN trunk, užívá se podrozhraní)
-	- L3 switching (Směrováí mezi VLANy konfigurováno na L3 switchi na SVI rozhraní)
-
-##### Legacy Inter-VLAN Routing
-- Výhody:
+- Uzel v jedné `VLAN` **nemůže přímo komunikovat** s jinou `VLAN`, jedná se o **navzájem izolované místní sítě** operující na spojové vrstvě
+- V Případě `IPv4` a `IPv6` lze nasadit **směrování** mezi `VLAN`y
+- Existují tři základní scénáře `Inter-VLAN routingu`:
+	1) **Legacy**:
+		- Router pracuje klasicky a neví nic o `VLAN` infrastruktuře
+	2) **Router-on-a-Stick**:
+		- Na Router vede `VLAN trunk`, užívá se podrozhraní
+	3) **L3 Switching**:
+		- Směrování mezi `VLAN`y konfigurováno na `L3` switchi na `SVI` rozhraní
+##### Legacy
+1) **Výhody**:
 	- Jednoduché nasazení
-	- Dedikovaný fyzický spoj pro provoz každé VLAN
+	- Dedikovaný fyzický spoj pro provoz každé `VLAN`
 	- Router nemusí podporovat tagovaný provoz
-- Nevýhody:
-	- Počet fyzických portů routeru a switche musí odpovídat počtu VLAN
+2) **Nevýhody**:
+	- Počet fyzických portů routeru a switche musí odpovídat počtu `VLAN`
 	- Špatná škálovatelnost v případě rozvoje síťové infrastruktury
-
-##### Router-on-a-Stick Inter-VLAN Routing
-- Výhody:
-	- Stačí jeden fyzický spoj pro všechny zúčastněné VLANy
+##### Router-on-a-Stick
+1) **Výhody**:
+	- Stačí jeden fyzický spoj pro všechny zúčastněné `VLAN`y
 	- Dobrá škálovatelnost v případě rozvoje síťové infrastruktury
-- Nevýhody:
-	- Jediný fyzický spoj předává rámce všech VLAN tam i zpět
-	- Selhání fyzického spoje znamená úplnou ztrátu komunikace mezi VLANy
-
-##### Inter VLAN Routing na Layer 3 Switchi
-- Výhody:
+2) **Nevýhody**:
+	- Jediný fyzický spoj předává rámce všech `VLAN` tam i zpět
+	- Selhání fyzického spoje znamená úplnou ztrátu komunikace mezi `VLAN`y
+##### L3 Switching
+1) **Výhody**:
 	- Optimální směrovací výkon
 	- Není třeba samostatného routeru
 	- Dobrá škálovatelnost v případě rozvoje síťové infrastruktury
-- Nevýhody:
-	- Selhání L3 switche znamená úplnou ztrátu komunikace mezi VLANy
+2) **Nevýhody**:
+	- Selhání `L3` switche znamená úplnou ztrátu komunikace mezi `VLAN`y
 	- Vyšší pořizovací náklady
-	

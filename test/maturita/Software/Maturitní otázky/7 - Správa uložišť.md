@@ -1,5 +1,4 @@
 #### 1) Typy a charakteristika místních a síťových úložišť, diskové pole RAID a jeho varianty
-
 ##### Stavba Disku
 - Inicializace disku (**MBR** nebo **GPT**) pro způsob vytváření diskových oddílů
 - Vytvoření oddílů
@@ -87,18 +86,17 @@
 	- `mdadm --stop {disk}` pro zastavení
 	- `mdadm --remove` pro odebrání
 ##### UNIX-Like OS - Varianty diskového pole RAID
-1) **RAID 0** (**využití u real-time aplikací, kde je výkon důležitější**)
+1) RAID 0 (využití u real-time aplikací, kde je výkon důležitější)
 	- `mdadm --create --verbose /dev/md0 --level=stripe --raid-devices=2 /dev/sdb1 /dev/sdc1`
-2)  **RAID 1** (**využití disků s operačním systémem a důležitých podadresářů**)
+2)  RAID 1 (využití disků s operačním systémem a důležitých podadresářů)
 	- `mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1`
-3) **RAID 5** (**webové a souborové servery**)
+3) RAID 5 (webové a souborové servery)
 	- `mdadm --create --verbose /dev/md0 --level=5 --raid-devices=3 /dev/sdb1 /dev/sdc1 /dev/sdd1 --spare-devices=1 /dev/sde1`
-4) **RAID 6** (**využití u souborových serverů a zálohovacích serverů s požadavky na vysokou dostupnost**)
+4) RAID 6 (využití u souborových serverů a zálohovacích serverů s požadavky na vysokou dostupnost)
 	- `mdadm --create --verbose /dev/md0 --level=6 --raid-devices=4 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1 --spare-devices=1 /dev/sdf1`
-5) **RAID 1 + RAID 0** (**Využití u databázových a aplikačnich serverů vyžadujícíh rychlé I/O operace**)
+5) RAID 1 + RAID 0 (Využití u databázových a aplikačnich serverů vyžadujícíh rychlé I/O operace)
 	- `mdadm --create --verbose /dev/md0 --level=10 --raid-devices=4 /dev/sd[be]1 --spare-devices=1 /dev/sdf1`
 #### 3) Konfigurace prostor úložiště ve Windows a LVM v UNIX-like OS
-
 ##### Windows - Vytváření diskových oddílů
 - **Při vytváření diskových oddílů dochází k dělení fyzického disku na logické jednotky** (diskové oddíly):
 	- Každý diskový oddíl se chová jako samostatný disk ke kterému je možné přidělit jedinečný identifikátor

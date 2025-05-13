@@ -1,5 +1,4 @@
 #### 1) Správa diskových oddílů typu MBR a GPT v OS Windows a UNIX-like OS
-
 ##### Widnows - Správa disků
 - Hlavním nástrojem pro správu disků je **modul snap-in konzoly MMC**, který je součástí **konzoly Správa počítače**
 	- Zobrazení stavu disku, přiřazení a změnění písmena disku (mapování), přidání disků a diskových polí, nastavení diskového oddílu jako aktivního a inicializace disku

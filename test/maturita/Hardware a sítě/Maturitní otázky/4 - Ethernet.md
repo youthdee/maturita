@@ -24,41 +24,42 @@
 - Přenosová rychlost `10 Mb/s`
 - Médiem je **souosý kabel** o průměru 6mm
 - Segment o délce až **185 metrů** a až **30 uzlů**
-##### Rámec Ethernetu
-- Druhy rámců:
-	1) `Ethernet II`
-		- Nejčastejiší a dnes užívaný (s polem EtherType)
-		- Výhodou je payload o délce až 1500 oktetů
-		- Doplněn do standardu až v roce 1997
-		- MAC Header (14B):
-		- Destination MAC address
-		- Source MAC address
-		- EtherType
-		- Data (46 - 1500B)
-		- CRC Checksum (4B)
-	2) `Novell Raw`
-		- Nestandardní, dříve využívaný s protokolem IPX
-	3) `IEE 802.2` **Logical Link Control** (`LLC`)
-		- Používán pouze ve spojení s protokoly ISO/OSI
-	4) `IEE 802.2` **Subnetwork Access Protoco**l
-		- Používán s protokoly TCP/IP
-		- Kvůli výhodám Ethernet II se prakticky nevyužívá
-	5) `IEEE 802.3` `LLC`/`SNAP`
-		- Od začátku používán současně s ostatními typy rámců
-		- Destination Address (6B)
-		- Source Address (6B)
-		- Length (2B)
-		- Packet (64-1500B)
-	- **Délky rámců**:
-		1) **Běžný rámec**:
-			- Délka 64 až 1518 oktetů (1522 pro VLAN tagging)
-		2) **Runt rámec**:
-			- Méně než 64 oktetů
-			- Neplatný rámec, odstraňuje se
-		3) **Jumbo rámec**:
-			- Více jež 1518 (1522 pro VLAN tagging)
-			- Nestandardní délka rámce (typicky až 9 KB)
-			- Podporován pouze některými síťovými prvky
+##### Druhy rámců:
+1) `Ethernet II`
+	- Nejčastější a dnes nejvyužívanější formát rámce
+	- Obsahuje pole EtherType pro identifikaci protokolu vyšší vrstvy
+	- Maximální velikost payloadu 1500 bajtů
+	- **Struktura**:
+		- Destination MAC (6B)
+		- Source MAC (6B)
+		- EtherType (2B)
+		- Data (46-1500B)
+		- CRC (4B)
+2) `Novell Raw`
+	- Nestandardní formát, historicky používaný s protokolem IPX
+ 3) `IEEE 802.2 LLC`
+	- Používán výhradně s protokoly ISO/OSI
+4) `IEEE 802.2 SNAP`
+	- Navržen pro protokoly TCP/IP
+	- Nahrazen formátem Ethernet II pro jeho výhody
+5) `IEEE 802.3 LLC/SNAP`
+	- **Struktura**:
+	    - Destination MAC (6B)
+	    - Source MAC (6B)
+	    - Length (2B)
+	    - Data (46-1500B)
+	    - CRC (4B)
+##### Délky rámců:
+1) **Standardní rámec**
+	- Velikost 64 až 1518 bajtů
+	- S VLAN tagem až 1522 bajtů
+2) **Runt rámec**
+	- Menší než minimální délka (64 bajtů)
+	- Považován za neplatný a je zahazován
+3) **Jumbo rámec**
+	- Větší než maximální standardní délka (1518/1522 bajtů)
+	- Typicky až 9000 bajtů
+	- Vyžaduje podporu na všech síťových prvcích na trase
 #### 2) MAC adresy – formát, druhy
 ##### Mac Adresa - Charakteristika
 - **Fyzická adresa** protokolů spojové vrstvy

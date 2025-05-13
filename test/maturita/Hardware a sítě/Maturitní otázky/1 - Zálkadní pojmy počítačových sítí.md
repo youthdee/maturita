@@ -30,13 +30,22 @@
 	- Decentralizovaný model fungování
 3) **Hybridní síť**
 	- Model kombinující sítě typu Client-Server a Peer-to-Peer
+4) **Předávání tokenu**
+	- Sítě typu Token-Ring
 ##### Podle Fyzického média
 1) **Metalická kabeláž**
-	- `UTP`, `STP`, koaxiální kabel
+	- UTP
+	- STP
+	- Koaxiální kabel
 2) **Optické vlákno**
+	- Mnohovidové
+	- Jednovidové
 3) **Bezdrátové sítě**
-	- `Wi-Fi`, `Bluetooth`
+	- `Wi-Fi`, `Bluetooth`, `Wimax`, `Zigbee`
+	- WLAN
 4) **Satelitní síť**
+	- Starlink
+	- Vysokorychlostní připojení k internetu s velkým pokrytím
 ##### Podle rozsahu
 1) **LAN**
 	- Local Area Network
@@ -44,6 +53,24 @@
 	- Metropolitan Area Network
 3) **WAN**
 	- Wide Area Network
+4) **PAN**
+	- Personal Area Network
+##### Podle fyzické topologie
+1) **Sběrnice**
+	- Všechny uzly využívají stejné přenosové médium pro komunikaci
+2) **Hvězda**
+	- Každý uzel je připojen ke středovému uzlu
+3) **Rozšířená hvězda**
+	-  Více hvězd propojených přes další centrální uzly
+4) **Kruh**
+	-  Uzly propojeny do kruhu, komunikace probíhá jedním směrem
+5) **Mesh**
+	- **Full Mesh**
+		- Každý uzel je propojen s každým uzlem
+		- Kritické síťové infrastruktury (páteřní síť datacentry)
+	- **Partial Mesh**
+		- Pouze některé uzly jsou propojeny s sebou
+		- Podníkové sítě s několika hlavními uzly
 #### 3) Prvky používané v počítačových sítích
 ##### Router (Směrovač)
 - Propojuje **přímo nesousedící** počítačové sítě

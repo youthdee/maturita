@@ -1,5 +1,4 @@
 #### 1) Model klient/server u operačních systémů, role serveru, kritéria pro správný výběr serverových komponent, základní subsystémy serveru
-
 ##### Model Klient/Server
 - Síť obsahující **servery** a **klienty**
 - Ideální pro **sdílení prostředků a dat**, **centrální zabezpečení**

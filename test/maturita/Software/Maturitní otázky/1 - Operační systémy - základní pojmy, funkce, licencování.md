@@ -13,7 +13,7 @@
 3) **Multi-processing**:
 	- Operační systém podporuje počítač s více procesory
 4) **Multi-threading**:
-	- Aplikace rozděleny do dílčích částí, které jsou načteny v případě potřeby
+	- Aplikace rozděleny do dílčích částí, které jsou načteny v případě potřeby (do vláken)
 	- Různé části programu mohou běžet paralelně
 #### 2) Základní funkce operačního systému
 ##### Základní funkce operačního systému
@@ -32,7 +32,6 @@
 		- **DirectX** (Specifikace pro grafiku ve Windows)
 		- **Windows API** (rozhraní pro práci s ovládacími prvky GUI, správu souborů a uživatelské rozhraní)
 #### 3) Charakteristika a filozofie licencování operačních systémů a softwaru obecně
-
 ##### Komerční Software (**proprietární**)
 - **Uzavřený zdrojový kód**, ke kterému **uživatel nemá přístup**
 - **Autor** programu **uživateli** předepisuje **podmínky používání** programu **prostřednictvím licence** (např. EULA od firmy Microsoft):
@@ -101,7 +100,7 @@
 	3) **Debian**:
 		- Nejrozsáhlejší distribuce plně vyvíjena komunitou, vývojový cyklus tří větví (stable, testing, unstable)
 		- Balíčkový systém apt
-	- **Ubuntu**:
+	4) **Ubuntu**:
 		- Vyvíjena komunitou za podpory firmou Canonical a postavena na distribuci Debian
 		- Orientována na osobní PC**
 	- **Další distrubuce**:

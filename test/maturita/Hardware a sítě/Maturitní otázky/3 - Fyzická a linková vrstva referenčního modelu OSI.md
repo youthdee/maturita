@@ -86,7 +86,7 @@
 7) **RS-232** a **RS-485**:
 	- Standardy pro sériovou komunikaci, které definují elektrické signály pro přenos dat mezi zařízeními
 #### 2) Přenosové cesty, druhy spojů (linky)
-##### SIMPLEX, HLAF DUPLEX, FULL FUPLEX Komunukace
+##### SIMPLEX, HLAF DUPLEX, FULL DUPLEX Komunukace
 - Komunikace mezi dvěma uzly po lince můe probíhhat třemi způsoby:
     1) **Simplex**:
 	    - Pouze jedním směrem

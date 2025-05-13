@@ -1,5 +1,4 @@
 #### 1) Možnosti správy operačního systému Windows pomocí systémových nástrojů v grafickém a textovém rozhraní
-
 ##### Možnosti správy OS Windows pomocí systémových nástrojů v grafickém rozhraní
 1) **Správce úloh**:
 	- Sledování operačního systému
@@ -29,7 +28,32 @@
 9) **Správa disků**:
 	- Stav disku, přiřazení či změnění mapování disku, přidání disk nebo diskového pole, nastavení diskového oddílu jako aktivní, inicializování disku
 ##### Možnosti správy OS Windows pomocí systémových nástrojů v textovém rozhraní
-	- zkopírovat z otázky 2 - která je uložena zatím lokálně
+- **CMD** a **PowerShelll**
+- **Powershell** je nástroj představující **prostředí s příkazovým řádkem**, který má **více funkcí**, včetně**skriptování** a **automatizace**:
+	- Prostředí pro skriptování se nazývá PowerShell ISE
+	- Pracuje s cmdlety, pro které je možné nadefinovat aliasy
+	- Poprvé uveden ve Windows 10
+- **Lze spustit** klávesovou zkratkou **okno + r -> cmd**
+- Klávesovou zkratkou **Ctrl + Shift + Enter** se spustí **v režimu správce**
+- **Základní příkazy**:
+	- `help`
+	- `exit`
+	- `dir`
+	- `cd` 
+	- `md` (make directory)
+	- `rd` (remove directory)
+	- `move `
+	- `ren` (rename)
+	- `type` (zobrazení typu souboru)
+	- `more` (zobrazení obsahu souboru)
+	- `copy`
+	- `xcopy` (kopírování souborů nebo celých adresářových stromů)
+	- `robocopy` (robust copy, hromadné kopírování)
+	- `tasklist`
+	- `taskkill`
+	- `del`
+	- `shutdown`
+- Oba dva nástroje **podporují zástupné znaky**
 #### 2) Možnosti správy UNIX-like OS pomocí systémových nástrojů v grafickém a textovém rozhraní
 ##### Možnosti správy UNIX-Like OS pomocí systémových nástrojů v grafickém rozhraní
 1) **Nástroj Disks**:

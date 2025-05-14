@@ -154,4 +154,4 @@
 	- Umožňuje více zařízením vystupovat na internetu pod jednou veřejnou IP adresou
 9) **Škálovatelný síťový model**
 	- S rostoucí firmou je potřeba zajistit škálování počítačové sítě
-	- Zajišťuje redundaci, odolnost, hierarchii a snadnou škálovatelnost
+	- Zajišťuje redundaci, odolnost, hierarchii a snadnou škálovatelnost 

@@ -11,8 +11,12 @@
 	- Z jednoho zdroje k jednomu cíli
 2) **Multicast**:
 	- Z jednoho zdroje k více cílům, ale ne ke všem dostupným
+	- IPv6 používá jako broadcast, např `ff02::1` pro LAN
 3) **Broadcast**:
 	- Z jednoho zdroje ke všem dostupným cílům (bez IPv6)
+ 4) **Anycast** (`IPv6`):
+	 - Paket je doručen nejbližšímu zařízení ze skupiny se stejnou anycast adresou.
+		 - Anycast adresa je adresa, která se sdílí mezi více uzly
 ##### Základní principy přenosu dat
 1) **Segmentace dat**:
 	- Data jsou rozdělena na menší části (paket nebo rámec)
@@ -27,11 +31,18 @@
 	- Data prochází kontrolou integrity pomocí kontrolních součtů
 	- V případě ztráty nebo poškození paketu je požádáno o přeposlání
 6) **Synchronizace a řízení toku dat**:
-	- Flow control (zajišťuje, aby odesílatel neposílal více dat, než je příjemce schopen zpracovat)
-	- Congestion control (zabraňuje přetížení sítě)
+	1) **Flow control**:
+		- Zajišťuje, aby odesílatel neposílal více dat, než je příjemce schopen zpracovat
+		- `TCP`
+	2) **Congestion control**:
+		- Zabraňuje přetížení sítě, které může způsobit ztrátu paketů
+		- Principem fungování je přizpůsobení rychlosti přenosu podle aktuálního stavu sítě
+		- `TCP`
 7) **Šifrování a zabezpečení**:
 	- Protokoly jako `SSL` a `TLS` chrání data během přenosu, např. při komunikaci přes `HTTPS`
-	- Autentizace a šifrování chrání před útoky jako odposlech nebo útoky typu MitM
+		- Využívá se asymetrické (`RSA`) nebo symetrické (`AES`) kryptografie
+	- Zajišťují autentizaci, šifrování a integritu dat.
+	- Chrání před útoky jako odposlech nebo útoky typu MitM
 #### 2) Komunikační protokoly a jejich funkce
 ##### Komunikační protokoly
 - Protokoly jsou **pravidla**, kterými se komunikace řídí:
@@ -47,13 +58,20 @@
 	- Formát a struktura zprávy závisí i na vlastnostech komunikačního kanálu
 4) **Určení velikosti zprávy**:
 	- Velikost zprávy musí být taková, aby ji komunikační kanál dokázal přenést tak, aby šla dekódovat
-5) **Rychlost a timing (časování) zpráv**:
-	1) **Řízení toku (flow control)**:
-		- Spravuje rychlost přenosu dat, definuje kolik dat lze odesílat a jak rychle po sobě tak, aby nedošlo k zahlcení příjemce
-	2) **Response timeout**:
-		- Spravuje, jak dlouho zdroj čeká na odpověď od cíle
-	3) **Přístupová metoda (access method)**:
-		- Určuje, kdy může zdroj odeslat zprávu tak, aby jeho zpráva nekolidovala s jinými zprávami a nepoškodila se (při použití sdíleného přenosového prostředku)
+5) **Rychlost a časování zpráv**:
+	1) **Flow control**:
+		- Zajišťuje, aby odesílatel neposílal více dat, než je příjemce schopen zpracovat
+		- `TCP`
+	2) **Congestion control**:
+		- Zabraňuje přetížení sítě, které může způsobit ztrátu paketů
+		- Principem fungování je přizpůsobení rychlosti přenosu podle aktuálního stavu sítě
+		- `TCP`
+6) **Response timeout**:
+	- Spravuje, jak dlouho zdroj čeká na odpověď od cíle
+7) **Přístupová metoda (access method)**:
+	- Určuje, kdy může zdroj odeslat zprávu tak, aby jeho zpráva nekolidovala s jinými zprávami a nepoškodila se (při použití sdíleného přenosového prostředku)
+	- `CSMA/CD` (Koaxial)
+	- `CSMA/CA` (WLAN)
 #### 3) Síťové modely ISO/OSI a TCP/IP a jejich protokoly
 ##### Referenční model OSI obecně
 - Přijat v roce **1984**

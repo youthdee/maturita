@@ -174,3 +174,4 @@
 	- Přímý upgrade (do-release-upgrade)
 	- LTS na LTS (Operační systémy s dlouhodobou podporou lze upgradovat mezi sebou)
 	- Reinstalace při zachování dat
+ 

@@ -142,7 +142,7 @@
 ##### Servery
 - Lze konfigurovat **Doménovou zásadu zabezpečení** na **Windows Serveru**, podle které se pak **řídí počítače v doméně**
 ##### Active Directory a Místní bezpečnostní zásady ve Windows
-- Počítače v doméně se řídí **Doménovou bezpečnostní politikou**
+- Počítače v doméně se řídí **Doménovou bezpečnostní politikou** (`GroupPolicy.mmc`)
 - Pro **samostatné počítače mimo doménu** slouží **Místní bezpečnostní zásady** (**Local Security Policy**), které lze otevřít pomocí:
 	- `secpol.msc`
 ##### Nastavení bezpečnostní politiky

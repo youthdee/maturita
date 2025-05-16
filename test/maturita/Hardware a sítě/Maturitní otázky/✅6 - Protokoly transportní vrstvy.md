@@ -117,7 +117,7 @@
 #### 3) 3-way handshake a ukončení spojení
 ##### Příznaky TCP segmentu
 1) `SYN` (synchronize):
-    - Slouží k navázání spojení a inicializaci číslování segmentů mezi klientem a serverem
+    -  Slouží k navázání spojení a inicializaci číslování segmentů mezi klientem a serverem
 2) `ACK` (acknowledge):
     - Slouží k potvrzování přijetí dat nebo jiných segmentů – včetně `SYN` nebo `FIN`
 3) `FIN` (finish):

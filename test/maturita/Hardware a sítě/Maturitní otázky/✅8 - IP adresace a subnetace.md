@@ -56,30 +56,94 @@
 - Pro automaticky přiřazované IPv4 adresy slouží rozsah `169.254.0.0/16` (link-state local address), známé jako APIPA (Automatic Private IP Addressing)
 - Pro default route se používá adresa `0.0.0.0/0` (této adrese vyhoví všechny pakety)
 #### 2) IPv6 – důvody vzniku, zápis, struktura a druhy IPv6 adres
-
-##### Možnosti zápisu IPv6 adresy
-//TODO
-##### Struktura IPv6 adres
-1) **IPv6 adresa má 128 bitů, je tvořena 8 slovy**:
-	- Každé slovo má `16 bitů` a zapisuje se jako čtyřznakové hexadecimální číslo
-	- Jednotlivá slova jsou oddělena dvojtečkami
-2) **IPv6 adresa má 3 logické části** (**zleva**):
-	- Globální routovací prefix (global prefix):
-		- Přidělován `ISP`
-		- `48 bitů` až `64 bitů`
-		- Podsíť se vytvoří zvětšením prefixu o velikost podsítě (maximálně `16 bitů`)
-	- Identifikátor podsítě (`subnet ID`)
-		- `16 bitů`
-	- Identifikátor rozhraní (`Interface ID`)
-		- `64 bitů`
-- Hodnota prefixu od ISP udává veřejně routovatelnou síť
-1) Identifikátor rozhraní má velikost `64 bitů` a zde ho vytvořit několika způsoby:
-	- Manuální statické přiřazení
-	- Transformování `MAC` adresy pomocí `EUI-64`
-	- Vygenerování operačním systémem náhodnou hodnotou
 ##### Důvody vzniku IPv6 Adres
 - IPv6 adresy jsou koncipovány tak, aby jich nikdy **nebyl nedostatek** (IPv4 adresy začaly brzy docházet)
-- Z principu musí mít každé síťové rozhraní **veřejně routovatelnou IPv6 adresu**
+- Z principu musí mít každé síťové rozhraní **veřejně směrovatelnou IPv6 adresu
+
+##### Struktura IPv6 adres
+- **IPv6 adresa má 128 bitů, je tvořena 8 slovy**:
+    - Každé slovo má `16 bitů` a zapisuje se jako čtyřznakové hexadecimální číslo
+    - Celkem 2^128 možných adres
+- **IPv6 adresa má 3 logické části** (**zleva**):
+    1. **Globální směrovací prefix**:
+	    - `48 bitů` až `64 bitů`
+        - Přidělován ISP
+        - Podsíť se vytvoří zvětšením prefixu o velikost podsítě (maximálně `16 bitů`)
+        - Udává veřejně směrovatelnou síť
+        - První 3 bity určují typ adresy (např. 001 = globální unicast)
+    2. **Identifikátor podsítě** (`subnet ID`):
+        - `16 bitů`
+        - Umožňuje vytvořit až 65 536 podsítí
+        - Může být hierarchicky strukturován
+        - Součást globálního směrovacího prefixu (společně tvoří prefix sítě)
+    3. **Identifikátor rozhraní** (`Interface ID`):
+        - `64 bitů`
+        - Identifikuje konkrétní rozhraní v dané podsíti
+        - Nahrazuje MAC adresu z IPv4 prostředí
+        - Musí být unikátní v rámci dané podsítě
+        - Umožňuje připojit 2^64 zařízení do jedné podsítě
+- **Identifikátor rozhraní lze vytvořit několika způsoby:**
+    1. **Manuální statické přiřazení**:
+        - Administrátorem nakonfigurovaná hodnota
+        - Používá se pro servery a klíčová zařízení
+        - Usnadňuje správu a dokumentaci sítě
+        - Obvykle se používají jednoduše zapamatovatelné hodnoty (např. ::1, ::2)
+    2. **Transformování `MAC` adresy pomocí `EUI-64`**:
+        - Převádí 48-bitovou MAC adresu na 64-bitový identifikátor
+        - Proces:
+            - Vloží `FFFE` doprostřed MAC adresy (po prvních 24 bitech)
+            - Invertuje 7. bit (U/L bit) první skupiny
+        - Příklad: MAC `00:1A:2B:3C:4D:5E` → IPv6 ID `021A:2BFF:FE3C:4D5E`
+        - Umožňuje sledování zařízení napříč sítěmi (problém soukromí)
+    3. **Vygenerování náhodnou hodnotou operačním systémem**:
+        - Operační systém vytvoří náhodný identifikátor
+        - Zvyšuje soukromí
+        - Může se periodicky měnit (dočasné adresy)
+        - Využívá kryptografické funkce pro zajištění unikátnosti
+        - Standardní metoda v moderních OS (Windows, Linux, macOS)
+    4. **DHCPv6**:
+        - Server přiděluje celou IPv6 adresu
+        - Umožňuje centrální správu a evidenci adres
+        - Podobná funkce jako DHCP v IPv4 prostředí
+##### Možnosti zápisu IPv6 adresy
+1) **Standardní zápis** (plný):
+    - Všech osm skupin po čtyřech hexadecimálních číslicích
+    - Příklad: `2001:0db8:0000:0000:0000:ff00:0042:8329`
+2) **Vynechání úvodních nul** (v každé skupině):
+    - Úvodní nuly v každé skupině lze vynechat
+    - Příklad: `2001:db8:0:0:0:ff00:42:8329`
+3) **Komprese nulových bloků** (použití ::):
+    - Souvislý blok nulových skupin lze nahradit pomocí dvojité dvojtečky `::`
+    - Lze použít pouze jednou v adrese
+    - Příklad: `2001:db8::ff00:42:8329`
+4) **Kombinovaný zápis**:
+    - Kombinace vynechání úvodních nul a komprese nulových bloků
+    - Nejkratší možný zápis
+    - Příklad: `2001:db8::ff00:42:8329`
+5) **Zahrnutí prefixu sítě**:
+    - Adresa s uvedením délky prefixu za lomítkem
+    - Příklad: `2001:db8::/32` (prefixem je 32 bitů)
+6) **Smíšená notace** (IPv4 v IPv6):
+    - Poslední 32 bitů (dvě skupiny) lze zapsat v IPv4 formátu
+    - Používá se pro přechodové mechanismy
+    - Příklad: `2001:db8::192.168.1.1`
+- **Speciální IPv6 adresy**:
+	1) **Loopback adresa**:
+	    - `::1` (ekvivalent 127.0.0.1 v IPv4)
+	2) **Nespecifikovaná adresa**:
+	    - `::` (ekvivalent 0.0.0.0 v IPv4)
+	3) **Unikátní lokální adresy**:
+	    - Začínají prefixem `fc00::/7` nebo `fd00::/8`
+	    - Obdoba privátních adres v IPv4
+	    - Příklad: `fd12:3456:789a:1::1`
+	4) **Lokální linkové adresy**:
+	    - Začínají prefixem `fe80::/10`
+	    - Automaticky konfigurovány na rozhraních
+	    - Platné pouze v rámci jednoho síťového segmentu
+	    - Příklad: `fe80::1234:5678:9abc`
+	5) **Multicastové adresy**:
+	    - Začínají prefixem `ff00::/8`
+	    - Příklad: `ff02::1` (všechny uzly na lince)
 ##### Druhy cílových IPv6 adres
 1) **Unicast**:
 	- Obdobné jako v `IPv4`
@@ -107,7 +171,6 @@
 		- Používají společný prefix `FF00::/8`
 		- `FF02::1` je multicast adresa všech uzlů v lokálním linkovém segmentu sítě (nahrazuje broadcast)
 		- `FF01::1` je multicast adresa pro vyzývaný uzel (ND)
-		- `FF02::1:ffxx:xxxx` je multicast adresa, kde poslední 3 bajty jsou převzaty z konce MAC adresy síťového rozhraní
 	4) `IPv6` **Loopback adresa**:
 		- Adresa ::1/128
 	5) `IPv6` Default gateway využívá adresu ::/0

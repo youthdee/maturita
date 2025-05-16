@@ -27,7 +27,7 @@
 ##### Druhy rámců:
 1) `Ethernet II`
 	- Nejčastější a dnes nejvyužívanější formát rámce
-	- Obsahuje pole EtherType pro identifikaci protokolu vyšší vrstvy
+	- Obsahuje pole EtherType pro identifikaci protokolu vyšší vrstvy (Co je obsahem)
 	- Maximální velikost payloadu 1500 bajtů
 	- **Struktura**:
 		- Destination MAC (6B)
@@ -39,20 +39,18 @@
 	- Nestandardní formát, historicky používaný s protokolem IPX
  3) `IEEE 802.2 LLC`
 	- Používán výhradně s protokoly ISO/OSI
+	- Místo pole `EtherType` je `Length` a poté `LLC` header, který říká, co je obsahem
 4) `IEEE 802.2 SNAP`
 	- Navržen pro protokoly TCP/IP
 	- Nahrazen formátem Ethernet II pro jeho výhody
+	- Rozšíření headeru `LLC` pro podporu dalších protokolů (TCP/IP)
+	- `SNAP` header, který je významově stejný `EtherType`
 5) `IEEE 802.3 LLC/SNAP`
-	- **Struktura**:
-	    - Destination MAC (6B)
-	    - Source MAC (6B)
-	    - Length (2B)
-	    - Data (46-1500B)
-	    - CRC (4B)
+	- Pole `Length` místo `EtherType`
+	- `LLC` a `SNAP` header
 ##### Délky rámců:
 1) **Standardní rámec**
-	- Velikost 64 až 1518 bajtů
-	- S VLAN tagem až 1522 bajtů
+	- `64 - 1518 (1522 VLAN TAG)` bajtů
 2) **Runt rámec**
 	- Menší než minimální délka (64 bajtů)
 	- Považován za neplatný a je zahazován
@@ -87,16 +85,16 @@
 	4) Cisco styl (čtveřice):
 		- `001A.2B3C.4D5E`
 ##### Druhy MAC adresy
-1) **Rozlišení typu v bitech prvního oktetu** (b1)
-	1) Universally Administered Addresses:
-		- `b1 = 0`
-	2) Locally Administered Adresses:
-		- `b1 = 1`
-2) **Rozlišení typu v bitech prvního oktetu** (b0)
+1) **Rozlišení typu v bitech prvního oktetu** (b0)
 	1) Unicast:
 		- `b0 = 0`
 	2) Multicast:
 		- `b0 = 1`
+ 2) **Rozlišení typu v bitech prvního oktetu** (b1)
+	1) Universally Administered Addresses: (Výrobcem přidělena)
+		- `b1 = 0`
+	2) Locally Administered Adresses: (Systémem přidělena)
+		- `b1 = 1`
 3) **Adresy spojové a síťové vrstvy korespondují**
 	1) `Unicast`:
 		- Příklad IPv4 adresy:

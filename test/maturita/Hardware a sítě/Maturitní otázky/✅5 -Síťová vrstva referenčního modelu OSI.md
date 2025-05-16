@@ -164,38 +164,38 @@
 - Nabízí zvýšenou bezpečnost oproti ARP díky možnosti využití IPsec
 #### 3) Princip paketového přenosu dat
 ##### Princip
-1) Data jsou **rozdělena do menších částí** (paketů), které jsou **nezávisle přenášeny** sítí
+1) **Segmentace dat na pakety**
     - Umožňuje paralelní přenos dat po různých cestách
     - Maximální velikost paketu je omezena hodnotou MTU (Maximum Transmission Unit)
     - Při výpadku je nutné znovu poslat pouze poškozené pakety, ne celou zprávu
-2) Každý paket **obsahuje header** (hlavičku) s informacemi o **zdrojové** a **cílové IP adrese** a **datovou část** (payload) obsahující přenášenou zprávu
+2) **Každý paket obsahuje header s informacemi o zdrojové a cílové IP adrese a datovou část obsahující přenášenou zprávu**
     - Hlavička obsahuje také řídící informace pro směrování a správu paketu
     - Součástí je TTL (Time To Live) nebo Hop Limit určující maximální počet skoků
     - Obsahuje také identifikační údaje pro správné sestavení a kontrolní součty
-3) Paketový přenos umožňuje **efektivnější využití** sítě než přepojování okruhů
+3) **Umožňuje efektivnější využití sítě než přepojování okruhů**
     - Protože různé pakety můžou jít různými cestami
     - Umožňuje sdílení přenosové kapacity mezi více komunikacemi
     - Zvyšuje odolnost sítě proti výpadkům (redundantní cesty)
     - Eliminuje plýtvání šířkou pásma při nečinnosti (na rozdíl od vyhrazených okruhů)
-4) Zajišťuje **směrování** (routing) paketů **mezi sítěmi**
+4) **Zajišťuje směrování paketů mezi sítěmi**
     - Využívá směrovací tabulky založené na síťových adresách
     - Podporuje statické i dynamické směrovací protokoly (RIP, OSPF, BGP)
     - Umožňuje automatické přesměrování při výpadku části sítě
-5) IP směrovače (routery) analyzují hlavičky paketů a **rozhodují o jejich cestě** v síti
+5) **Routery analyzují hlavičky paketů a rozhodují o jejich cestě v síti**
     - Používají síťové masky pro určení příslušnosti k síti
     - Provádějí směrování na základě nejdelšího shodného prefixu (longest prefix match)
     - Udržují směrovací tabulky s informacemi o dostupných sítích
     - Mohou prioritizovat pakety podle QoS (Quality of Service) požadavků
-6) Pokud paket putuje přes více sítí, může **být fragmentován a znovu sestaven**
+6) **Pokud paket putuje přes více sítí, může být fragmentován a znovu sestaven**
     - Fragmentace nastává, když je MTU cílové sítě menší než velikost paketu
     - Každý fragment má vlastní hlavičku pro správné směrování
     - Opětovné sestavení provádí až cílové zařízení nebo hraniční směrovač
     - V IPv6 fragmentaci provádí pouze výchozí uzel, ne směrovače
-7) **Nezaručuje spolehlivé doručení** ani zachování pořadí paketů
+7) **Nezaručuje spolehlivé doručení ani zachování pořadí paketů**
     - Pracuje na principu "best effort delivery"
     - Spolehlivost a správné pořadí zajišťuje vyšší vrstva (typicky TCP)
     - Pakety mohou být zahozeny při přetížení sítě nebo vypršení TTL
-8) Podporuje různé **typy přenosu**
+8) **Podporuje různé metody přenosu**
     - Unicast (jeden odesílatel, jeden příjemce)
     - Multicast (jeden odesílatel, více příjemců)
     - Broadcast (jeden odesílatel, všichni příjemci v dané síti)

@@ -1,8 +1,8 @@
 #### 1) Účel, funkce a charakteristika protokolů aplikační vrstvy
 ##### Účel aplikační vrstvy
-- **7. vrstva** modelu síťové architektury OSI
-- Poskytuje aplikacím **přístup ke komunikačnímu systému** a umožňuje jim tak jejich **spolupráci**
-- Teoreticky řečeno umožňuje aplikacím komunikovat přes síť, aniž by se uživatel musel starat o detaily nižších vrstev
+1) **7. vrstva** modelu síťové architektury OSI
+2) Poskytuje aplikacím **přístup ke komunikačnímu systému** a umožňuje jim tak jejich **spolupráci**
+3) Umožňuje aplikacím komunikovat přes síť, aniž by se uživatel musel starat o detaily nižších vrstev
 ##### Funkce aplikační vrstvy
 - Poskytuje **rozhraní mezi uživatelem a síťovými službami**
 - Umožňuje **přenos dat** mezi aplikacemi na různých zařízeních

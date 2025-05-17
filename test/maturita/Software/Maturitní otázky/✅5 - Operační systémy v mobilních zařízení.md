@@ -81,11 +81,3 @@
 	2) Jailbreaking se používá u zařízení s OS IOS
 		- Umožňuje získat úplný přístup k souborovému systému a k modulům jádra operačního systému
 		- Dnes již nemožné
-##### Instalace oprav a aktualizací operačního systému
-- Aktualizace se **doručují do mobilních zařízení automaticky**
-- Beta verze
-- Pro **firmware**, který je v mobilním zařízení pro radiovou bezdrátovou komunikaci přes mobilního operátora existují **dva typy aktualizací**:
-	1) **Preffered Roaming List**
-		- Obsahuje informace o konfiguraci, kterou mobilní telefon potřebuje pro komunikaci v jiné síti mobilního operátora)
-	2) **Primary Rate ISDN** 
-		- Přenosové rychlosti používané při komunikaci mezi zařízením a věží mobilního operátora, zajišťuje správnou rychlost komunikace

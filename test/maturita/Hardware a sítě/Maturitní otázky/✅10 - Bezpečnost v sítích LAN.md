@@ -1,27 +1,89 @@
 #### 1) Druhy útoků v LAN
 ##### Průzkumné útoky (Reconnaissance Attacks)
-- **Získání informací o síti** a jejích službách:
-	- Mapování topologie sítě, objevování hostitelů a jejich služeb,
-	- zjišťování údajů z veřejně dostupných zdrojů, zjišťování zranitelností a aplikace exploitů hostitelských služeb
+- **Získání informací o síti a jejích službách:**
+    - Mapování topologie sítě, objevování hostitelů a jejich služeb
+    - Zjišťování údajů z veřejně dostupných zdrojů (OSINT - Open Source Intelligence)
+    - Zjišťování zranitelností a aplikace exploitů hostitelských služeb
 - Předcházejí vlastním přístupovým (`access`) či `DoS` útokům
-##### Přístupové útoky (Access Atacks)
-1) **Zneužívají zranitelností síťových služeb**:
-	- Autentizační služby, webové služby
-2) **Umožňují získat přístup k datům či oprávněním pro správu**:
-	- Citlivé záznamy v databázi či účtu správce domény Active Directory
-3) **Password Attacks**:
-	- Útočník se snaží získat hesla ke klíčovým uživatelským účtům
-4) **Spoofing Attacks**:
-	- Útočník se pokouší vystupovat na síti jako jiné známé zařízení
-5) **Trust exploitations**, **Port redirections**, **MitM attacks**, **Buffer overflow attacks**
-##### Útoky typu odepření služby
-1) Dočasné či trvale brání užívání služeb legitimním subjektům
-2) **Zákldaní přičiny síťových útoků odepření služby**:
-	- Nadměrný objem síťového provozu
-	- Pakety s podvrženými údaji
-3) **Distribuované odepření služby**:
-	- Prováděny s využitím mnoha současně působících zdrojů
-	- Koordinované útoky realizovány pomocí botnetů
+- **Nejčastější nástroje a techniky**:
+    - `Port scanning` : 
+	    - Zjišťování otevřených portů (Nmap, Zenmap)
+    - `Ping sweeping` :
+	    - Identifikace aktivních zařízení v síti
+    - `DNS enumeration` : 
+	    - Získávání informací o doménách a serverech
+    - `Banner grabbing` : 
+	    - Zjišťování verzí služeb a operačních systémů
+    - `Social engineering` : 
+	    - Získávání informací od zaměstnanců organizace
+##### Přístupové útoky (Access Attacks)
+1. **Zneužívají zranitelností síťových služeb**:
+    - Autentizační služby, webové služby, databázové služby
+    - Neaktualizované systémy s veřejně známými zranitelnostmi
+    - Zero-day exploity (využití dosud neopravených zranitelností)
+2. **Umožňují získat přístup k datům či oprávněním pro správu**:
+    - Citlivé záznamy v databázi či účtu správce domény Active Directory
+    - Přístup k síťovým úložištím a dokumentům
+    - Eskalace oprávnění v systému
+3. **Password Attacks**:
+    - `Brute force` : 
+	    - Systematické zkoušení všech možných kombinací hesel
+    - `Dictionary attack` : 
+	    - Zkoušení slov ze slovníku jako možná hesla
+    - `Rainbow tables` :
+	    - Předpočítané hash hodnoty hesel pro rychlejší prolomení
+    - `Credential stuffing` : 
+	    - Zkoušení uniklých přihlašovacích údajů z jiných služeb
+    - `Keylogging` : 
+	    - Zachycení stisknutých kláves uživatele s cílem získat heslo
+4. **Spoofing Attacks**:
+    - `IP spoofing` :
+		 - Podvržení zdrojové IP adresy v paketu
+    - `MAC spoofing` :
+	    - Změna MAC adresy zařízení pro obejití filtrů
+    - `ARP spoofing` :
+	    - Manipulace s ARP tabulkami pro přesměrování provozu
+    - `DNS spoofing` :
+	    - Manipulace DNS odpovědí pro přesměrování na falešné stránky
+    - `Email spoofing` :
+	    - Falšování odesílatele e-mailových zpráv
+5. **Trust exploitations**:
+    - Zneužití důvěryhodných vztahů mezi systémy
+    - Využití toho, že některé systémy implicitně důvěřují jiným systémům
+    - Příklad: zneužití důvěry mezi servery v doméně
+6. **Port redirections**:
+    - Přesměrování síťového provozu na neoprávněné porty nebo služby
+    - Vytvoření tunelu pro přenos dat skrz firewall
+    - Obcházení bezpečnostních kontrol pomocí přesměrování portů
+7. **MitM attacks** (Man-in-the-Middle):
+    - Útočník se umístí mezi dvě komunikující strany
+    - Může odposlouchávat, upravovat nebo blokovat komunikaci
+    - Realizace pomocí:
+	    - `ARP spoofing` (podvržení `MAC` adresy)
+	    - `DNS spoofing` (podvržení `DNS` záznamu)
+	    - `SSL stripping` (odstranění šífrování `HTTPS`)
+8. **Buffer overflow attacks**:
+    - Útok na aplikaci zasláním většího množství dat, než očekává
+    - Přepsání paměti programu může vést k vykonání škodlivého kódu
+##### Útoky typu odepření služby (DoS - Denial of Service)
+1. Dočasně či trvale brání užívání služeb legitimním subjektům:
+    - **Cíle útoků**: webové servery, DNS servery, e-mailové servery, síťová infrastruktura
+    - **Dopady**: finanční ztráty, poškození reputace, nespokojenost zákazníků
+2. **Základní příčiny síťových útoků odepření služby**:
+    - **Nadměrný objem síťového provozu**:
+        - **Volumetrické útoky** - zahlcení sítě velkým množstvím dat
+        - **Amplifikační útoky** - zneužití protokolů k zesílení útoku (DNS, NTP)
+    - **Pakety s podvrženými údaji**:
+        - **TCP SYN flood** - zahlcení serveru polovičními TCP spojeními
+        - **ICMP flood** - zahlcení ping požadavky
+        - **UDP flood** - zahlcení UDP pakety
+3. **Distribuované odepření služby** (DDoS - Distributed Denial of Service):
+    - Prováděny s využitím mnoha současně působících zdrojů
+    - Koordinované útoky realizovány pomocí botnetů (sítě kompromitovaných počítačů)
+    - **Typy DDoS útoků**:
+        - **Layer 3-4 útoky** - zaměřené na síťovou a transportní vrstvu (SYN flood, UDP flood)
+        - **Layer 7 útoky** - zaměřené na aplikační vrstvu (HTTP flood, Slowloris)
+    - **Známé DDoS nástroje**: LOIC, HOIC, Mirai botnet, Memcached amplification
 #### 2) Druhy útoků na L2, Možnosti předcházení útokům na LAN
 ##### Druhy útoků na L2
 1) **ARP Spoofing** (Poisoning):
@@ -77,6 +139,39 @@
 	- Snadné vytváření a obnova obrazů virtuálních počítačů
 - **Pravidelná bezpečnostní školení uživatelů LAN**:
 	- Obvykle největší bezpečnostní hrozbou v LAN je neznalý uživatel
+##### Ochrana proti průzkumným útokům:
+- Implementace IDS/IPS systémů (Intrusion Detection/Prevention System)
+- Skrytí síťové topologie a omezení veřejně dostupných informací
+- Monitoring neobvyklého síťového provozu (skenování portů)
+- Správná konfigurace firewallů pro blokování nežádoucích připojení
+##### Ochrana proti přístupovým útokům:
+- **Silná autentizace**:
+	- Vícefaktorová autentizace (2FA/MFA)
+	- Komplexní hesla a jejich pravidelná obměna
+	- Biometrické metody ověřování
+- **Správa zranitelností**:
+	- Pravidelné aktualizace a patche systémů
+	- Penetrační testování a bezpečnostní audity
+- **Síťová segmentace**:
+	- Oddělení kritických systémů do vlastních VLAN
+	- Řízení přístupu mezi segmenty pomocí ACL
+    - **Ochrana proti spoofingu**:
+        - IP Source Guard - ochrana proti IP spoofingu
+        - DHCP Snooping - ochrana proti falešným DHCP serverům
+        - Dynamic ARP Inspection - ochrana proti ARP spoofingu
+        - 802.1X - autentizace zařízení před připojením do sítě
+##### Ochrana proti DoS a DDoS útokům:
+- **Redundance systémů**:
+	- Geografická distribuce serverů
+	- Load balancing pro rozložení zátěže
+- **Rate limiting a filtering**:
+	- Omezení počtu připojení z jedné IP adresy
+	- Filtrování známých škodlivých IP adres
+- **Anti-DDoS služby**:
+	- Cloudflare, AWS Shield, Akamai
+	- Scrubbing centers pro čištění provozu
+- **Border Gateway Protocol (BGP) failover**:
+	- Přesměrování provozu v případě útoku
 ##### Úrovně zabezpečení počítače
 1) **Fyzická bezpečnost**:
 	- Zajištění chráněného fyzického přístupu
@@ -90,11 +185,6 @@
 	- Zajištění bezpečného provozu a užívání aplikací
 	- Zranitelnost aplikací díky chybám vývojářů
 	- Např. Pravidlo nejmenší nutné úrovně přístupu, dostatečně silná hesla, pravidelné aktualizace aplikací, omezení síťového přístupu
-##### Firewall
-- Síťová služba, počítačový systém či jejich skupina
-- Zajišťuje politiku **síťového přístupu** mezi hostiteli a sítěmi
-- Zabraňuje **expozici citlivých hostitelů** v síti, prověřuje **korektnost síťové komunikace**, **blokuje** nežádoucí provoz a **centralizuje implementaci** přístupových pravidel
-- Pří nesprávné konfiguraci mohou být některé služby nepřístupné, v případě centrální role bývá firewall **single point of failure**, firewall může omezovat propustnost sítě kvůli výpočetním nárokům pravidel
 #### 3) Zabezpečení přístupu na switche a routery
 ##### Druhy přístupu k Cisco síťovým prvkům
 1) **Konzolový přístup** (port `CONSOLE`):
@@ -124,6 +214,3 @@
 ##### Nastavení doby nečinnosti sezení (session)
 - `exec-timeout 5 20` v `line console 0`
 	- Po uplynutí zadaného času nečinnosti se sezení (session) automaticky odhlásí
-##### Nastavení minimální délky hesla
-- `security passwords min-length {length}`
-	- Zařízení nedovolí nastavení hesla kratšího, než je stanovená mez

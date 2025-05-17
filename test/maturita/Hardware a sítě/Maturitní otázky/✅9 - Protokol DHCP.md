@@ -16,14 +16,7 @@
 - DHCP agenty pro obsluhu více sítí, **zprostředkují komunikaci** mezi serverem a klienty
 - Použitelný nejen pro pracovní stanice, je přímo nezbytný pro mobilní a bezdrátová zařízení
 - Lze nakonfigurovat i servery a aktivní prvky sítě, většinou ale rezervací dle `MAC` adres
-##### Vlastnosti protokolu DHCPv6
-- Konfiguruje síťová rozhraní `IPv6` uzlů v místní síti (obdoba mechanismu pro IPv4)
-- Doplňuje funkčnost mechanismu `SLAAC`:
-	- Umožňuje nastavení dalších údajů (DNS servery, NTP...)
-- Klient používá `UDP port 546`:
-	- Zasílá na multicast adresu `ALL_DHCP_Relay_AGENTS_and_Servers`
-- Server používá `UDP port 547` a link-local adresy:
-	- Zasílá na link-local adresy klienta 
+
 #### 2) Průběh komunikace v DHCPv4
 ##### Princip činnosti DHCPv4
 1) **Discover - Klient vyzve server o přidělení IP adresy** (`DHCPDISCOVER`)
@@ -53,6 +46,15 @@
 - Přeposílá DHCP pakety mezi sítěmi, kde by jinak broadcast zprávy neprocházely
 - Implementováno na směrovačích nebo dedikovaných serverech
 #### 3) Průběh komunikace v DHCPv6
+
+##### Vlastnosti protokolu DHCPv6
+- Konfiguruje síťová rozhraní `IPv6` uzlů v místní síti (obdoba mechanismu pro IPv4)
+- Doplňuje funkčnost mechanismu `SLAAC`:
+	- Umožňuje nastavení dalších údajů (DNS servery, NTP...)
+- Klient používá `UDP port 546`:
+	- Zasílá na multicast adresu `ALL_DHCP_Relay_AGENTS_and_Servers`
+- Server používá `UDP port 547` a link-local adresy:
+	- Zasílá na link-local adresy klienta 
 ##### Způsoby nastavení IPv6 rozhraní
 1. **Link-local adresa**:
     - Nastavení IID pomocí EUI-64 nebo náhodně
@@ -109,7 +111,7 @@
     - DHCPv6 Solicit - zprávu zasílá hostitel na základě údajů obsažených ve zprávě Router Advertisement
 ##### Příznaky v Router Advertisement (RA):
 - **M-flag** (Managed Address Configuration Flag):
-    - M=1: Použít Stateful DHCPv6 pro adresy
+    - M=1: Použít Stateful DHCPv6 pro adresy-
     - M=0: Použít SLAAC pro adresy
 - **O-flag** (Other Configuration Flag):
     - O=1: Použít DHCPv6 pro další parametry

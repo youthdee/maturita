@@ -101,6 +101,7 @@
 	- Příznak `-h` pro human-readable formu
 2) Příkaz `du` (**disk usage**)
 	- Lze použít pro zjištění, které soubory zabírají nejvíce místa
+3) Nástroj Disks
 ##### Windows OS - Nástroje pro sledování využití kapacity disků
 1) **Správa disků**: (**Modul **snap-in** Konzoly **MMC** - **)
 	- Poskytuje podrobnější informace o alokovaném prostoru na discích a diskových oddílech

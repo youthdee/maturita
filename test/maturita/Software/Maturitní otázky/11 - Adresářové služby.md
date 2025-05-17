@@ -3,13 +3,6 @@
 - Obsahují, spravují a poskytují **přístup k různým informacím v adresáři**
 - Používají se pro vyhledávání, správu a uspořádání běžných položek a síťových prvků (svazky, složky, soubory, tiskárny, uživatelé, skupiny, zařízení, telefonní čísla...)
 - **Active Directory**
-##### Pracovní skupina (Workgroup)
-- **Jednoduché seskupení počítačů** v lokální síti, kde každý počítač spravuje vlastní uživatelské účty a oprávnění
-- Nemá **žádný centrální řadič**, každý počítač si ukládá informace o uživatelských účtech lokálně
-##### Doména
-- **Centrální správa uživatelů, oprávnění a zásad** díky Group Policy
-- Uživatelé se mohou přihlásit na jakýkoliv počítač v doméně pomocí jednoho účtu
-- **Lepší škálovatelnost**
 ##### Active Directory
 - Poskytuje spoustu **síťových služeb**:
 	- Je řadičem domény
@@ -37,6 +30,14 @@
 	- Active Directory Administrative Center,
 	- Active Directory Sites and Services,
 	- Group Policy Management Console
+##### Pracovní skupina (Workgroup)
+- **Jednoduché seskupení počítačů** v lokální síti, kde každý počítač spravuje vlastní uživatelské účty a oprávnění
+- Nemá **žádný centrální řadič**, každý počítač si ukládá informace o uživatelských účtech lokálně
+##### Doména
+- **Centrální správa uživatelů, oprávnění a zásad** díky Group Policy
+- Uživatelé se mohou přihlásit na jakýkoliv počítač v doméně pomocí jednoho účtu
+- **Lepší škálovatelnost**
+
 ##### Active Directory - Role FSMO (Flexible Single Master Operations)
 - Vzhledem k tomu, že existují funkce, které může v jednom okamžiku provádět pouze jeden řadič domény, používá Active Directory role FSMO, které se označují také jako operations master roles
 - Příklad **FSMO rolí**:

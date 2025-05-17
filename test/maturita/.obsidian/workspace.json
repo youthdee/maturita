@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
+                "file": "Software/Maturitní otázky/8 - Správa diskových oddílů.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9 - Protokol DHCP"
+              "title": "8 - Správa diskových oddílů"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "1022eeebb58c9669",
@@ -170,6 +170,29 @@
   },
   "active": "a53fe04ed2153334",
   "lastOpenFiles": [
+    "Software/Maturitní otázky/7 - Správa uložišť.md",
+    "Software/Maturitní otázky/19 - Služby WWW, FTP.md",
+    "Software/Maturitní otázky/20 - Virtualizace a kontejnery.md",
+    "Software/Maturitní otázky/18 - Služby DNS, DHCP.md",
+    "Software/Maturitní otázky/13 - Základní komponenty cloudu.md",
+    "Software/Maturitní otázky/12 - Správa uživatelů a oprávnění.md",
+    "Software/Maturitní otázky/✅6 - Model klient-server u operačních systémů, instalace, monitorování a řešení problémů u serverů.md",
+    "Hardware a sítě/Maturitní otázky/✅7 - Protokoly aplikační vrstvy.md",
+    "Hardware a sítě/Maturitní otázky/✅6 - Protokoly transportní vrstvy.md",
+    "Hardware a sítě/Maturitní otázky/✅5 -Síťová vrstva referenčního modelu OSI.md",
+    "Software/Maturitní otázky/17 - Cloudová služba Microsoft 365.md",
+    "Software/Maturitní otázky/16 - Správa a řízení služby Azure.md",
+    "Software/Maturitní otázky/15 - Služby Azure pro zajištění identity, přístupu a zabezpečení.md",
+    "Software/Maturitní otázky/14 - Popis architektury a základních služeb MS Azure.md",
+    "Software/Maturitní otázky/11 - Adresářové služby.md",
+    "Software/Maturitní otázky/10 - Zavádění operačního systému.md",
+    "Software/Maturitní otázky/9 - Záloha a obnovení serveru.md",
+    "Software/Maturitní otázky/8 - Správa diskových oddílů.md",
+    "Hardware a sítě/Maturitní otázky/✅10 - Bezpečnost v sítích LAN.md",
+    "Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
+    "ČJ/Maturita/Maturitní otázky/✅4 - Erben Karel Jaromír - Kytice.md",
+    "Software/Maturitní otázky/✅5 - Operační systémy v mobilních zařízení.md",
+    "Hardware a sítě/Maturitní otázky/✅9 - Protokol DHCP.md",
     "Hardware a sítě/Maturitní otázky/✅8 - IP adresace a subnetace.md"
   ]
 }

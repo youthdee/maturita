@@ -1,8 +1,4 @@
 #### 1) Typy a charakteristika místních a síťových úložišť, diskové pole RAID a jeho varianty
-##### Stavba Disku
-- Inicializace disku (**MBR** nebo **GPT**) pro způsob vytváření diskových oddílů
-- Vytvoření oddílů
-- Naformátování oddílů
 ##### Typy úložišť pro pevné disky ve Windows
 1) **Základní disky**
 2) **Dynamické disky**:

@@ -1,9 +1,4 @@
 #### 1) Správa uživatelů a skupin v OS Windows
-##### Správa uživatelů v OS Windows
-- **Přihlásit** se do **počítače** nebo do **domény**
-- **Ověření identity uživatele** a k zjišťování, k čemu bude **uživatel přistupovat** a **jakou úroveň pověření** vlastní
-- Lze také použít pro **audit**
-- Místní a doménové uživatelské účty ve Windows
 ##### Profil uživatele
 - **Soubor složek** a **dat obsahujících prostředí plochy** a **nastavení aplikací**
 - Ukládají se v něm **použitá síťová připojení**
@@ -13,6 +8,11 @@
 - **Ověření** a audit **přistupu** počítače k síti Windows a k **prostředkům domény**
 - Každý počítač **musí mít jedinečný účet** počítače
 - Lze také použít pro **audit**
+##### Správa uživatelů v OS Windows
+- **Přihlásit** se do **počítače** nebo do **domény**
+- **Ověření identity uživatele** a k zjišťování, k čemu bude **uživatel přistupovat** a **jakou úroveň pověření** vlastní
+- Lze také použít pro **audit**
+- Místní a doménové uživatelské účty ve Windows
 ##### Správa skupin v OS Windows
 - **Množina** či **seznam uživatelských účtů** nebo **účtů počítačů**
 - Na rozdíl od **kontejnerů** se do skupiny **neukládají žádné údaje** týkající se **uživatele** či **počítače**
@@ -39,20 +39,6 @@
 	- Backup operators
 	- Authenticated users
 	- Everyone
-##### Zásady skupiny
-- **Nejmocnější funkce Active Directory** používané pro **konfiguraci prostředí** účtů **uživatelů** a **počítačů**
-- Poskytují **centralizovanou správu** a **konfiguraci OS** a **uživatelů v Active Directory**
-##### Možnosti použití zásad skupiny
-- Lze uplatnit na **úrovni pracovní stanice**, popřípadě na **různých úrovních**:
-	- Místa
-	- Domény
-	- Organizační jednotky
-- Daleko **více možností nastavení** než na úrovní místní
-- Při **vlastním nasazení** se zásady skupiny **aplikují v následujícím pořadí**:
-	1) Místní zásady skupiny
-	2) Zásady skupiny na úrovní místa
-	3) Zásady skupiny na úrovni domény
-	4) Zásady skupiny na úrovni organizační jednotky
 #### 2) Přehled oprávnění ve Windows na úrovni souborového systému a na úrovni sdílení
 ##### Oprávnění
 - **Typ přístupu**, který má **objekt** nebo **atribut objektu přiřazen**

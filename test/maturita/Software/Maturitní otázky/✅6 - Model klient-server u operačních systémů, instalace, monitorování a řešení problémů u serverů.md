@@ -3,16 +3,22 @@
 - Síť obsahující **servery** a **klienty**
 - Ideální pro **sdílení prostředků a dat**, **centrální zabezpečení**
 ##### Server
-- **Počítač poskytující služby**
+- **Počítač poskytující (síťové) služby více uživatelům současně**
 - Vybrání **hardwaru a softwaru na základě role serveru**. kterou bude plnit a na základě výkonu počítačů, které budou serverové služby využívat
-- **Role serveru** je **hlavní úkol**, který server plní:
+##### Server - Role
+- **Hlavní úkol**, který server plní:
 	- Přičemž server může plnit současně více rolí (souborové, tiskové, webové, poštovní, databázové...)
+##### Server - Funkce
+- Programy, které **nejsou přímou součástí role**
+- Požívají se pro **rozšíření funkčnosti rolí** a tedy i celého serveru
 ##### Server - Výběr hardwaru
-- Server je určen k tomu, aby **poskytoval síťové služby více uživatelům současně**
 - Pokud server havaruje nebo se stane nedostupným, ovlivní tato skutečnost klientské počítače, které využívají tento server
 - Je třeba tyto **problémy předvídat**, aby se s nimi dalo **vypořádat co nejrychleji**
 ##### Server - výběr softwaru
-- Nejprve je třeba si vybrat **operační systém**, poté **role**, které bude operační systém a server plnit a naposled **ostatní požadovaný software**
+- Best-Practice postup výběru:
+	1) Operační systém serveru
+	2) Role, které bude OS a Server plnit
+	3) Ostatní, doplňující software
 ##### Server - Základní subsystémy serveru
 - **Subsystémy**:
 	1) **Procesor**
@@ -36,9 +42,6 @@
 		- Obsahuje procesor, který komunikuje s ostatními komponentami výpočetního systému
 		- Sběrnice (Bus) slouží pro přenos dat mezi procesorem a pamětí a I/O zařízeními
 - **Po selhání libovolného subsystému havaruje celý server**
-##### Server - Funkce
-- Programy, které **nejsou přímou součástí role**
-- Požívají se pro **rozšíření funkčnosti rolí** a tedy i celého serveru
 #### 2) Monitorování a řešení problémů u serverů s OS Windows a UNIX-like OS včetně vhodných nástrojů
 ##### Metodika řešení problémů
 1) Vyhledat problém
@@ -47,28 +50,28 @@
 4) Vykonat naplánované operace
 5) Prověřit výsledek
 ##### Windows Server - vhodné nástroje pro řešení problémů a monitorování
-- **Systémové informace** `MSINFO32.EXE`:
+1) **Systémové informace** `MSINFO32.EXE`:
 	- Údaje o konfiguraci PC, komponentách operačního systému, ovladačích atd.
-- **Prohlížeč událostí** `EVENTVWR.MSC`:
+2) **Prohlížeč událostí** `EVENTVWR.MSC`:
 	- Procházení a správu záznamů o událostech
 	- Součást nástrojů Správa počítače, Správce serveru a Nástroje pro správu
-- **Sledování prostředků**:
+3) **Sledování prostředků**:
 	- Zobrazuje jak procesy a služby využívají systémové prostředky
 	- Lze provádět analýzu neodpovídajících procesů, souborů využívaných aplikacemi a řídit činnost procesů a služeb
-- **Konfigurace systému** `MSCONFIG.EXE`:
+4) **Konfigurace systému** `MSCONFIG.EXE`:
 	- Zjišťování problémů při spouštění Windows
 	- Dokáže zakázat spouštění programů a služeb při startu operačního systému
-- **Správce úloh**:
+5) **Správce úloh**:
 	- Sledování výkonu, stavu spuštěných programů a programů, které neodpovídají a je třeba je ukončit
-- **Sledování výkonu**:
+6) **Sledování výkonu**:
 	- Nástroje pro analýzu výkonu počítače
 	- Je možné sledovat výkon aplikací a hardwaru v reálném čase, konfigurovat, která data se mají shromažďovat, definovat úrovně pro varování a automatické provádění určitých operací
 - **Další nástroje:** 
-	- Nástroj pro diagnostiku paměti (nástroje pro správu)
-	- Průvodce řešením problémů
-	- Spouštěcí nabídka včetně nouzového režimu
-	- Obnova Windows
-	- Správce zařízení
+	1. Nástroj pro diagnostiku paměti (nástroje pro správu)
+	2. Průvodce řešením problémů
+	3. Spouštěcí nabídka včetně nouzového režimu
+	4. Obnova Windows
+	5. Správce zařízení
 ##### Unix-Like OS - Vhodné nástroje pro řešení problémů a monitorování
 1) **Sledování využití prostoru na discích**:
 	- Příkaz `df` (disk free)
@@ -109,6 +112,12 @@
 	- `chmod` pro změnu oprávnění u souborů
 	- `chown` pro změnu vlastníka či skupiny
 #### 3) Technologie a komponenty používané pro zajištění nepřetržitého provozu serveru
+##### Cluster
+- **Seskupení počítačů**, které společně **pracují jako jeden počítač**
+- Zajištění **dostupnosti** a **load balancing**
+- **Nejvyužívanější podoby** clusterů:
+	1) Clustery s ochranou proti výpadku (failover clusters)
+	2) Clustery pro vyrovnání zátěže (load-balancing clusters)
 ##### Odolnost serveru vůči chybám
 - Pro **zajištění maximální odolnosti** je třeba zjistit:
 	- Které komponenty pravděpodobně havarují
@@ -123,13 +132,7 @@
 - **Zálohování**:
 	- Operace, při níž se **vytváři kopie dat tak, aby se tyto kopie daly později použít** k obnovení původních dat, která se poškodila
 	- Provádí se na zálohovací servery, externí disky, cloud, magnetickou pásku
-##### Cluster
-- **Seskupení počítačů**, které společně **pracují jako jeden počítač**
-- Zajištění **dostupnosti** a **load balancing**
-- **Nejvyužívanější podoby** clusterů:
-	1) Clustery s ochranou proti výpadku (failover clusters)
-	2) Clustery pro vyrovnání zátěže (load-balancing clusters)
-##### 4) Možnosti vzdáleného přístupu a správy serveru
+#### 4) Možnosti vzdáleného přístupu a správy serveru
 ##### Unix-Based OS - SSH
 - Nástroj `ssh {user}@{domain_name} -p {port}`
 - Lze nakonfigurovat připojení v souboru `.ssh/config`

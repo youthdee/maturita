@@ -20,15 +20,6 @@
 - Nejpoužívanější softwarovou platformou je **Docker**
 	- V jehož ekosystému jsou k dispozici desítky standardních kontejnerů, které je možné stáhnout a použít
 #### 2) Virtualizace v OS Windows a v UNIX-like OS
-##### UNIX-like OS - Virtualizace
-- Balíček **qemu**, nástroj **virsh**
-- Instalace operačního systému na virtuální počítač příkazem `virt-install`:
-	- Příklad argumentů: (--name, --ram, --vcpus, --cdrom, --os-type,--diskpath)
-- Vypsání **přehledu všech virtuálních počítačů** příkazem `virsh --list all`
-- Zjištění **informací o virtuálním počítači** příkazem `virsh dominfo {name}`
-- **Úprava nastavení** virtuálního počítače příkazem `virsh edit {name}`
-- **Zastavení** virtuálního počítače příkazem `virsh shutdown {name}`
-- **Klonování** virtuálního počítače příkazem `virt-clone --original {vm1} --auto-clone --name {vm2}`
 ##### Windows OS - Virtualizace obecně
 - Na klientských počítačích se používají virtualizační programy **Hypervisor typu 2** (**VMWare Workstation**, **Oracle VirtualBox**)
 	- Za účelem vytvoření a provozu více virtuálních počítačů na jednom klientském pc
@@ -50,6 +41,15 @@
 	- Jako **dynamicky se zvětšující** pevné disky
 4) Snímky (**snapshots**) jsou **obrazy virtuálních počítačů v určitém bodě v čase**
 	- Technologie Hyper-V umožňuje vytvořit až 10 snímků pro každý virtuální počítač
+##### UNIX-like OS - Virtualizace
+- Balíček **qemu**, nástroj **virsh**
+- Instalace operačního systému na virtuální počítač příkazem `virt-install`:
+	- Příklad argumentů: (--name, --ram, --vcpus, --cdrom, --os-type,--diskpath)
+- Vypsání **přehledu všech virtuálních počítačů** příkazem `virsh --list all`
+- Zjištění **informací o virtuálním počítači** příkazem `virsh dominfo {name}`
+- **Úprava nastavení** virtuálního počítače příkazem `virsh edit {name}`
+- **Zastavení** virtuálního počítače příkazem `virsh shutdown {name}`
+- **Klonování** virtuálního počítače příkazem `virt-clone --original {vm1} --auto-clone --name {vm2}`
 #### 3) Konfigurace a správa kontejnerů
 ##### UNIX-Like OS - Konfigurace a správa kontejnerů
 - Zobrazení dostupných možností příkazem `docker` případně `docker {command} --help`

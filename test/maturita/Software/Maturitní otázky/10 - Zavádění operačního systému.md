@@ -21,6 +21,37 @@
 - Po **aktivaci souborového systému** **Kernel spustí správce systému a služeb** (**init** nebo **systemd** s PID 1), které **zajistí zobrazení uživatelského rozhraní**
 	- Jedná se o deamony spravující ostatní deamony jak při spuštění, tak vypínání systému
 #### 3) Správci spouštění v OS Windows a UNIX-like OS, možnosti úprav zavádění operačního systému
+##### Možnosti zavedení operačního systému - OS Windows
+- Režimy spouštění ve Windows 7 (Vybrat režim lze klávesou F8 při spouštění počítače):
+	1) **Nouzový režim**
+		- Diagnostický režim pro řešení problémů s operačním systémem a jeho spouštěním
+		- Funkčnost je omezená
+	2) **Nouzový režim se sítí**
+		- Nouzový režim s podporou konektivity do počítačové sítě
+	3) **Nouzový režim s příkazovým řádkem**
+		- Operační systém Windows v CLI
+	4) **Poslední známá funkční konfigurace**
+		- Načte konfiguraci použitou při posledním úspěšném zavedení operačního systému
+- Režimy spouštění ve Windows 8 a Windows 10 a Windows 11 (**Vybrat režim lze držením klávesy shift a položky restartovat**)
+- Příslušná možnost spuštění se vybere stiskem jedné z kláves **F1-F9**:
+	- 1) Enable debugging
+	- 2) Enable boot logging
+	- 3) Enable low-resolution video
+	- 4) Enable Safe Mode
+	- 5) Enable Safe Mode with Networking
+	- 6) Enable Safe Mode with Command Prompt
+	- 7) Disable driver signature enforcment
+	- 8) Disable early launch anti-malware protection
+	- 9) Disable automatic restart after failure
+##### Windows Boot Manager (bootmgr.exe)
+- **Primární součástí zavádějícího procesu** ve Windows
+- Nachází se v **kořenovém adresáři zaváděcího oddílu**
+- Odpovídá za **načtení bootovacího zavaděče OS**
+##### OS Windows - Boot Configuration Data (BCD)
+- **Nahrazuje** starý "**boot.ini**"
+- Obsahuje **konfiguraci pro spouštění Windows**
+##### Windows Boot Loader (winload.exe)
+- Zodpovídá za **načtení jádra systému** (**ntoskrnl.exe**), **ovladačů** a **dalších komponent OS**
 ##### Správci spouštění v UNIX-like OS
 - V Linuxu se používá systém **runlevelů**, které umožňují **nastavit**, které služby se budou **v daném** **runlevelu** **spouštět**
 - V současnosti se používá **správce systému systemd**, který kvůli **zachování kompability podporuje** i **příkazy sysv**
@@ -64,34 +95,3 @@
 ##### Správci spouštění v UNIX-like OS - Upstart
 - **Náhrada** za deamona `/sbin/init` s cílem **zajistit spouštění služeb jen tehdy, kdy je potřeba**, sledovat spuštěné služby a zpracovat události v okamžiku kdy se objeví, **s cílem obejít klasický systém sysvinit** založený na závislostech
 - Postupem času byl zastíněn deamonem systemd
-##### Možnosti zavedení operačního systému - OS Windows
-- Režimy spouštění ve Windows 7 (Vybrat režim lze klávesou F8 při spouštění počítače):
-	1) **Nouzový režim**
-		- Diagnostický režim pro řešení problémů s operačním systémem a jeho spouštěním
-		- Funkčnost je omezená
-	2) **Nouzový režim se sítí**
-		- Nouzový režim s podporou konektivity do počítačové sítě
-	3) **Nouzový režim s příkazovým řádkem**
-		- Operační systém Windows v CLI
-	4) **Poslední známá funkční konfigurace**
-		- Načte konfiguraci použitou při posledním úspěšném zavedení operačního systému
-- Režimy spouštění ve Windows 8 a Windows 10 a Windows 11 (**Vybrat režim lze držením klávesy shift a položky restartovat**)
-- Příslušná možnost spuštění se vybere stiskem jedné z kláves **F1-F9**:
-	- 1) Enable debugging
-	- 2) Enable boot logging
-	- 3) Enable low-resolution video
-	- 4) Enable Safe Mode
-	- 5) Enable Safe Mode with Networking
-	- 6) Enable Safe Mode with Command Prompt
-	- 7) Disable driver signature enforcment
-	- 8) Disable early launch anti-malware protection
-	- 9) Disable automatic restart after failure
-##### Windows Boot Manager (bootmgr.exe)
-- **Primární součástí zavádějícího procesu** ve Windows
-- Nachází se v **kořenovém adresáři zaváděcího oddílu**
-- Odpovídá za **načtení bootovacího zavaděče OS**
-##### OS Windows - Boot Configuration Data (BCD)
-- **Nahrazuje** starý "**boot.ini**"
-- Obsahuje **konfiguraci pro spouštění Windows**
-##### Windows Boot Loader (winload.exe)
-- Zodpovídá za **načtení jádra systému** (**ntoskrnl.exe**), **ovladačů** a **dalších komponent OS**

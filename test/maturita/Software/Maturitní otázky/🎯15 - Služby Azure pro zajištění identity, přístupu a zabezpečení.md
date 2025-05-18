@@ -60,3 +60,18 @@
 - Přístup typu **RBAC** se vynucuje pomocí **ARM** (**Azure Resource Manager**)
 	- Služba pro správu a zabezpečení cloudových prostředků.
 - RBAC funguje na **principu dědičnosti** a **povolování přístupu**.
+##### Model Zero Trust
+- Model, který předpokládá ten nejhorší scénář, jaký může nastat a na jeho základě provádí ochranu prostředků, tj. předpokládá, že každý požadavek považuje, jako by přicházel z nedůvěryhodné sítě.
+- Mezi základní principy modelu Zero Trust patří důsledné ověřování, používání přístupu nejmenšího potřebného oprávnění, předpokládat, že kdykoliv může dojít k nějakému bezpečnostnímu incidentu
+- Nepředpokládá (jako u tradičních řešení), že zařízení je bezpečné, protože se nachází ve firemní síti, ale vyžaduje po každém, aby se ověřil, přístup se tedy uděluje na základě ověření (a nikoliv umístění)
+##### Model Defense-in-depth
+- Model pro ochranu dat a ochrana před jejich zcizením neoprávněnými uživateli
+- Skládá se z několika ochranných vrstev, kdy data se nachází uprostřed a jsou chráněna okolními vrstvami, které chrání středovou oblast obsahující tato data
+- Systém vrstev útok zpomaluje, pokud útočník prolomí jednu vrstvu, musí prolomit další, aby postoupil ke středu
+- **Fyzické zabezpečení**: ochrana přístupu do budovy fyzickými prostředky
+- **Identita a přístup**: řízení přístupu k infrastruktuře firmy, používání SSO a multifaktorového ověřování, audit událostí a změn
+- **Perimetr**: ochrana prostředků před síťovými útoky, identifikace útoků, varování a likvidace pomocí ochrany před útoky DDoS a pomocí firewallu
+- **Síť**: omezení síťové konektivity na nutné minimum
+- **Výpočetní prostředky**: zajištění zabezpečení výpočetních prostředků zabezpečením přístupu k virtuálním počítačům, aktualizace a ochrana koncových uzlů
+- **Aplikace**: zajištění bezpečnosti aplikací odhalováním zranitelností v kódu
+- **Data**: zajištění ochrany dat pomocí prostředků a procesů zajišťujících CIA (důvěrnost, integritu a dostupnost

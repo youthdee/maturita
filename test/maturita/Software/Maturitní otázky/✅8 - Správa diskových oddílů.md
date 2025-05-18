@@ -4,28 +4,34 @@
 	- Zobrazení stavu disku, přiřazení a změnění písmena disku (mapování), přidání disků a diskových polí, nastavení diskového oddílu jako aktivního a inicializace disku
 - Pro **vytvoření oddílu** a jeho **naformátování** lze použít i nástroj `diskpart.exe` a příkaz `Format`
 - **Pro naformátování** disku lze použít i program Průzkumník Windows
-##### Správa diskových oddílů typu MBR v OS Windows
-- **Standard Master Boot Record** používá záznam **MBR**, který obsahuje informace o tom, **jak jsou na pevném disku rozloženy jednotlivé diskové oddíly**
-	- Tento záznam má 512 B a obsahuje zavaděč (boot loader) v aktivním diskovém oddílu
-	- Tento standard se používá zejména v počítačích s firmwarem typu BIOS
-- Pokud je třeba na disku **vytvořit více než 4 oddíly** , pak je možné **jeden diskový oddíl nastavit jako rozšířený**
-	- V rozšířeném oddílu se vytváří jednotlivé logické disky, které se používají pro oddělení dat pro účely správy
-##### Správa diskových oddílů typu GPT v OS Windows
-- Standard **GUID Partition Table** pro pevné disky v podobě **schématu založeném na tabulce oddílů**
-	- Využívá celou řadu moderních technik, které rozšiřují možnosti staršího standardu MBR
-	- Používá se na počítačích s UEFI
+##### Windows - Způsoby vytváření diskových oddílů
+1) **Master Boot Record** (MBR):
+	- Záznam **MBR**, který obsahuje informace o tom, jak jsou na pevném disku rozloženy jednotlivé diskové oddíly
+	- Tento záznam má `512B` a obsahuje zavaděč (`boot loader`) v aktivním diskovém oddílu
+	- Tento standard se používá zejména v počítačích s firmwarem typu `BIOS`
+	- Max 4 primární oddíly, potom je třeba vytvořit oddíl rozšířený
+ 2) **GUID Partition Table** (GPT):
+	 - **GUID Partition Table** pro pevné disky v podobě **schématu založeném na tabulce oddílů**
+	- Využívá celou řadu moderních technik, které rozšiřují možnosti staršího standardu `MBR`
+	- Používá se na počítačích s `UEFI`
 ##### Správa diskových oddílů typu MBR v UNIX-like OS
 - Nástroj `fdisk {název}` pro **správu disků MBR**
+	- Nová oddíl `n`
 	- Aktuální partition table lze zobrazit klávesou `p`
-	- Seznam všech typů diskových oddílů lze zobrazit klávesou `l`
 	- Odstranění diskového oddílu klávesou `d`
-	- Parametr `ld` lze ručně měnit klávesou `t`
 	- Konečné úpravy se zapíší na disk klávesou `w`
+	- Ukončit bez uložení `q`
 ##### Správa diskových oddílů typu GPT v UNIX-like OS
 - nástroj `gdisk {název}` pro **správu disků GPT**
 	- Lze použít pro vytvoření diskových oddílů GPT i MBR
 	- Volby jsou velmi podobné volbám nástroji `fdisk`
 #### 2) Charakteristika a konfigurace nejběžnějších souborových systémů v OS Windows a UNIX-like OS
+##### Windows - Formátování
+1) **Disk Management**
+2) **Inicializace disku** (MBR nebo GPT)
+3) **Vytvoření jednoduchého svazku**
+4) **Přiřazení identifikátoru** (písmena) jednotky nebo cesty
+5) **Formátování disku** (NTFS, exFAT, FAT32, FAT16)
 ##### Windows - Souborový systém
 - Představuje **způsob ukládání** a **uspořádání souborů**
 - Spravuje **fyzické umístění souborů**
@@ -38,28 +44,33 @@
 		- Maximální velikost souboru 4GB
 		- Diskové oddíly do 2 TB
 		- Nepodporuje šifrování ani oprávnění
-	3) **NTFS**:
+	3) **exFAT**:
+		- Optimalizovaný pro disky flash
+		- Podpora souborů větších než 4 GB
+		- Maximální velikost diskového oddílu je 16 EB
+	4) **NTFS**:
 		- Upřednostňovaná souborový systém s názvem New Technology File System
 		- podporuje disky s velikostí až 16 exabytů a dlouhé názvy souborů
 		- Umožňuje ACL a šifrování
-	4) **exFAT**:
-		- Optimilalizovaný pro disky flash
-		- Podpora souborů větších než 4 GB
-		- Maximální velikost diskového oddílu je 16 EB
 	5) **ReFS**:
 		- optimalizován pro big data (ukkládání velkého množství dat ve velkém počtu souborů)
 		- Maximální velikost souboru je 16 EB
 		- Je určen pro datové disky, nelze z něj zavést operační systém
-- Požadovaný souborový systém se zvolí v **Nástroji Správa Disků**
+##### Unix-Like Os - Formátování
+1) Nástroj `fdisk | gdisk` pro vytvoření diskového oddílu
+2) Příkaz `mkfs -t {souborový systém} -L {popisek} {diskový oddíl}` pro formátování diskového oddílu
+3) Poté je třeba vytvořit Mountpoint a zapsat do `/etc/fstab.`
+4) **Alternativně** lze využít **nástroj Disks** (GUI), kterým lze následující:
+	- Správa diskových oddílů
+	- připojování a odpojování disků
+	- formátování diskových oddílů
+	- dotazování se na stav disku technologií S.M.A.R.T. (Self Monitoring, Analysis and Reporting Technology)
 ##### Unix-Like OS - Formátování diskových oddílů
-- **Po vytvoření** diskových oddílů je třeba tyto diskové oddíly **naformátovat** (vytvořit na nich souborový systém)
-	- Zobrazení seznamu podporovaných souborových systémů příkazem `ls /sbin/mk`
-- Při výběru souborového systému je třeba zohlednit:
-	- Podpora žurnálování:
+- **Při výběru souborového systému je třeba zohlednit**:
+	1) Podpora žurnálování:
 		- Rychlejší obnova dat při pádu systému
-	- Podporu SE Linuxu:
-		- Security Enhanced Linux
-- Mezi nejvyužívanější souborové systémy patří:
+	2) Podporu SE Linuxu:
+- **Mezi nejvyužívanější souborové systémy patří**:
 	1) **ext2**
 		- Žádný žurnál, není odolný proti výpadkům
 		- Rychlý zápis, vhodný pro flash paměti
@@ -80,20 +91,6 @@
 		- Vysoký výkon, optimalizovaný pro velké soubory
 		- Žurnálování na metadatech, rychlá obnova
 		- Škálovatelný, podporuje velmi velké disky
-	6) **FAT**
-		- Maximální velikost souboru 4 GB u FAT32, omezená velikost
-		- Široká kompatibilita, podporován všemi OS
-		- Bez oprávnění a zabezpečení, méně vhodný pro moderní systémy
-	7) **HPFS** / **NTFS** / **exFAT**
-		- HPFS dříve pro OS/2, dnes zastaralý
-		- NTFS podpora oprávnění, šifrování a velkých souborů
-		- exFAT kompromis mezi FAT32 a NTFS, ideální pro flash disky
-- Příkaz `mkfs -t {souborový systém} -L {popisek} {diskový oddíl}` pro formátování diskového oddílu
-- **Alternativně** lze využít **nástroj Disks** (GUI), kterým lze následující:
-	- Správa diskových oddílů
-	- připojování a odpojování disků
-	- formátování diskových oddílů
-	- dotazování se na stav disku technologií S.M.A.R.T. (Self Monitoring, Analysis and Reporting Technology)
 #### 3) Nástroje pro sledování využití kapacity disků v OS Windows a UNIX-like OS
 ##### UNIX-Like OS - Nástroje pro sledování využití kapacity disků
 1) Příkaz `df` (**disk free**)

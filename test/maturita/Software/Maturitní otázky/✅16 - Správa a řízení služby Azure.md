@@ -121,7 +121,7 @@
 	- Podmínka, při které se má upozornění vyvolat
 	- Např. vytížení CPU na virtuálním počítači překročí 80%.
 - **Provedení akcí**, které **následují po upozornění** se nazývá **action groups**, lze spojit s **jednou nebo více událostmi**.
-##### Application Insights
+##### Azure Application Insights
 - **Funkce** služby **Azure Monitor** pro **monitoring webových aplikací** běžících v Azure, **on-premise** a různých cloudových prostředích.
 - Lze **monitorovat** např. **počty požadavků**, **doby odezvy**, **počty chyb**, **rychlost načtení**, **relace**, **počet uživatelů**.
 - Dokáže posílat **syntetické požadavky** za účelem **kontroly stavu aplikace** a **sledování stavu během nízkého vytížení**.

@@ -4,17 +4,6 @@
 2) Záznamy tabulky se tvoří **dle přijatých rámců**, uloží se `MAC` **adresa** odesílatele a **číslo portu**
 3) Rámce se následně rozesílají dle `MAC` **tabulky**, podle **cílové** `MAC` **adresy** se vyhledá **číslo portu**
 4) Záznamy tabulky po určité době **expirují**, při odpojení portu se položky tabulky vymažou
-##### Přepínání rámců
-- **Klíčový koncept** v oblasti sítí a telekomunikací
-- **Různé druhy** switchů pro různé sítě:
-	- `LAN`, `WAN`, `PSTN` (Public Service Telephone Network)
-- Rozlišení portů podle jejich aktuální úlohy:
-	1) Vstupní (`ingress`) port:
-		- Místo, kde rámce vstupuje do zařízení
-	2) Výstupní (`egress`) port:
-		- Místo, kudy rámec opouští zařízení
-- Přepínání probíhá na základě **vyhodnocení záhlaví rámce**
-	- Podle cílové adresy je možné dohledat výstupní port
 ##### Tabulka MAC adres switche 
 1) Uložena v paměti `CAM` (**Content Addresable Memory**)
 	- Která slouží pro vyhledávání záznamů vysokou rychlostí
@@ -29,6 +18,17 @@
 	1) V případě unicast adresy switch (přepínač) v tabulce `MAC` adres vyhledá pro danou cílovou `MAC` adresu výstupní port
 	2) V případě `multicast`/`broadcast` adresy je rámec rozeslán na všechny aktivní porty kromě portu vstupního
 #### 2) Přepínání rámců na switchi, popis, metody
+##### Přepínání rámců
+- **Klíčový koncept** v oblasti sítí a telekomunikací
+- **Různé druhy** switchů pro různé sítě:
+	- `LAN`, `WAN`, `PSTN` (Public Service Telephone Network)
+- Rozlišení portů podle jejich aktuální úlohy:
+	1) Vstupní (`ingress`) port:
+		- Místo, kde rámce vstupuje do zařízení
+	2) Výstupní (`egress`) port:
+		- Místo, kudy rámec opouští zařízení
+- Přepínání probíhá na základě **vyhodnocení záhlaví rámce**
+	- Podle cílové adresy je možné dohledat výstupní port
 ##### Metoda Store-and-Forward
 1) Nejprve příjme **celý rámec**, **ověří délku** a **kontrolní součet**
 2) **Zaznamená** číslo portu odesílatele pokud v tabulce MAC adres příslušný záznam není

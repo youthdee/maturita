@@ -1,5 +1,4 @@
 #### 1) Základní charakteristika služby Microsoft 365
-
 ##### Základní charakteristika služby Microsoft 365 - Základní charakteristika
 - **Cloudová služba** obsahující:
 	1) Aplikace pro produktivitu z Office 365
@@ -14,24 +13,24 @@
 - Vznikla **rozšířením SaaS** služby **Office 365**
 - Služba existuje v **různých variantách předplatného** (běžní uživatelé, malé i velké firmy, školy...)
 ##### Základní charakteristika služby Microsoft 365 - Copilot for Microsoft 365
-- Asistenční nástroj využívající **umělou inteligenci**
+1) Asistenční nástroj využívající **umělou inteligenci**
 	- Díky využívání rozsáhlých jazykových modelů (LLM) a nástroje Microsoft Graph
 	- Microsoft Graph umožňuje uživatelům dosahovat maximální produktivity (při zachování vysoké úrovně zabezpečení a soukromí)
 		- Označuje se také jako brána k datům a umělé inteligenci v MS 365
 		- zajišťuje přístup k datům uložených ve všech aplikacích MS 365
-- **Copilot for Microsoft 365 existuje ve dvou podobách**:
+2) **Copilot for Microsoft 365 existuje ve dvou podobách**:
 	1) Jako nástroj integrovaný v aplikacích Microsoft 365 (Word, Excel Powerpoint...)
 	2) Jako Microsoft 365 Copilot:
 		- Zde dokáže prohledávat internet, přičemž využívá pracovní materiály uživatele a z nich vytváří potřebný obsah
 		- Upozorňuje na vše, na co by mohl uživatel zapomenout a usnadňuje tak rozhodování
-- **Přehled funkcí Copilotu**:
-	1) Podpora kreativity
-	2) Podpora produktivity
-	3) Podpora rozvoje uživatele
-	4) Součástí je pokročilé řešení zabezpečení, souladu a ochrany soukromí
-	5) Disponuje základními dovednostmi v oblasti produktivity a spolupráce
-	6) Učí se nové dovednosti
-- Firma Microsoft zachovává **přísná pravidla** týkající se umělé inteligence a vyvíjí **pouze systémy prospěšné pro uživatele**
+	- **Přehled funkcí Copilotu**:
+		1) Podpora kreativity
+		2) Podpora produktivity
+		3) Podpora rozvoje uživatele
+		4) Součástí je pokročilé řešení zabezpečení, souladu a ochrany soukromí
+		5) Disponuje základními dovednostmi v oblasti produktivity a spolupráce
+		6) Učí se nové dovednosti
+3) Firma Microsoft zachovává **přísná pravidla** týkající se umělé inteligence a vyvíjí **pouze systémy prospěšné pro uživatele**
 	1) Zajišťuje kontroly možných hrozeb
 	2) Vylepšuje data a modely
 	3) Opravuje chybné chování
@@ -39,7 +38,6 @@
 	5) Vysvětluje omezení
 	6) Posiluje dohled uživatelů
 #### 2) Přehled řešení v oblasti produktivity a spolupráce u služby Microsoft 365
-
 ##### Přehled řešení v oblasti produktivity - Výhody a možnosti
 1) **Možnost používání aplikací Office**:
 	- (Word, Excel, Powerpoint)
@@ -115,13 +113,13 @@
 	- Platforma pro rozvoj stávajících a budování nových znalostí a dovedností spojující v sobě možnost komunikace, znalosti, učení, prostředky a náhledy týkající se práce
 #### 3) možnosti nasazení a aktualizace aplikací Microsoft 365
 ##### Možnosti nasazení aplikací
-- Aplikace uživatelé můžou **instalovat jednotlivě**
-- Z místního zdroje pomocí nástroje **Configuration Manager**
+1) Aplikace uživatelé můžou **instalovat jednotlivě**
+2) Z místního zdroje pomocí nástroje **Configuration Manager**
 	- Instalační soubory se stáhnou z místní sítě
-- Z **cloudu** pomocí nástroje **ODT** (**Office Deployment Tool**)
+3) Z **cloudu** pomocí nástroje **ODT** (**Office Deployment Tool**)
 	- Instalace ze sítě CDN (Content Delivery Network)
-- Z místního zdroje pomocí nástroje **ODT** (**Office Deployment Tool**)
-- **Automatická instalace z cloudu**:
+4) Z místního zdroje pomocí nástroje **ODT** (**Office Deployment Tool**)
+5) **Automatická instalace z cloudu**:
 	- Instalace probíhá z portálu office
 ##### Možnosti aktualizací aplikací
 - **Typy aktualizací**:

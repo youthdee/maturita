@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software/Maturitní otázky/🎯15 - Služby Azure pro zajištění identity, přístupu a zabezpečení.md",
+                "file": "Software/Maturitní otázky/19 - Služby WWW, FTP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🎯15 - Služby Azure pro zajištění identity, přístupu a zabezpečení"
+              "title": "19 - Služby WWW, FTP"
             }
           }
         ]
@@ -170,31 +170,31 @@
   },
   "active": "1c873390297e6cf3",
   "lastOpenFiles": [
-    "Hardware a sítě/Maturitní otázky/12 - Statický routing, Inter-VLAN routing.md",
-    "Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
-    "Software/Maturitní otázky/🎯14 - Popis architektury a základních služeb MS Azure.md",
-    "Software/Maturitní otázky/✅13 - Základní komponenty cloudu.md",
-    "Software/Maturitní otázky/✅10 - Zavádění operačního systému.md",
-    "Software/Maturitní otázky/11 - Adresářové služby.md",
-    "Software/Maturitní otázky/12 - Správa uživatelů a oprávnění.md",
     "Software/Maturitní otázky/18 - Služby DNS, DHCP.md",
-    "Software/Maturitní otázky/19 - Služby WWW, FTP.md",
-    "Software/Maturitní otázky/🎯20 - Virtualizace a kontejnery.md",
-    "Software/Maturitní otázky/🎯17 - Cloudová služba Microsoft 365.md",
-    "Software/Maturitní otázky/🎯16 - Správa a řízení služby Azure.md",
-    "Software/Maturitní otázky/🎯15 - Služby Azure pro zajištění identity, přístupu a zabezpečení.md",
-    "Software/Maturitní otázky/✅9 - Záloha a obnovení serveru.md",
-    "Software/Maturitní otázky/✅8 - Správa diskových oddílů.md",
-    "Software/Maturitní otázky/✅7 - Správa uložišť.md",
-    "Software/Maturitní otázky/✅6 - Model klient-server u operačních systémů, instalace, monitorování a řešení problémů u serverů.md",
-    "Hardware a sítě/Maturitní otázky/✅4 - Ethernet.md",
-    "Hardware a sítě/Maturitní otázky/✅7 - Protokoly aplikační vrstvy.md",
-    "Hardware a sítě/Maturitní otázky/✅6 - Protokoly transportní vrstvy.md",
-    "Hardware a sítě/Maturitní otázky/✅5 -Síťová vrstva referenčního modelu OSI.md",
-    "Hardware a sítě/Maturitní otázky/✅10 - Bezpečnost v sítích LAN.md",
-    "Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
-    "ČJ/Maturita/Maturitní otázky/✅4 - Erben Karel Jaromír - Kytice.md",
-    "Software/Maturitní otázky/✅5 - Operační systémy v mobilních zařízení.md",
-    "Hardware a sítě/Maturitní otázky/✅9 - Protokol DHCP.md"
+    "Software/Maturitní otázky/12 - Správa uživatelů a oprávnění.md",
+    "Software/Maturitní otázky/11 - Adresářové služby.md",
+    "Software/Maturitní otázky/✅20 - Virtualizace a kontejnery.md",
+    "Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
+    "Hardware a sítě/Maturitní otázky/12 - Statický routing, Inter-VLAN routing.md",
+    "Hardware a sítě/Maturitní otázky/13 - Dynamický routing.md",
+    "Hardware a sítě/Maturitní otázky/14 - Access Control Lists (ACL).md",
+    "Hardware a sítě/Maturitní otázky/15 - Služba NAT v IPv4.md",
+    "Hardware a sítě/Maturitní otázky/16 - Správa VLAN ve středně velkých a velkých sítích.md",
+    "Hardware a sítě/Maturitní otázky/17 - Protokol STP a EtherChannel.md",
+    "Hardware a sítě/Maturitní otázky/18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
+    "Hardware a sítě/Maturitní otázky/19 - Standardy a technologie sítí WAN.md",
+    "Hardware a sítě/Maturitní otázky/20 - VPN a IPsec.md",
+    "ČJ/Maturita/Maturitní otázky/20 - Smoljak Ladislav - Vyšetřování ztráty třídní knihy.md",
+    "ČJ/Maturita/Maturitní otázky/11 - Kesey Ken - Vyhoďme ho z kola ven.md",
+    "ČJ/Maturita/Maturitní otázky/8 - Fitzgerald Scott Francis - Velký Gatsby.md",
+    "ČJ/Maturita/Maturitní otázky/7 - Maupassant Guy de - Kulička.md",
+    "ČJ/Maturita/Maturitní otázky/6 - Mácha Karel Hynek - Máj.md",
+    "ČJ/Maturita/Maturitní otázky/5 - Gogol Nikolaj Vasiljevič - Revizor.md",
+    "ČJ/Maturita/Maturitní otázky/3 - Shakespeare William - Romeo a Julie.md",
+    "ČJ/Maturita/Maturitní otázky/2 - Moliére - Lakomec.md",
+    "ČJ/Maturita/Maturitní otázky/✅15 - Čapek Karel - Bílá nemoc.md",
+    "ČJ/Maturita/Maturitní otázky/✅10 - Kafka Franz - Proměna.md",
+    "ČJ/Maturita/Maturitní otázky/✅9 - Hemingway Ernest - Stařec a moře.md",
+    "ČJ/Maturita/Maturitní otázky/✅4 - Erben Karel Jaromír - Kytice.md"
   ]
 }

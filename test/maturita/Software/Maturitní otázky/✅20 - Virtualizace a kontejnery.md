@@ -22,7 +22,6 @@
 #### 2) Virtualizace v OS Windows a v UNIX-like OS
 ##### Windows OS - Virtualizace obecně
 - Na klientských počítačích se používají virtualizační programy **Hypervisor typu 2** (**VMWare Workstation**, **Oracle VirtualBox**)
-	- Za účelem vytvoření a provozu více virtuálních počítačů na jednom klientském pc
 - Na serveru se obvykle používají virtualizační programy **Hypervisor typu 1** (**VMWare vSphere/ESXi, Xen, Oracle VM Server**) což přináší mnoho výhod:
 	1) Efektivita využití systémových prostředků
 	2) Menší spotřeba energie

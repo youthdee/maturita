@@ -31,7 +31,6 @@
 - Je vhodné **nainstalovat i proxy server** a **deamona pro web-cache**  **Squid** a vylepšení **SquidGuard**, který provádí přesměrování a nasazení blacklistů
 - Adresář pro uložení webových stránek a dalších dokumentů je definován v direktivě `DocumentRoot`, v případě více webů má každý virtuální host svoji direktivu
 	- Místo, které slouží jako výchozí pro vyřízení požadavků na server
-	- Definici každého virtuálního hosta je třeba přidat do samostatného souboru v adresáři /etc/httpd/conf.d
 - Definování portu či adresy a portu se definuje v direktivě `Listen`
 - Konfigurační soubor se nachází:
 	- `/etc/apache2/apache2.conf` pro ubuntu
@@ -42,6 +41,8 @@
 		- `SSLEngine on`
 		- `SSLCertificateFile {cesta}`
 		- `SSLCertificateKeyFile {cesta}`
+	
+> Definici každého virtuálního hosta je třeba přidat do samostatného souboru v adresáři /etc/httpd/conf.d
 #### 3) Konfigurace a správa služby FTP v OS Windows a v UNIX-like OS.
 ##### OS Windows - Konfigurace a správa služby FTP
 1) lze vytvořit v **IIS Manageru** jako **FTP Server s vazbou na konkrétní web** (Sites/Actions/Add FTP Site)

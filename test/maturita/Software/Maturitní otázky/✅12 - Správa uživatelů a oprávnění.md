@@ -18,14 +18,16 @@
 - Na rozdíl od **kontejnerů** se do skupiny **neukládají žádné údaje** týkající se **uživatele** či **počítače**
 	- Skupina své členy pouze vypíše
 - Skupiny se s výhodou používají ke **zjednodušení správy** (zejména přidělování oprávnění a práv)
-- Typy skupin:
-	1) Skupina se zabezpečením
-	2) Distribuční skupina
-- Typy a rozsahy skupin podle **rozsahu působnosti** (doména, strom, les)
+1) Typy skupin:
+	1) Skupina se zabezpečením:
+		- Slouží k přidělení oprávnění v operačním systému 
+	2) Distribuční skupina:
+		- Slouží pro emailovou komunikaci
+2) Typy a rozsahy skupin podle **rozsahu působnosti** (doména, strom, les)
 	1) Místní doménová
 	2) Globální
 	3) Univerzální
-- Pro efektivní používání skupin na přiřazování oprávnění se používá zkratka "**AGDLP**"
+3) Pro efektivní používání skupin na přiřazování oprávnění se používá zkratka "**AGDLP**"
 	1) Accounts
 	2) Global
 	3) Domain Local
@@ -39,6 +41,12 @@
 	- Backup operators
 	- Authenticated users
 	- Everyone
+##### Nástroje pro správu
+1) Na Windows Serveru:
+	- Active Directory Users and Computers
+2) Na klientském počítači:
+	- Ovládací panely -> účty uživatelů
+	- lusrmgr.msc
 #### 2) Přehled oprávnění ve Windows na úrovni souborového systému a na úrovni sdílení
 ##### Oprávnění
 - **Typ přístupu**, který má **objekt** nebo **atribut objektu přiřazen**

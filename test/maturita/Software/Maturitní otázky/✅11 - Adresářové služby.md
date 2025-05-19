@@ -37,7 +37,6 @@
 - **Centrální správa uživatelů, oprávnění a zásad** díky Group Policy
 - Uživatelé se mohou přihlásit na jakýkoliv počítač v doméně pomocí jednoho účtu
 - **Lepší škálovatelnost**
-
 ##### Active Directory - Role FSMO (Flexible Single Master Operations)
 - Vzhledem k tomu, že existují funkce, které může v jednom okamžiku provádět pouze jeden řadič domény, používá Active Directory role FSMO, které se označují také jako operations master roles
 - Příklad **FSMO rolí**:
@@ -45,7 +44,7 @@
 		-  1 per forest, spravuje aktualizace a změny schématu Active Directory
 	2) Domain Naming Master 
 		- 1 per forest, Spravuje přidání a odebrání domén z lesu pokud se les vyskytuje v root domain
-	3) PDC Emulator 
+	3) Primary Domain Controller Emulator 
 		- 1 per domain, Primary Domain Controller, v minulosti používán jako hlavní správce domény, podpora kompability, tváří se jako hlavní server pro změny hesel
 	4) RID Master
 		- 1 per domain, Alokuje pooly UUID pro doménové controllery pro použití při vytváření nových domén
@@ -122,26 +121,26 @@
 - Povolení průchodu požadavkům přes firewall: `sudo ufw allow ldap`
 - Po instalaci serveru LDAP je nutno **nainstalovat na klientská zařízení potřebné knihovny**, které zajistí připojení k serveru LDAP
 ##### UNIX-Like OS - Konfigurace a správa služby LDAP
-- Většinu **konfigurace zajistí** balíček `ldap-auth-config`:
+1) Většinu **konfigurace zajistí** balíček `ldap-auth-config`:
 	- Stačí zadat ID serveru LDAP, název báze vyhledávání LDAP a požadovanou verzi
 	- Vytvoří se účet LDAP pro uživatele root a nastaví se heslo
 	- Zadané údaje se uloží do `/etc/ldap.conf`
 	 - Vytvoření účtu správce a přiřazení hesla příkazem `slappasswd`
-- Vytvoření souboru **LDIF** (ldaprootpasswrd.ldif) používaného pro **přidávání záznamů do adresáře** LDAP
+2) Vytvoření souboru **LDIF** (ldaprootpasswrd.ldif) používaného pro **přidávání záznamů do adresáře** LDAP
 	- Zde je třeba přidat tento obsah:
 		- dn: olcDatabase={0}config,cn=config (název konkrétní instance databáze, obvykle se nacházi v souboru /etc/openldap/slapd.d/dn=config)
 		- changetype: modify
 		- add: olcRootPW
 		- olcRootPW: {SSHA}PASSWORD_CREATED (hash získaný při vytvoření účtu správce LDAP)
-- Přidat **záznam lze pomocí URI odkazujícího na server LDAP** a výše zmiňovaný soubor
+3) Přidat **záznam lze pomocí URI odkazujícího na server LDAP** a výše zmiňovaný soubor
 	- sudo ldapadd -Y EXTERNAL -H ldapi:// -f ldaprootpasswd.ldif
-- Poté je třeba **zkopírovat soubor slapd** do /var/lib/ldap a nastavit mu nutná oprávnění
+4) Poté je třeba **zkopírovat soubor slapd** do /var/lib/ldap a nastavit mu nutná oprávnění
 	- sudo cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
 	- sudo chown -R ldap;ldap /var/lib/ldap/DB_CONFIG
 	- sudo systemctl restart slapd
-- Následuje **import některých základních schémat LDAP** z /etc/openldap/schema
+5) Následuje **import některých základních schémat LDAP** z /etc/openldap/schema
 	- sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
 	- sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif
 	- sudo ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
-- Nyní se **přidá doména do databáze LDAP** a vytvoří se **soubor ldapdomain.ldif pro doménu**
-- Tato konfigurace se přidá do databáze příkazem "sudo **ldapmodify** -Y EXTERNAL -H ldapi:/// -f ldapdomain.ldif"
+6) Nyní se **přidá doména do databáze LDAP** a vytvoří se **soubor ldapdomain.ldif pro doménu**
+7) Tato konfigurace se přidá do databáze příkazem "sudo **ldapmodify** -Y EXTERNAL -H ldapi:/// -f ldapdomain.ldif"

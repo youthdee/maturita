@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software/Maturitní otázky/✅18 - Služby DNS, DHCP.md",
+                "file": "Hardware a sítě/Maturitní otázky/12 - Statický routing, Inter-VLAN routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "✅18 - Služby DNS, DHCP"
+              "title": "12 - Statický routing, Inter-VLAN routing"
             }
           }
         ]
@@ -170,31 +170,31 @@
   },
   "active": "1c873390297e6cf3",
   "lastOpenFiles": [
-    "Software/Maturitní otázky/✅19 - Služby WWW, FTP.md",
-    "Software/Maturitní otázky/✅20 - Virtualizace a kontejnery.md",
-    "Software/Maturitní otázky/✅18 - Služby DNS, DHCP.md",
-    "Software/Maturitní otázky/✅12 - Správa uživatelů a oprávnění.md",
-    "Hardware a sítě/Maturitní otázky/18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
+    "Hardware a sítě/Maturitní otázky/✅11 - Přepínané sítě.md",
     "Hardware a sítě/Maturitní otázky/20 - VPN a IPsec.md",
     "Hardware a sítě/Maturitní otázky/19 - Standardy a technologie sítí WAN.md",
+    "Hardware a sítě/Maturitní otázky/18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
     "Hardware a sítě/Maturitní otázky/17 - Protokol STP a EtherChannel.md",
     "Hardware a sítě/Maturitní otázky/16 - Správa VLAN ve středně velkých a velkých sítích.md",
     "Hardware a sítě/Maturitní otázky/15 - Služba NAT v IPv4.md",
     "Hardware a sítě/Maturitní otázky/14 - Access Control Lists (ACL).md",
     "Hardware a sítě/Maturitní otázky/13 - Dynamický routing.md",
     "Hardware a sítě/Maturitní otázky/12 - Statický routing, Inter-VLAN routing.md",
-    "Hardware a sítě/Maturitní otázky/11 - Přepínané sítě.md",
+    "Hardware a sítě/Maturitní otázky/✅4 - Ethernet.md",
+    "Hardware a sítě/Maturitní otázky/✅5 -Síťová vrstva referenčního modelu OSI.md",
+    "Hardware a sítě/Maturitní otázky/✅6 - Protokoly transportní vrstvy.md",
+    "Hardware a sítě/Maturitní otázky/✅7 - Protokoly aplikační vrstvy.md",
+    "Hardware a sítě/Maturitní otázky/✅8 - IP adresace a subnetace.md",
+    "Hardware a sítě/Maturitní otázky/✅9 - Protokol DHCP.md",
+    "Software/Maturitní otázky/✅18 - Služby DNS, DHCP.md",
+    "Software/Maturitní otázky/✅19 - Služby WWW, FTP.md",
+    "Software/Maturitní otázky/✅20 - Virtualizace a kontejnery.md",
+    "Software/Maturitní otázky/✅12 - Správa uživatelů a oprávnění.md",
     "Software/Maturitní otázky/✅11 - Adresářové služby.md",
     "ČJ/Maturita/Maturitní otázky/20 - Smoljak Ladislav - Vyšetřování ztráty třídní knihy.md",
     "ČJ/Maturita/Maturitní otázky/11 - Kesey Ken - Vyhoďme ho z kola ven.md",
     "ČJ/Maturita/Maturitní otázky/8 - Fitzgerald Scott Francis - Velký Gatsby.md",
     "ČJ/Maturita/Maturitní otázky/7 - Maupassant Guy de - Kulička.md",
-    "ČJ/Maturita/Maturitní otázky/6 - Mácha Karel Hynek - Máj.md",
-    "ČJ/Maturita/Maturitní otázky/5 - Gogol Nikolaj Vasiljevič - Revizor.md",
-    "ČJ/Maturita/Maturitní otázky/3 - Shakespeare William - Romeo a Julie.md",
-    "ČJ/Maturita/Maturitní otázky/2 - Moliére - Lakomec.md",
-    "ČJ/Maturita/Maturitní otázky/✅15 - Čapek Karel - Bílá nemoc.md",
-    "ČJ/Maturita/Maturitní otázky/✅10 - Kafka Franz - Proměna.md",
-    "ČJ/Maturita/Maturitní otázky/✅9 - Hemingway Ernest - Stařec a moře.md"
+    "ČJ/Maturita/Maturitní otázky/6 - Mácha Karel Hynek - Máj.md"
   ]
 }

@@ -1,4 +1,16 @@
 #### 1) Princip Routingu
+##### Princip Routingu
+1) **Směrování (routing):**  
+	- Rozhodování kam dál poslat paket na základě cílové IP adresy.
+2) **Routovací tabulky:**  
+	- Každý router má tabulku, ve které jsou záznamy o tom, kam se má paket s určitým cílem odeslat.
+3) **Statický vs. dynamický routing:**
+    - **Statický**: Správce ručně nastaví trasy.
+    - **Dynamický**: Routery si mezi sebou vyměňují informace a samy určují trasy (pomocí protokolů jako RIP, OSPF, BGP).
+4) **Skoky (hops):**  
+    - Data často musí projít několika routery = více skoků.
+5) **Metoda výběru trasy:**  
+    - Na základě metrik jako počet skoků, rychlost linky, zátěž, spolehlivost atd.
 ##### Druhy cílů IP paketu
 1) **Hostitel sám sobě**:
 	- Odesílatel je zároveň adresátem paketu
@@ -38,7 +50,7 @@
 4) **Vhodné pro malé sítě**:
 	- Efektivní u minimálně měnících se topologiích
 5) **Nevhodné pro rozsáhlé a dynamické sítě**: 
-	- Každá změna sítě vyžaduje ruční úpravy)
+	- Každá změna sítě vyžaduje ruční úpravy
 ##### Konfigurace statického směrování
 - `show ip route` pro vypsání aktuální směrovací tabulky
 - `ip route {cílová síť} {maska sítě} {next-hop IP | výstupní rozhraní}` pro konfiguraci směrovacího pravidla

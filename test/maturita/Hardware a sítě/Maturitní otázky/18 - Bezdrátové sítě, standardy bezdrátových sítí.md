@@ -35,6 +35,57 @@
 		- V režimu PSK se volí SSID a heslo
 		- V režimu Enterpise autentizace probíhá přes RADIUS server
 	3) Wi-fi Protected Setup (`WPS`)
+##### NFC
+- Standard `ISO/IEC 18000-3` a `ISO/IEC 14443`
+- Frekvence `13,56 MHz` (HF pásmo)
+- Dosah **maximálně 10 cm** (typicky 1-4 cm)
+- Rychlost přenosu dat `106`, `212` nebo `424 kbit/s`
+- Tři režimy provozu:
+    1. `Čtecí/Zapisovací` režim (aktivní zařízení komunikuje s pasivním tagem)
+    2. `Peer-to-Peer` režim (dvě aktivní zařízení komunikují spolu)
+    3. `Emulace karty` (zařízení se chová jako pasivní tag)
+- Využití:
+    - Bezkontaktní platby
+    - Přístupové systémy
+    - Přenos kontaktů a adres
+    - Bluetooth a Wi-Fi párování
+##### Bezdrátová technologie RFID
+- Radio Frequency Identification
+- Frekvenční pásma:
+    1. `LF` (nízká frekvence): `125-134 kHz`, dosah do `10 cm`
+    2. `HF` (vysoká frekvence): `13,56 MHz`, dosah do `1 m`
+    3. `UHF` (ultra vysoká frekvence): `860-960 MHz`, dosah `1-12 m`
+    4. `Mikrovlnné` pásmo: `2,45 GHz` a `5,8 GHz`, dosah až `30 m`
+- Typy tagů:
+    - `Pasivní` (bez zdroje energie, napájené polem čtečky)
+    - `Aktivní` (vlastní zdroj energie, větší dosah)
+    - `Semi-pasivní` (baterie napájí čip, ale ne komunikaci)
+- Využití:
+    - Logistika a sledování zboží
+    - Identifikace osob a zvířat
+    - Elektronické cestovní doklady
+    - Mýtné systémy
+##### Bezdrátová technologie ZigBee
+- Standard `IEEE 802.15.4`
+- Frekvence:
+    - `868 MHz` (Evropa, 1 kanál)
+    - `915 MHz` (Amerika, 10 kanálů)
+    - `2,4 GHz` (celosvětově, 16 kanálů)
+- Rychlost přenosu dat:
+    - `20 kbit/s` (pásmo 868 MHz)
+    - `40 kbit/s` (pásmo 915 MHz)
+    - `250 kbit/s` (pásmo 2,4 GHz)
+- Dosah `10-100 m` podle prostředí
+- Topologie sítě:
+    - `Hvězda` (star)
+    - `Strom` (tree)
+    - `Mesh` (plně propojená síť)
+- Typy uzlů:
+    - `Koordinátor` (řídí celou síť, pouze jeden)
+    - `Router` (směruje data v síti)
+    - `Koncové zařízení` (end device, komunikuje jen s rodičem)
+- Výhody: `nízká spotřeba energie`, `vysoká spolehlivost` díky mesh topologii
+- Využití: automatizace domácnosti, průmyslové řízení, IoT
 ##### Celluar
 - Komunikace probíhá pomocí radiových vln na nejbližší mobilní věž
 - `3G`/`4G`/`5G` a `LTE`

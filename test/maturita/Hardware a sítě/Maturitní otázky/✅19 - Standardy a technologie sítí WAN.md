@@ -38,54 +38,27 @@
 		- Používá více virtuálních okruhů (spojů) k přímému propojení vybraných lokalit
 		- Méně nákladné na implementaci
 - Rozsáhlé sítě `WAN` tyto topologie obvykle kombinují
-##### Způsoby připojení k síti WAN
-1) `Single-Carrier` připojení:
-	- Připojení k jedinému poskytovateli
-	- Vlastní připojení i služby poskytovatele představují single point of failure
-	- Levnější řešení
-	- Nezajišťuje vždy dostupnost připojení
-2) `Dual-Carrier` připojení:
-	- Připojení ke dvěma nezávislým poskytovatelům
-	- Vlastní připojení i služby poskytovatele jsou redundantní
-	- Nákladnější řešení
-	- Zlepšení propustnosti připojení a load-balancing
 #### 2) Základní pojmy a zařízení používaná v sítích WAN
 ##### DTE (Data Terminal Equipment)
-- Připojuje síť `LAN` zákazníka k zařízení `DCE`
+- Připojuje síť `LAN` zákazníka k zařízení `DCE` (**router**)
 ##### DCE (Data Communication Equipment)
-- Zajišťuje komunikaci s `WAN` infrastrukturou poskytovatele
+- Zajišťuje komunikaci s `WAN` infrastrukturou poskytovatele (**modem**)
 ##### CPE (Customer Premises Equipment)
-- Zařízení `DTE` a `DCE` umístěná na hranici sítě `LAN`
+- Zařízení `DTE` a `DCE` umístěná na hranici sítě `LAN` (**všechna zařízení na straně zákazníka**)
 ##### POP (Point-Of-Presence)
-- Bod, kde se zákazník připojuje k síti poskytovatele
+- Bod, kde se zákazník připojuje k síti poskytovatele (**ústředna ISP**, **datacentrum**)
 ##### Demarkační bod
-- Fyzické umístění v budově nebo komplexu, které odděluje `CPE` od vybavení poskytovatele
+- Fyzické umístění v budově nebo komplexu, které odděluje `CPE` od vybavení poskytovatele (**Optický rozvaděč**) 
 ##### Pronajaté linky (leased lines)
 - Poskytovány telekomunikačními operátory jako **pevné připojení**
 - Dostupné v různých **pevně daných přenosových rychlostech**
 - **Garantována kvalita** služby díky vyhrazené přenosové kapacitě
-##### Možnosti připojení k internetu
-1) Pevné (wired) připojení
-	- Metalické či optické kabeláže
-	- Stabilní rychlost přenosu
-	- Nízká latence a vyšší náklady
-	- `XDSL`, `Cable`, `Optical Fiber`
-2) Bezdrátové (wireless) připojení
-	- Komunikace rádiovými vlnami
-	- Omezení dosahu, vliv rušení
-	- Méně nákladné, možnosti závislé na lokalitě
-	- `Municipal Wi-Fi`, `Celluar`, `Satellite Internet`, `WiMAX`
-3) Možnosti připojení k Internetu:
-	1) `Sinlge-homed`:
-		- Jeden `ISP` a spoj, nejnižší náklady, bez redundance
-	2) `Dual-homed`:
-		- jeden `ISP`, dva spoje, redundance a `load-balancing`, závislost na jednom `ISP`
-	3) `Multihomed`:
-		- Dva různí `ISP`s, vyšší spolehlivost a možnost `load-balancing`u, vyšší náklady
-	4) `Dual-multihomed`:
-		- Více `ISP`s a více spojů, nejvyšší spolehlivost a redundance, nejdražší řešení
+##### Zařízení používaná v sítích WAN
+1) Router
+2) Modem - převod digitálního signálu na analogový a zpátky
+3) WAN Switch - Pro technologie jako Frame Relay a ATM
 #### 3) Přehled a základní charakteristika technologií sítí WAN
-##### Připojení využívající přepínání okruhů
+##### Technologie využívající přepínání okruhů
 1) **Public Service Telephone Network** (`PSTN`)
 	- Veřejná telefonní síť
 	- Možnost připojení pomocí klasického modemu až do `56 kb/s`
@@ -94,7 +67,7 @@
 	- Digitální připojení místní smyčky
 	- Rychlost přenosu od `45kb/s` do `2048 Mb/s`
 	- S ohledem na rozmach `DSL` a omezenou rychlost je tato technologie na ústupu
-##### Připojení využívající přepínání paketů
+##### Technologie využívající přepínání paketů
 1) **Frame Relay**
 	- Jednoduchá technologie pracující na `L2`
 	- Umožňuje propojit podnikové sítě `LAN` ve vzdálených lokalitách
@@ -109,6 +82,10 @@
 - Novější `Ethernet` standardy nabízejí **podporu optických vláken**
 - Poskytovatelé nabízejí `WAN` připojení **s použitím optiky** jako:
 	1) **Metropolitan Ethernet** (`Metro Ethernet`)
+		- Funguje na principu L2 Ethernetu (přepínání rámců podle MAC adres).
+		- Podporuje vysoké přenosové rychlosti (10 Mbps až 10 Gbps a více).
+		- Je škálovatelný – lze snadno zvýšit rychlost bez výměny infrastruktury.
+		- Používá se pro LAN-to-LAN propojení, přístup k internetu nebo připojení do cloudových služeb.
 	2) **Ethernet over MPLS**
 	3) **Virtual Private LAN Service**
 ##### Multiprotocol Label Switching (MPLS)
@@ -117,9 +94,10 @@
 	- `Ethernet`, `DSL`, kabel, Frame Relay
 - Podporuje zapouzdření `IPv4` a `IPv6`
 - K dispozici služby `QoS`, redundance spojů a `VPN`
+- Nepoužívá klasické IP směrování, ale labelem, který určuje trasu paketu
 - Příklad nasazení `MPLS` s použitím `Label-switched Routers`:
 	1) **Customer Edge** (CE) **Router**:
-		- Hraniční router zákazníka)
+		- Hraniční router zákazníka
 	2) **Provider Edge** (PE) **Router**:
 		- Označí paket labelem
 	3) **Internal Provider** (P) **Router**:
@@ -132,22 +110,7 @@
 - Využívá **telefonního účastnického vedení** (**místní smyčky**)
 	- `DSL` modem moduluje či demoduluje signál na přípojce a převádí na nebo z data
 	- `DSLAM `(DSL Access Multiplexer) jako protějšek umístěn v ústředně
-##### Kabelové připojení
-- Užívá **koaxiálního kabelu** jako média účastnické přípojky
-- Standard `DOCSIS` (**Data over Cable Service Interface Specification**)
-- Hybridní sítě (`HFC`) užívají optické spoje pro připojení k `CMTS` (**Cable odem Termination System**)
-##### Optické připojení
-- **Fiber to the Home** (`FTTH`):
-	- Optika zavedena až do bytu
-- **Fiber to the Building** (`FTTB`)
-	- Optika zavedena jen do budovy
-- **Fiber to the Node/Neighborhood** (`FTTN`)
-	- Optika zavedena do uzlu poblíž účastnických obydlí
-- Řešení `FTTx` nabízí **nejvyšší dosažitelné rychlosti připojení**
-##### Vyhrazené širokopásmové připojení (broadband)
-- Díky `DWDM` technologií **významná úspora počtu optických vláken**
-- Volná vlákna lze pronajímat dalším subjektům (`dark fiber`)
-##### Bezdrátové připojení
+##### Technologie pro bezdrátové připojení
 1) `Municipal Wi-Fi`:
 	- Městské bezdrátové připojení, nízká cena
 2) `Celluar`:

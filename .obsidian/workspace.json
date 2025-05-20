@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "7cfc988add8a7847",
+    "id": "2a5c8878a8d5557c",
     "type": "split",
     "children": [
       {
-        "id": "9b8fa755005ac19e",
+        "id": "dc92c9d54ea2bfeb",
         "type": "tabs",
         "children": [
           {
-            "id": "1c873390297e6cf3",
+            "id": "7b48fe361b4a247c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hardware a sítě/Maturitní otázky/✅20 - VPN a IPsec.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "✅20 - VPN a IPsec"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7bd7fc084aa8bd5c",
+    "id": "babc714c4dbbd577",
     "type": "split",
     "children": [
       {
-        "id": "230b5b46eed9a289",
+        "id": "b454426d360b811e",
         "type": "tabs",
         "children": [
           {
-            "id": "e42021ac4dabcaf6",
+            "id": "d8920bd378b18042",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "b10bbaada64dec84",
+            "id": "f0af962402db5d71",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "f0d3d68d1705c376",
+            "id": "42925312e8cc59b8",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +74,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "1022eeebb58c9669",
+    "id": "dfec11fc6b592069",
     "type": "split",
     "children": [
       {
-        "id": "4ea96a92a86b4e3a",
+        "id": "bd387743272fffb7",
         "type": "tabs",
         "children": [
           {
-            "id": "e14cb0932cbd1d63",
+            "id": "b22606985a69dc30",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 9 - Protokol DHCP"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "ab5beee61603cb9e",
+            "id": "74c123b91d345153",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 9 - Protokol DHCP"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "ba67268197ee2563",
+            "id": "0e7b26ebc79eafc6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +131,17 @@
             }
           },
           {
-            "id": "472555e4e38a7788",
+            "id": "aa16ea3b77962bdf",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hardware a sítě/Maturitní otázky/9 - Protokol DHCP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 9 - Protokol DHCP"
+              "title": "Outline"
             }
           }
         ]
@@ -168,33 +161,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c873390297e6cf3",
+  "active": "7b48fe361b4a247c",
   "lastOpenFiles": [
-    "Hardware a sítě/Maturitní otázky/✅19 - Standardy a technologie sítí WAN.md",
-    "Hardware a sítě/Maturitní otázky/✅18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
-    "Hardware a sítě/Maturitní otázky/✅20 - VPN a IPsec.md",
-    "Hardware a sítě/Maturitní otázky/✅17 - Protokol STP a EtherChannel.md",
-    "Hardware a sítě/Maturitní otázky/✅16 - Správa VLAN ve středně velkých a velkých sítích.md",
-    "Hardware a sítě/Maturitní otázky/✅15 - Služba NAT v IPv4.md",
-    "Hardware a sítě/Maturitní otázky/✅14 - Access Control Lists (ACL).md",
-    "Hardware a sítě/Maturitní otázky/✅13 - Dynamický routing.md",
-    "Hardware a sítě/Maturitní otázky/✅2 - Síťové protokoly a komunikace v síti.md",
-    "Hardware a sítě/Maturitní otázky/✅12 - Statický routing, Inter-VLAN routing.md",
-    "Hardware a sítě/Maturitní otázky/✅11 - Přepínané sítě.md",
-    "Hardware a sítě/Maturitní otázky/✅4 - Ethernet.md",
-    "Hardware a sítě/Maturitní otázky/✅5 -Síťová vrstva referenčního modelu OSI.md",
-    "Hardware a sítě/Maturitní otázky/✅6 - Protokoly transportní vrstvy.md",
-    "Hardware a sítě/Maturitní otázky/✅7 - Protokoly aplikační vrstvy.md",
-    "Hardware a sítě/Maturitní otázky/✅8 - IP adresace a subnetace.md",
-    "Hardware a sítě/Maturitní otázky/✅9 - Protokol DHCP.md",
-    "Software/Maturitní otázky/✅18 - Služby DNS, DHCP.md",
-    "Software/Maturitní otázky/✅19 - Služby WWW, FTP.md",
-    "Software/Maturitní otázky/✅20 - Virtualizace a kontejnery.md",
-    "Software/Maturitní otázky/✅12 - Správa uživatelů a oprávnění.md",
-    "Software/Maturitní otázky/✅11 - Adresářové služby.md",
-    "ČJ/Maturita/Maturitní otázky/20 - Smoljak Ladislav - Vyšetřování ztráty třídní knihy.md",
-    "ČJ/Maturita/Maturitní otázky/11 - Kesey Ken - Vyhoďme ho z kola ven.md",
-    "ČJ/Maturita/Maturitní otázky/8 - Fitzgerald Scott Francis - Velký Gatsby.md",
-    "ČJ/Maturita/Maturitní otázky/7 - Maupassant Guy de - Kulička.md"
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅20 - VPN a IPsec.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅19 - Standardy a technologie sítí WAN.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅17 - Protokol STP a EtherChannel.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅16 - Správa VLAN ve středně velkých a velkých sítích.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅15 - Služba NAT v IPv4.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅14 - Access Control Lists (ACL).md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅13 - Dynamický routing.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅12 - Statický routing, Inter-VLAN routing.md"
   ]
 }

@@ -10,16 +10,24 @@
 - Každých 30 sekund posílá **celou routovací tabulku**, **omezený maximální počet skoků**
 ##### OSPF  (Open Shortest Path First)
 1) **Využívá koncept oblastí** (`areas`)  
-  - Komplexní síť s mnoha routery lze pro zajištění efektivní výměny směrovacích údajů rozdělit na samostatné části (`areas`)  
-1) **Jako spoj** (`link`) **routeru se chápe**:  
-  - Síťové rozhraní  
-  - Síťový segment  
-  - Koncová síť (`stub network`)  
-1) **Stav spoje** (`link-state`) **zahrnuje**:  
-  - Adresu sítě  
-  - Délku prefixu  
-  - Cenu (`cost`)  
+	- Komplexní síť s mnoha routery lze pro zajištění efektivní výměny směrovacích údajů rozdělit na samostatné části (`areas`)  
+2) **Jako spoj** (`link`) **routeru se chápe**:  
+	- Síťové rozhraní  
+	- Síťový segment  
+	- Koncová síť (`stub network`)  
+3) **Stav spoje** (`link-state`) **zahrnuje**:  
+	- Adresu sítě  
+	- Délku prefixu  
+	- Cenu (`cost`)  
 #### 2) OSPF – druhy, vlastnosti a možnosti nasazení
+##### OSPFv2  
+- Podpora **pouze** `IPv4`  
+- Pro vzájemnou komunikaci routerů se používá `IPv4`  
+##### OSPFv3  
+- Podporuje `IPv6` i `IPv4`  
+- Pro vzájemnou komunikaci routerů používá `IPv6`  
+- Běží nezávisle na `OSPFv2`
+- Příkazy na konfiguraci jsou velmi podobné ``OSPFv2``
 ##### Součásti protokolu OSPF  
 1) **Zprávy** (pakety):
 	- Pro výměnu směrovacích informací  
@@ -54,68 +62,14 @@
 	- `Cena = Referenční rychlost / Rychlost rozhraní`
 	- Výchozí referenční rychlost je `100 Mbit/s`
 	- Výsledná cena musí bát kladné celé číslo větší než nula (problém pro `FastEthernet` a `GigabitEthernet` a rychlejší, vyjde vždy 1)
-##### Princip činnosti OSPF  
-1) **Stanovení vztahu sousednosti** (`Neighbor Adjacencies`) 
-	- Každý router pošle` Hello paket` se svým `Router-ID` na multicastovou adresu `224.0.0.5`
-	- `Router-ID` je identifikátor routeru v ``OSPF`` oblasti jako `32 bitové` číslo
-	- Příjme-li router `Hello paket` s neznámým `Router-ID`, pokusí se s ním navázat vztah sousednosti (Pokud dané `Router-ID` zná tak vztah pouze udržuje)
-2) **Výměna údajů o stavu spojů** (`Link-state Advertisements`)  
-3) **Sestavení databáze stavu spojů** (`Link-state Database`, `LSDB`)  
-4) **Spuštění algoritmu** `SPF`
-5) **Výběr nejlepších cest sítí**
-##### Možnost implementace OSPF  
-1) `OSPF` podporuje **hierarchické směrování** pomocí oblastí  
-  - Oblast (area) je skupina routerů sdílejících údaje o stavech spojů  
-  - Všechny routery v dané oblasti mají totožný oblast LSDB  
-2) `OSPF` **lze implementovat dvěma způsoby**:  
-	1) `Single-area OSPF`:  
-    - Všechny routery v jediné oblasti (zpravidla 0)  
-	2) `Multi-area OSPF`:
-    - Routery v různých oblastech, které jsou hierarchicky uspořádané  
-    - Všechny oblasti musí být propojeny s páteřní (backbone) oblastí 0
 ##### Point-to-Point spoj
 - Nedochází k volbě `BR` a `BDR`
 - U spojů **Serial automaticky**
 - U spojů **Ethernet explicitně**
-
 ##### Pasivní rozhraní
 - Nekomunikuje s dalšími `OSPF` routery
 	- Zabraňuje hledání sousedních OSPF routerů
 	- Nasazením pasivního rozhraní se omezí zátěž sítě a sníží se bezpečnostní rizika vyplývající z nasazení OSPF
-##### OSPFv2  
-- Podpora **pouze** `IPv4`  
-- Pro vzájemnou komunikaci routerů se používá `IPv4`  
-##### OSPFv3  
-- Podporuje `IPv6` i `IPv4`  
-- Pro vzájemnou komunikaci routerů používá `IPv6`  
-- Běží nezávisle na `OSPFv2`
-- Příkazy na konfiguraci jsou velmi podobné ``OSPFv2``
-##### Provozní stavy OSPF
-1) **Down**:
-	- Router odesílá `Hello pakety` na daném rozhraní
-	- Router přijímá `Hello paket` od souseda
-2) **Init**:
-	- Router odesílá pakety s `RID` daného souseda
-	- Router přijímá `Hello Paket` s vlastním `RID`
-3) **Two-way** (v tomto stavu zůstávají sousední routery, které nejsou `DR` ani `BDR`):
-	- Routery si vzájemně vyměňují `Hello pakety`
-	- Pokud jsou oba routery propojeny spojem `Point-to-Point`, přejdou do stavu `ExStart`
-	- Pokud jsou oba routery propojeny `Ethernet` spojem, dojde k volbě `DR` a `BDR`:
-		- Router, který má nejvyšší prioritu nebo Router-ID se stane DR
-		- Router, který má druhou nejvyšší prioritu nebo Router-ID se stane BDR
-4) **ExStart** (pouze pro `Point-to-Point` sítě):
-	- Routery si vzájemně vyměňují `DBD` pakety s příznaky
-	- Dojde k dohodě, kdo první pošle `DBD` a s jakým sekvenčním číslem
-5) **Exchange**:
-	- Routery si vzájemně vyměňují `DBD` pakety s `LSA`
-	- Dojde ke vzájemné výměně záznamů `LSDB`
-	- Po stavu `Two-Way` routery přejdou do stavů synchronizace svých databází
-6) **Loading** (Pouze pokud je třeba získat podrobnosti o určitém spoji)
-	- Routery si vyměňují `LSR`, `LSU` a `LSAck` pakety, `SPF` algoritmus určí cesty
-	- Dojde k získání konzistentní podoby `LSDB` mezi oběma routery
-7) **Full**:
-	- `LSDB` je mezi routery plně synchronizována
-	- Pokud nepříjde `Hello paket` v časovém limitu, přejde do stavu `Down`
 ##### Význam role Designated Router (DR)
 1) `Multiaccess` sítě přinášejí dvě výzvy: 
 	- Existenci mnoha vztahů sousednosti
@@ -127,22 +81,99 @@
 ##### Ostatní Routery (DROTHER)
 - Zasílají aktualizace stavů spojů pouze routerů DR a BDR
 - Přijímají aktualizace stavu spojů výhradně od DR nebo BDR
+##### Možnost implementace OSPF  
+1) `OSPF` podporuje **hierarchické směrování** pomocí oblastí  
+  - Oblast (area) je skupina routerů sdílejících údaje o stavech spojů  
+  - Všechny routery v dané oblasti mají totožný oblast LSDB  
+2) `OSPF` **lze implementovat dvěma způsoby**:  
+	1) `Single-area OSPF`:  
+    - Všechny routery v jediné oblasti (zpravidla 0)  
+	2) `Multi-area OSPF`:
+    - Routery v různých oblastech, které jsou hierarchicky uspořádané  
+    - Všechny oblasti musí být propojeny s páteřní (backbone) oblastí 0
 #### 3) OSPF pakety
-##### Zprávy protokolu OSPF  
-1) **Hello Packet**:
-  - Informuje o přítomnosti daného routeru na síťovém segmentu
-  - Zajišťuje zjištění `OSPF` sousedů, předává parametry nutné pro vzájemnou spolupráci a pokud se neshodují, vztah nevznikne
-  - Volba routeru v roli `DR` (Designated Router) a `BDR` (Backup Designated Router), netýká se spojů `Point-to-Point`
-2) **Database Description Packet** (`DBD`)
-  - Shrnuje aktuální stav link-state databáze (`LSDB`)  
-3) **Link-state Request Packet** (`LSR`)
-  - Žádost o poskytnutí údajů o stavu daného spoje  
-4) **Link-state update Packet** (`LSU`)
-  - Předává údaje o stavu daného spoje
-  - Používá se také pro zasílání aktualizací stavu spojů, v tomto případě mu `LSR` paket nepředchází
-  - LSU může obsahovat až 11 různých druhů `LSA` (Link-State Advertisement) bloků
-5) **Link-state Acknowledgment Packet** (`LSAck`)  
-  - Potvrzení přijetí údajů o stavu daného spoje
+##### Princip činnosti OSPF
+1. **Zjištění sousedů** (`Neighbor Discovery`)
+    - Každý router posílá `Hello pakety` se svým `Router-ID` na multicastovou adresu `224.0.0.5`
+    - `Router-ID` je unikátní `32 bitový` identifikátor routeru v `OSPF` oblasti
+    - Příjme-li router `Hello paket` s neznámým `Router-ID`, pokusí se s ním navázat vztah sousednosti
+2. **Výměna informací o topologii** (`Database Exchange`)
+    - Routery si vyměňují `DBD pakety` (Database Description) pro shrnutí vlastní topologické databáze
+    - Pomocí `LSR paketů` (Link-state Request) si vyžádají chybějící záznamy
+    - Prostřednictvím `LSU paketů` (Link-state Update) posílají detaily o požadovaných spojích
+    - `LSAck pakety` (Link-state Acknowledgment) potvrzují přijetí informací
+3. **Vytvoření topologické databáze** (`Link-state Database`, `LSDB`)
+    - Každý router buduje identickou databázi obsahující kompletní mapu sítě
+    - Databáze obsahuje informace o všech routerech, sítích a jejich vzájemném propojení
+    - Synchronizace databází probíhá mezi všemi sousedy
+4. **Výpočet nejlepších cest** (`SPF Algorithm`)
+    - Router spustí Dijkstrův algoritmus nejkratší cesty (`Shortest Path First`)
+    - Algoritmus vypočítá nejlepší cestu ke každé cílové síti
+    - Cesty s nejnižší cenou jsou vybrány do směrovací tabulky
+5. **Udržování aktuální topologie** (`Network Maintenance`)
+    - Pravidelná výměna `Hello paketů` udržuje vztahy mezi sousedy
+    - Při změně topologie jsou rozesílány nové `LSA` (Link-state Advertisement)
+    - Všechny routery přepočítávají své cesty na základě aktualizovaných informací
+##### Zprávy protokolu OSPF
+1. **Hello Packet**
+    - Zajišťuje objevování a udržování sousedních vztahů
+    - Obsahuje konfigurační parametry jako Router-ID, oblast, intervaly, hesla
+    - Slouží k volbě `DR` (Designated Router) a `BDR` (Backup Designated Router) na sdílených segmentech
+    - Zasílá se pravidelně dle nastaveného Hello intervalu (výchozí 10s)
+2. **Database Description Packet** (`DBD`)
+    - Poskytuje přehled obsahu topologické databáze odesílatele
+    - Obsahuje pouze hlavičky `LSA` záznamů pro porovnání verzí
+    - Používá sekvenční čísla pro spolehlivý přenos
+    - Umožňuje efektivní synchronizaci velkých databází
+3. **Link-state Request Packet** (`LSR`)
+    - Slouží k vyžádání konkrétních `LSA` záznamů
+    - Odesílá se po porovnání `DBD` paketů, pokud router zjistí chybějící nebo zastaralé záznamy
+    - Obsahuje identifikátory požadovaných `LSA` záznamů
+4. **Link-state Update Packet** (`LSU`)
+    - Přenáší kompletní `LSA` záznamy s detaily o topologii
+    - Může obsahovat až 11 různých typů `LSA` bloků
+    - Používá se jak pro odpovědi na `LSR`, tak pro šíření aktualizací při změnách topologie
+    - Přenáší se spolehlivě s potvrzováním
+5. **Link-state Acknowledgment Packet** (`LSAck`)
+    - Potvrzuje příjem `LSU` paketů
+    - Zajišťuje spolehlivost přenosu topologických informací
+    - Může potvrzovat více `LSA` najednou pro efektivitu
+##### Provozní stavy OSPF 
+1. **Down**
+    - Výchozí stav pro všechna rozhraní
+    - Router začíná vysílat `Hello pakety`
+    - Očekává se příjem `Hello paketu` od potenciálního souseda
+    - Při detekci souseda přechází do stavu `Init`
+2. **Init**
+    - Router přijal `Hello paket` od souseda
+    - Ve vlastních `Hello paketech` už zahrnuje ID souseda
+    - Čeká na `Hello paket` obsahující vlastní Router-ID
+    - Po oboustranném rozpoznání přechází do stavu `Two-way`
+3. **Two-way**
+    - Obousměrná komunikace je navázána
+    - Na sdílených segmentech probíhá volba `DR` a `BDR`
+    - Na Point-to-Point spojích přechází přímo do stavu `ExStart`
+    - Některé vztahy zůstávají v tomto stavu (nesousedí s DR/BDR)
+4. **ExStart**
+    - Inicializace procesu výměny databází
+    - Ustanovení role Master/Slave pro výměnu `DBD` paketů
+    - Dohoda na počátečním sekvenčním čísle
+    - Po úspěšném vyjednání přechází do stavu `Exchange`
+5. **Exchange**
+    - Výměna `DBD` paketů se souhrnem obsahu databáze
+    - Identifikace rozdílů v databázích
+    - Příprava seznamu chybějících nebo zastaralých záznamů
+    - Po dokončení výměny přechází do stavu `Loading` nebo `Full`
+6. **Loading**
+    - Výměna `LSR`, `LSU` a `LSAck` paketů
+    - Získávání chybějících detailů o topologii
+    - Doplňování databáze do konzistentního stavu
+    - Jakmile jsou všechny požadavky vyřízeny, přechází do stavu `Full`
+7. **Full**
+    - Databáze jsou plně synchronizovány
+    - Sousední vztah je plně funkční
+    - Routery pravidelně vyměňují `Hello pakety` pro udržení vztahu
+    - Stav je udržován, dokud nedojde k přerušení komunikace
 #### 4) OSPF konfigurace
 ##### Režim konfigurace routeru pro OSPF
 1) Příkaz `router ospf {id procesu}`, platí pouze v rámci daného routeru a je vhodné si zvolit stejné ID pro všechny routery v oblasti

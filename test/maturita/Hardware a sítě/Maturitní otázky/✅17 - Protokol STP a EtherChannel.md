@@ -8,8 +8,8 @@
 	- V síti `Ethernet` nelze smyčky tolerovat
 	- Řešením je protokol `STP` (Spanning Tree Protocol)
 ##### Problémy v redundantní síti
-1) Smyčky v `Ethernetové` síti
-	- `Ethernetové` rámce cirkulují donekonečna protože jsou switchi stále přeposílány dál (Broadcast storm) což může zahltit celou síť
+1) **Smyčky v** `Ethernetové` **síti**:
+	- `Ethernetové` rámce cirkulují donekonečna protože jsou switchi stále přeposílány dál (`Broadcast storm`) což může zahltit celou síť
 	- Duplikace rámců
 	- Nesprávné doručení rámců
 2) **Řešením je protokol** `STP` (Spanning Tree Protocol) **a jeho varianty**:

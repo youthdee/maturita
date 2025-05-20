@@ -51,13 +51,6 @@
 ##### Omezený počet ACLs na rozhraní
 - Až dvě `ACLs` pro `IPv4`/`IPv6` provoz 
 	- Jedno příchozí (`Inbound`) a jedno odchozí (`Outbound`)
-##### Další kritéria umístění ACLs
-1) **Hranice sítě spravované organizací**:
-	- Umístění závisí na tom, jestli má organizace pod správou zdrojové či cílové hostitele, jejichž provoz potřebuje filtrovat
-2) **Propustnost sítí skrze které provoz prochází**:
-	- Ideální je filtrovat provoz co nejblíže jeho zdroji kvůli šetření přenosové kapacity sítě
-3) **Jednoduchost konfigurace**:
-	- Někdy je jednodušší určit pravidla filtrace co nejblíže cíli, ačkoliv to není optimální z hlediska využití přenosové kapacity sítě
 #### 2) Standardní a rozšířené IPv4 ACL
 ##### Příprava na tvorbu ACLs obecně
 1) **Definice požadavků** na síťový provoz

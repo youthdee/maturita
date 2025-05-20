@@ -8,19 +8,8 @@
 	- Magnetického pole (střídavé magnetické pole na kratší vzdálenost
 4) **Rádiový přenos**:
 	-  Vysokofrekvenční elektromagnetické vlny ve vzdušném prostředí nebo vakuu
-##### Bezdrátové sítě Bluetooth
-- Standard `IEEE 802.15.1`
-- Frekvence od `2,4` do `2,48 GHz`: 
-	- `ISM` pásmo - Industrial, Scientific, Medical
-- Určen pro `PAN` (Personal Area Network):
-	- Až 7 zařízení ve společné síti, role `master`/`slave`
-- Dosah až `100 m`
 ##### Bezdrátové sitě WLAN (Wi-Fi)
 1) `Standard IEEE 802.11`
-	1) `802.11b` (až 11 Mb/s)
-	2) `802.11g` (až 54 Mb/s)
-	3) `802.11n` (až 600 Mb/s)
-	4) `802.11ac` (až 1,69 Gb/s)
 2) **Frekvenční pásma** `2,45 GHz` a `5 GHz`
 	- `ISM` pásma (Industrial, Scientific and Medical)
 	- `U-NII` pásma (Unlicensed National Information Infrastructure)
@@ -35,8 +24,19 @@
 		- V režimu PSK se volí SSID a heslo
 		- V režimu Enterpise autentizace probíhá přes RADIUS server
 	3) Wi-fi Protected Setup (`WPS`)
+##### Bezdrátové sítě Bluetooth
+- Standard `IEEE 802.15.1`
+- Frekvence od `2,4` do `2,48 GHz`: 
+	- `ISM` pásmo - Industrial, Scientific, Medical
+- Určen pro `PAN` (Personal Area Network):
+	- Až 7 zařízení ve společné síti, role `master`/`slave`
+- Dosah až `100 m`
 ##### NFC
-- Standard `ISO/IEC 18000-3` a `ISO/IEC 14443`
+- Využití:
+    - Bezkontaktní platby
+    - Přístupové systémy
+    - Přenos kontaktů a adres
+    - Bluetooth a Wi-Fi párování
 - Frekvence `13,56 MHz` (HF pásmo)
 - Dosah **maximálně 10 cm** (typicky 1-4 cm)
 - Rychlost přenosu dat `106`, `212` nebo `424 kbit/s`
@@ -44,29 +44,9 @@
     1. `Čtecí/Zapisovací` režim (aktivní zařízení komunikuje s pasivním tagem)
     2. `Peer-to-Peer` režim (dvě aktivní zařízení komunikují spolu)
     3. `Emulace karty` (zařízení se chová jako pasivní tag)
-- Využití:
-    - Bezkontaktní platby
-    - Přístupové systémy
-    - Přenos kontaktů a adres
-    - Bluetooth a Wi-Fi párování
-##### Bezdrátová technologie RFID
-- Radio Frequency Identification
-- Frekvenční pásma:
-    1. `LF` (nízká frekvence): `125-134 kHz`, dosah do `10 cm`
-    2. `HF` (vysoká frekvence): `13,56 MHz`, dosah do `1 m`
-    3. `UHF` (ultra vysoká frekvence): `860-960 MHz`, dosah `1-12 m`
-    4. `Mikrovlnné` pásmo: `2,45 GHz` a `5,8 GHz`, dosah až `30 m`
-- Typy tagů:
-    - `Pasivní` (bez zdroje energie, napájené polem čtečky)
-    - `Aktivní` (vlastní zdroj energie, větší dosah)
-    - `Semi-pasivní` (baterie napájí čip, ale ne komunikaci)
-- Využití:
-    - Logistika a sledování zboží
-    - Identifikace osob a zvířat
-    - Elektronické cestovní doklady
-    - Mýtné systémy
 ##### Bezdrátová technologie ZigBee
-- Standard `IEEE 802.15.4`
+ - Výhody: `nízká spotřeba energie`, `vysoká spolehlivost` díky mesh topologii
+- Využití: automatizace domácnosti, průmyslové řízení, IoT
 - Frekvence:
     - `868 MHz` (Evropa, 1 kanál)
     - `915 MHz` (Amerika, 10 kanálů)
@@ -84,14 +64,17 @@
     - `Koordinátor` (řídí celou síť, pouze jeden)
     - `Router` (směruje data v síti)
     - `Koncové zařízení` (end device, komunikuje jen s rodičem)
-- Výhody: `nízká spotřeba energie`, `vysoká spolehlivost` díky mesh topologii
-- Využití: automatizace domácnosti, průmyslové řízení, IoT
-##### Celluar
-- Komunikace probíhá pomocí radiových vln na nejbližší mobilní věž
-- `3G`/`4G`/`5G` a `LTE`
-##### Satelit
-- K přístupu k Internetu uživatelé potřebují **satelitní disk**, **dva modemy** (`uplink`, `downlink`) a **koaxialní kabel** mezi diskem a modemem
-- Router se připojí k **satelitnímu disku**, který je namířen k satelitu, který se nachází ve vesmíru
+##### Ostatní typy bezdrátových sítí
+1) `Municipal Wi-Fi`:
+	- Městské bezdrátové připojení, nízká cena
+2) `Celluar`:
+	- Datové připojení mobilních zařízení skrze buňkovou síť mobilního operátora
+	- Technologie `3G`/`4G`/`5G` a `LTE`
+3) `Satellite Internet`:
+	- Užíván na venkově či v odlehlých oblastech, kde není k dispozici jiný druh připojení
+	- Účastník se připojuje prostřednictvím mikrovlnné směrové antény k družicím
+4) `WiMAX`:
+	- Vysokorychlostní bezdrátové připojení se širokým pokrytím geografických oblastí
 #### 2) Přístupová metoda CSMA/CA v bezdrátových sítích
 ##### CMSA/CA (Carrier sense multiple access with collision avoidance)
 - Metoda **vícenásobného přístupu** s detekcí **nosné** a **předcházením kolize**

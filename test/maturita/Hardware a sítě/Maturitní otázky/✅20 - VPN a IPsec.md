@@ -20,71 +20,57 @@
 - **Zapouzdření** a **šifrování provozu** se provádí na `VPN` **bránách** (Gateways)
 	- Odesílající brána (Gateway) paket zašifruje adoplní o potřebná záhlaví
 	- Přijímající brána paket zbaví přidaných záhlaví a dešifruje jej
-- `IPsec VPN`, `GRE over IPsec`, `DMVPN`
+1) `IPsec VPN`:
+	1) **Široká podpora aplikací**:
+		- Všechny aplikace užívající `IP`
+	2) **Vysoká odolnost autentizace**:
+		- Dvoucestná autentizace se sdíleným klíčem či certifikáty
+	3) **Vysoká odolnost šifrování**:
+		- Délky klíčů `56 - 256 bitů`
+	4) **Střední složitost připojení**:
+		- Vyžaduje nainstalovanou aplikaci `VPN` klienta
+	5) **Omezené možnosti připojení**:
+		- Pouze pro specifická zařízení se specifickou konfigurací
+2) `GRE over IPsec`:
+	1) **Nezabezpečený** `Site-To-Site` `VPN` **tunelovací protokol**:
+		- Samotný nepodporuje autentizaci ani šifrování
+	2) **Umožňuje zapouzdření různých protokolů**:
+		- Včetně `multicast` a `broadcast` provozu
+	3) **Pro zabezpečení komunikace lze zapouzdřit pomocí** `IPsec`
+		- Standardní `IPsec` `VPN` podporuje pouze `unicastový` provoz
+		- Umožňuje zabezpečit `multicastovou` komunikaci (např. pro potřeby komunikace dynamických směrovacích protokolů)
+	4) **Princip zapouzdření**:
+		- `Passanger protocol` (přenášený protokol)
+			- Je Protokolem datového paketu určeného k zapouzdření pomocí `GRE`
+		- `Carrier protocol` (přepravní protokol)
+			- Je přepravním protokolem zapouzdřujícím datový paket
+		- `Transport protocol` (transportní či přenosový protokol)
+			- Protokol, který zajišťuje vlastní přenos zapouzdřeného paketu (např. `IP`)
+3) `DMVPN`:
+	1) **Nabízí flexibilní způsob propojení centrály a poboček**:
+		- Zjednodušuje konfiguraci `VPN` umožňuje vznik virtuálních spojů
+	2) **Základní infrastruktura používá topologii** `Hub-and-Spoke`:
+		- Pobočkové brány mají konfiguraci `VPN` spojení s centrálou
+	3) **Virtuální pobočkové spoje odpovídají topologii** `Full Mesh`:
+		- Centrála zprostředkuje konektivitu mezi pobočkovými branami
 ##### VPN typu Remote Access
 - Umožňují **zabezpečené připojení k firemní síti**
 1) Clientless:
-	- `SSL` pomocí webového prohlížeče
+	- Využívají infrastrukturu **veřejného klíče** (PKI) a **certifikáty**, pomocí nich probíhá **autentizace účastníků** pomocí `SSL`
+	1) **Omezená podpora aplikací**:
+		- Pouze webové aplikace a sdílení souborů
+	2) **Průměrná odolnost autentizace**:
+		- Jednocestná či dvoucestná autentizace
+	3) **Střední či vysoká odolnost šifrování**:
+		- Délky klíčů `40-256 bitů`
+	4) **Nízká složitost připojení**:
+		- Vyžaduje pouze webový prohlížeč
+	5) **Široké možnosti připojení**:
+		- Lze připojit jakékoliv zařízení s webovým prohlížečem
 2) Client-Based:
 	- `IPsec VPN` připojení pomocí klienta
-##### VPN s využitím SSL/TLS
-- Využívají infrastrukturu **veřejného klíče** (PKI) a **certifikáty**, pomocí nich probíhá **autentizace účastníků**
-1) **Omezená podpora aplikací**:
-	- Pouze webové aplikace a sdílení souborů
-2) **Průměrná odolnost autentizace**:
-	- Jednocestná či dvoucestná autentizace
-3) **Střední či vysoká odolnost šifrování**:
-	- Délky klíčů `40-256 bitů`
-4) **Nízká složitost připojení**:
-	- Vyžaduje pouze webový prohlížeč
-5) **Široké možnosti připojení**:
-	- Lze připojit jakékoliv zařízení s webovým prohlížečem
-##### VPN s využitím IPsec
-- **Široká podpora aplikací**:
-	- Všechny aplikace užívající `IP`
-- **Vysoká odolnost autentizace**:
-	- Dvoucestná autentizace se sdíleným klíčem či certifikáty
-- **Vysoká odolnost šifrování**:
-	- Délky klíčů `56 - 256 bitů`
-- **Střední složitost připojení**:
-	- Vyžaduje nainstalovanou aplikaci `VPN` klienta
-- **Omezené možnosti připojení**:
-	- Pouze pro specifická zařízení se specifickou konfigurací
-##### Podnikové VPN
-- Zřizovány prostřednictvím Internetu
-##### VPN poskytovatelů služeb
-- Umožňují oddělit provoz různých klientů
-##### GRE over IPsec (Generic Routing Encapsulation)
-1) **Nezabezpečený** `Site-To-Site` `VPN` **tunelovací protokol**:
-	- Samotný nepodporuje autentizaci ani šifrování
-2) **Umožňuje zapouzdření různých protokolů**:
-	- Včetně `multicast` a `broadcast` provozu
-3) **Pro zabezpečení komunikace lze zapouzdřit pomocí** `IPsec`
-	- Standardní `IPsec` `VPN` podporuje pouze `unicastový` provoz
-	- Umožňuje zabezpečit `multicastovou` komunikaci (např. pro potřeby komunikace dynamických směrovacích protokolů)
-4) **Princip zapouzdření**:
-	- `Passanger protocol` (přenášený protokol)
-		- Je Protokolem datového paketu určeného k zapouzdření pomocí `GRE`
-	- `Carrier protocol` (přepravní protokol)
-		- Je přepravním protokolem zapouzdřujícím datový paket
-	- `Transport protocol` (transportní či přenosový protokol)
-		- Protokol, který zajišťuje vlastní přenos zapouzdřeného paketu (např. `IP`)
-##### Dynamic Multipoint VPN (DMVPN)
-1) **Nabízí flexibilní způsob propojení centrály a poboček**:
-	- Zjednodušuje konfiguraci `VPN` umožňuje vznik virtuálních spojů
-2) **Základní infrastruktura používá topologii** `Hub-and-Spoke`:
-	- Pobočkové brány mají konfiguraci `VPN` spojení s centrálou
-3) **Virtuální pobočkové spoje odpovídají topologii** `Full Mesh`:
-	- Centrála zprostředkuje konektivitu mezi pobočkovými branami
-##### IPsec Virual Tunnel Interface (VTI)
-1) **Zjednodušuje konfiguraci** `VPN` **propojující více lokalit**:
-	- Místo fyzického rozhraní lze konfigurovat `VTI` rozhraní daného tunelu
-2) **Umožňuje odesílání a příjem** `unicast` **a** `multicast` **provozu**:
-	- Díky tomu je zajištěna podpora směrovacích protokolů bez nutnosti konfigurovat `GRE`
-3) **Podporuje topologii** `Point-to-Point` **nebo** `Hub-and-Spoke`:
-	- Tunel lze zřizovat přímo mezi lokalitami nebo skrze centrální router
 ##### VPN poskytovatelů v využitím MPLS
-- Poskytovatelé `WAN` připojení často implementují `MPLS`, což umožňuje oddělit provoz mnoha zákazníků na společné infrastruktuře
+- Oddělení provozu mnoha zákazníků na společné infrastruktuře
 - Lze jej nasadit dvěma základními způsoby:
 	1) `Layer 3 MPLS VPN`
 		- Poskytovatel se zákazníkem spolupracuje na směrování jeho provozu

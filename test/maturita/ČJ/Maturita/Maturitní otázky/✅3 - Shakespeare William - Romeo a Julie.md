@@ -8,7 +8,7 @@
 - Tragédie
 ##### Kompozice
 - Chronologická
-- Prolog
+- Prolog = sonet, říká o čem je hra
 - 5 dějství
 ##### Téma
 - Nešťastná láska dvou milenců, kteří spolu nemůžou být kvůli nenávisti, která panuje mezi jejich rodinami
@@ -33,7 +33,7 @@ uloží i Parise, kterého probodne mečem. Když spatří Julii, vypije jed, ta
 rozhodne zabít se dýkou, neboť její život bez lásky smysl nemá. Rody se však díky tragédii
 nakonec usmíří.
 ##### Obsah díla
-Napsáno v roce 1595, v době, kdy psal komedii Sen noci svatojánské (začíná jako
+- Napsáno v roce 1595, v době, kdy psal komedii Sen noci svatojánské (začíná jako
 tragédie, končí jako komedie), Romeo a Julie začíná jako komedie (rozhovor sluhů),
 tragédie se odehrává od poloviny děje.
 - Příběh milenecké adolescentní lásky (Romeo 17 let, Julie 14 let!). Julii hrál herec (bylo
@@ -43,10 +43,6 @@ první pohled (časté téma), “epifanie” (ve světském významu náhle zje
 pravdy).
 - Zamilovaný dialog = sonet, 14 řádků, střídání dvou těl (Romeo a Julie).
 - Romeo a Julie jsou “poutníci lásky” (pouť do Říma = Romeo).
-
-4/16/2025
-
-2
 - Nenávist dvou rodů (Montekové - Romeo x Kapuleti - Julie) není přímo popsána,
 neznáme důvod, pouze zcela jistě víme, že se nesnáší - přenesení do jakékoliv doby
 (rozdílná náboženství, politika…).
@@ -62,11 +58,18 @@ Julie jeho život nemá smysl. Julie se náhle ale probudí z mdlob a vidí mrtv
 zabodne do sebe tedy dýku a skutečně již umírá. Zemřeli pro svou lásku. Obětovali se jí.
 ##### Postavy
 - Romeo
-	- syn Monteků; dobrosrdečný mladík; bláznivě zamilovaný do Julie; mladý romantik, smělý, unáhlený, citlivý, odvážný, impulsivní
+	- Syn Monteků
+	- Dobrosrdečný mladík, mladý romantik, smělý, unáhlený, citlivý, odvážný, impulsivní
+	- Bláznivě zamilovaný do Julie
 - Julie 
-	- Dcera Kapuletů; mladá a nešťastně zamilovaná do Romea; nemá dobrý vztah k rodičům, tajně se vdala a svou rodinou oklamala „sebevraždou“ (jed)
+	- Dcera Kapuletů
+	- Mladá a nešťastně zamilovaná do Romea
+	- Nemá dobrý vztah k rodičům
+	- Tajně se vdala a svou rodinou oklamala „sebevraždou“ (jed)
 - Otec Vavřinec (Lorenzo) 
-	- Tajně oddá Romea a Julii; františkánský mnich; vidí ve sňatku Romea a Julie možný smír obou rodin
+	- Tajně oddá Romea a Julii
+	- Františkánský mnich
+	- Vidí ve sňatku Romea a Julie možné smíření obou rodin
 - Montek a Kapulet: 
 	- Hlavní představitelé obou rodů
 - Merkucio: 
@@ -74,9 +77,13 @@ zabodne do sebe tedy dýku a skutečně již umírá. Zemřeli pro svou lásku. 
 - Paris:
 	- Mladý šlechtic; měl si vzít Julii
 - Tybalt:
-	- Juliin bratranec; velmi pomstychtivý a nesnášenlivý vůči Montekům
+	- Juliin bratranec
+	- Velmi pomstychtivý a nesnášenlivý vůči Montekům
 - Chůva: 
-	- Veselá, upovídaná; chůva Julie; vnáší do tragédie komediální prvky; spojka mezi Romeem a Julií
+	- Veselá, upovídaná
+	- Chůva Julie
+	- Vnáší do tragédie komediální prvky
+	- Spojka mezi Romeem a Julií
 ##### 2) Literárněhistorický kontext
 ##### Autor
 - Největší dramatik světové literatury
@@ -86,11 +93,10 @@ zabodne do sebe tedy dýku a skutečně již umírá. Zemřeli pro svou lásku. 
 ##### Autorova další tvorba
 - Hamlet
 - Zkrocení zlé ženy
-- Macbeth
 ##### Obecně kulturní kontext
 - Boccacio (Dekameron)
 - Petrarcha (Sonety)
-- Cervantes y Saavedra (Don Quijote)
+- Cervantes y Saavedra (Don Quijote dela manča)
 ##### Hnutí a směr
 - Renesance:
 	- Znovuzrození

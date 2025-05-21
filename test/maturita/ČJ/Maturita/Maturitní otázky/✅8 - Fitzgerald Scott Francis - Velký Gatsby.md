@@ -23,15 +23,13 @@ Celý příběh vypráví Nick Carraway. Spřátelí se se svým novým sousedem
 který je velmi zámožný a oblíbený muž. Ve svém domě pořádal spoustu večírků, avšak Nick poznal,
 že jde o snobské lidi, ne o přátele. Gatsby požádal Nicka o zprostředkování setkání se svou dávnou
 láskou, s níž se Nick zná. Daisy je již vdaná za Toma Buchanana, i přesto se začnou opět s Gatsbym
-po letech stýkat a stanou se z nich milenci. Její manžel Tom si našel vdanou přítelkyni Myrtle, avšak o
-nevěře své ženy neví. Časem se milenecký poměr Gatsbyho a Daisy dostane na povrch a vše
+po letech stýkat a stanou se z nich milenci. Její manžel Tom si našel vdanou přítelkyni Myrtle, avšak o  nevěře své ženy neví. Časem se milenecký poměr Gatsbyho a Daisy dostane na povrch a vše
 vyvrcholí na výletě v New Yorku. Po hádce mezi Tomem, Gatsbym a Daisy odjíždí spolu Gatsby s
 Daisy autem domů. Daisy, která řídí Gatsbyho auto, nechtěně srazí Myrtle, milenku Toma, jež na
 místě zemře. Gatsby ji kryje a vina padne na něj. Manžel Myrtle se chce pomstít, zastřelí Gatsbyho a
 poté spáchá sebevraždu. Tom a Daisy se odstěhují. Nick zařizuje Gatsbyho pohřeb, ale zjistí, že lidé
 jsou bezcitní, bezohlední a jde jim jen a jen o peníze. Na jeho pohřeb přijde pouze on a Gatsbyho
 otec.
-##### Obsah díla
 ##### Postavy
 - Nick Carraway:
 	- obchodník s cennými papíry, jenž se snaží osamostatnit; přítel Gatsbyho, milenec Jordan a bratranec Daisy, vypravěč, tolerantní, slouží spíše k popisu událostí
@@ -52,6 +50,9 @@ otec.
 - 20. století
 - Americký spisovatel a scénarista
 - Nejvýznamnější představitel ztracené generace spolu s E. Hemingwayem
+	- Autoři, kteří se snaží vzpamatovat z války, ve které byli
+	- Na svět se dívají jiným pohledem, neumí se vrátit do normálního života
+	- Po 1. světové válce
 - Promítal jeho život v dílech
 ##### Autorova další tvorba
 - Něžná je noc

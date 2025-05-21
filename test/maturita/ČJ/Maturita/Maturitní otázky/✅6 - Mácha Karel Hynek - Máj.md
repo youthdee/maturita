@@ -19,17 +19,23 @@
 - 19. století
 ##### Obsah díla (stručně)
 - 1. Zpěv
-	- líčení májové přírody, Jarmila na břehu jezera , loďka =posel=&gt; Vilém zabil svého otce=&gt; smrt Jarmily utopením
+	- Líčení májové přírody
+	- Jarmila na břehu jezera
+	- Loďka
+	- Vilém zabil svého otce
+	- Smrt Jarmily utopením
 - 2. Zpěv
-	- Vilém ve vězení(hluboká noc) přemýšlí o svém životě, trestu, smrti, nicotě, marnosti osudu, věčnosti
+	- Vilém ve vězení (hluboká noc) přemýšlí o svém životě, trestu, smrti, nicotě, marnosti osudu, věčnosti
 - 1 intermezzo 
-	- obraz půlnočního popraviště
+	- Obraz půlnočního popraviště
 - 3.Zpěv
-	- Vrchol, poprava Viléma. Vilémovo vyznání lásky k přírodě a rodné zemi. Obžalobaspolečnosti. krásné ráno x poprava, poslední myšlenka na vlast, matku, zemi
+	- Vrchol, poprava Viléma.
+	- Vilémovo vyznání lásky k přírodě a rodné zemi.
+	- Obžaloba společnosti. krásné ráno x poprava, poslední myšlenka na vlast, matku, zemi
 - 2 intermezzo: 
 	- Nářek Vilémových druhů, obraz horské přírody
 - 4.Zpěv(epilog):
-	- Po čase přichází poutník, autor se ztotožňuje, zamyšlení nad tragikou lidského osudu. Závěr tragický.
+	- Po čase přichází poutník, autor se ztotožňuje, zamyšlení nad tragikou lidského osudu. 
 
 ##### Obsah díla
 - 1. ZPĚV
@@ -55,6 +61,8 @@
 ##### 2) Literárněhistorický kontext
 ##### Autor
 - Spolu s Erbenem hlavní představitelé Národního Obrození (3. fáze)
+- Poutník
+- Dílo nebylo přijato českou kritikou
 - 19. století
 - Básník a prozaik
 - Nejvýznamnější představitel českého Romantismu
@@ -70,3 +78,5 @@
 - Romantismus
 	- Vyzdvihuje svobodu jedince, odmítá idealizaci člověka a světa
 	- Cit a vášeň, krása přírody
+- Národní obrození
+	- Obnova českého jazyka, kultury a národní identity v reakci na germanizaci

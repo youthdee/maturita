@@ -11,10 +11,14 @@
             "id": "7b48fe361b4a247c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "test/maturita/ČJ/Maturita/Maturitní otázky/✅20 - Smoljak Ladislav - Vyšetřování ztráty třídní knihy.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "✅20 - Smoljak Ladislav - Vyšetřování ztráty třídní knihy"
             }
           }
         ]
@@ -163,14 +167,31 @@
   },
   "active": "7b48fe361b4a247c",
   "lastOpenFiles": [
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅19 - Hrabal Bohumil - Obsluhoval jsem anglického krále.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅17 - Dyk Viktor - Krysař.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅14 - Steinbeck John -O myších a lidech.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅11 - Kesey Ken - Vyhoďme ho z kola ven.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅13 - Solženicyn Alexandr - Jeden den Ivana Děnisoviče.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅18 - Fuks Ladislav - Spalovač mrtvol.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅20 - Smoljak Ladislav - Vyšetřování ztráty třídní knihy.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅12 - Orwell George - 1984.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅8 - Fitzgerald Scott Francis - Velký Gatsby.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅7 - Maupassant Guy de - Kulička.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅6 - Mácha Karel Hynek - Máj.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅5 - Gogol Nikolaj Vasiljevič - Revizor.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅16 - Čapek Karel - RUR.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅2 - Moliére - Lakomec.md",
+    "test/maturita/ČJ/Maturita/Maturitní otázky/✅3 - Shakespeare William - Romeo a Julie.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅1 - Zálkadní pojmy počítačových sítí.md",
+    "test/maturita/Software/Maturitní otázky/✅1 - Operační systémy - základní pojmy, funkce, licencování.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅16 - Správa VLAN ve středně velkých a velkých sítích.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅13 - Dynamický routing.md",
+    "test/maturita/Software/Maturitní otázky/✅19 - Služby WWW, FTP.md",
+    "test/maturita/Software/Maturitní otázky/✅20 - Virtualizace a kontejnery.md",
     "test/maturita/Hardware a sítě/Maturitní otázky/✅20 - VPN a IPsec.md",
     "test/maturita/Hardware a sítě/Maturitní otázky/✅19 - Standardy a technologie sítí WAN.md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅18 - Bezdrátové sítě, standardy bezdrátových sítí.md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅17 - Protokol STP a EtherChannel.md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅16 - Správa VLAN ve středně velkých a velkých sítích.md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅15 - Služba NAT v IPv4.md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅14 - Access Control Lists (ACL).md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅13 - Dynamický routing.md",
-    "test/maturita/Hardware a sítě/Maturitní otázky/✅12 - Statický routing, Inter-VLAN routing.md"
+    "test/maturita/Software/Maturitní otázky/✅18 - Služby DNS, DHCP.md",
+    "test/maturita/Hardware a sítě/Maturitní otázky/✅17 - Protokol STP a EtherChannel.md"
   ]
 }

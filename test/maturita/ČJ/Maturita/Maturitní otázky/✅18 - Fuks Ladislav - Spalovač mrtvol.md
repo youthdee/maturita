@@ -50,7 +50,6 @@ dcera otcův útok přežije a Kopfrkingl je okamžitě odvezen do ústavu pro d
 ##### Autorova další tvorba
 - Pan Theodor Munstock
 - Mí černovlasí bratři
-
 ##### Obecně kulturní kontext
 - Bohumil Hrabal (Obsluhoval jsem anglického krále)
 - Ludvík Vaculík (Morčata)

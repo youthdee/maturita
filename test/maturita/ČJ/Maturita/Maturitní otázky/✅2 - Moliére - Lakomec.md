@@ -49,6 +49,7 @@ Příběh se odehrává v Paříži. Pojednává o životě lakomce Harpagona. 
 ##### Obecně kulturní kontext
 - Johann Wolfgang Goethe (Čarodějův učeň)
 - Jean Racine (Faidra)
+- Pierre Corneille
 ##### Hnutí a směr
 - Klasicismus:
 	- Polovina 18. století

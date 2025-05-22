@@ -96,15 +96,6 @@
 - **Nástroj správa disků**
 - Prostory úložiště jsou technologií diskového pole doporučovanou operačním systémem Windows
 	- Vytváří **fondy fyzických pevných disků**, z nichž je následně možné **vytvořit virtuální disky** (prostory úložiště)
-##### Windows - Způsoby vytváření diskových oddílů
-1) **Master Boot Record** (MBR):
-	- Záznam **MBR**, který obsahuje informace o tom, jak jsou na pevném disku rozloženy jednotlivé diskové oddíly
-	- Tento záznam má `512B` a obsahuje zavaděč (`boot loader`) v aktivním diskovém oddílu
-	- Tento standard se používá zejména v počítačích s firmwarem typu `BIOS`
- 2) **GUID Partition Table** (GPT):
-	 - **GUID Partition Table** pro pevné disky v podobě **schématu založeném na tabulce oddílů**
-	- Využívá celou řadu moderních technik, které rozšiřují možnosti staršího standardu MBR
-	- Používá se na počítačích s UEFI
 ##### Unix-Like OS - Logical volume Management (LVM)
 - **Řešení pro správu místa v uložištích**, hlavní výhodou je **možnost měnit velikost vzniklých logických celků**
 - Struktura LVM:

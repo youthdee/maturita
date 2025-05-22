@@ -28,16 +28,7 @@ Třetí část příběhu popisuje Janův pád. Jeho neetické chování a nesch
 V poslední části příběhu se Jan pokouší smířit se se svým minulým životem a najít nový smysl svého života. Reflektuje své chyby a ztráty a snaží se pochopit, co skutečně znamená být šťastný. Jeho příběh končí zamyšlením nad tím, jak moc je materiální úspěch důležitý v porovnání s lidským štěstím.
 ##### Obsah díla
 ##### Postavy
-- Jana Dítě: 
-	- Hlavní postava, která začíná jako mladý číšník, ale postupně se dostává mezi elitu. Je ambiciózní, vychytralý a ziskuchtivý. Jeho příběh je plný vzestupů a pádů.
-- Paní Dítěová
-	- Jana manželka, která ho podporuje v jeho ambicích. Je sympatická, ale i ona je ovlivněna jeho neúspěchy a postupem času se stává frustrovanou.
-- Pan Karel:
-	- Zákazník a později známý obchodník. Je reprezentantem mocných a bohatých, se kterými se Jan Dítě stýká a získává od nich vliv.
-- Bohumil: 
-	- Další číšník, který pracuje s Janem. Má své vlastní ambice a je někdy rivalem Jana Dítě.
-- Petr:
-	- Janův přítel z dob mládí, který později hraje důležitou roli v jeho životě. Je morálně čestný a často poskytuje Janovi cenné rady.
+	Jan Dítě – nomen omen (zachovává si dětské nazírání na svět), není kladnou ani zápornou postavou, vždy se přizpůsobuje době, je s Němci v době okupace; je cílevědomý, pracovitý, chce dosáhnout bohatství, stále nemůže najít smysl života a smířit se s tím, že se nenarodil jako boháč; je do jisté míry naivní, ke všemu se přiznává, jde udat sám sebe. Líza – Dítětova manželka, Němka, sportovkyně a zdravotní sestra, chce splnit svou árijskou povinnost a dát Německu zdravé silné dítě, což se jí nepovede; ve válce ukradne z prázdných domů známky, aby zajistila rodinu; nakonec je zabita při náletu. Zdeněk Skřivánek – vrchní v hotelu Paříž, číšník-profesionál, je velmi pracovitý a výborný psycholog hostů, kdysi obsluhoval anglického krále a je na to pyšný, rád by z Dítěte vychoval svého nástupce, ale když začne Dítě chodit s Němkou, už k němu není tak milý.
 ##### 2) Literárněhistorický kontext
 ##### Autor
 - Významný český spisovatel

@@ -24,6 +24,9 @@
 	6) **Vzdálená správa**:
 		- Bezpečné připojení k jinému zařízení na dálku
 		- `SSH`, `Telnet`
+##### Charakteristika protokolů aplikační vrstvy
+- Protokoly aplikační vrstvy zajišťují přímou komunikaci mezi aplikacemi uživatelů a poskytují konkrétní síťové služby, jako je web, e-mail nebo přenos souborů.
+#### 2) Přehled protokolů aplikační vrstvy
 ##### Charakteristika protokolů aplikační vrstvy - FTP (File Transfer Protocol)
 - Standardní komunikační protokol pro **přenos souborů** mezi počítači prostřednictvím počítačové sítě
 - **Stavový protokol**, postaveno na architektuře **klient-server**
@@ -104,34 +107,6 @@
 		- Software, který běží na spravovaných zařízeních
 	3) NMS (Network Management Station)
 		- Software, který běží na správcovských zařízeních
-#### 2) Přehled protokolů aplikační vrstvy
-
-##### Webové aplikace a stránky
-- `HTTP`
-- `HTTPS`
-##### Stahování, nahrávání souborů
-- `FTP`
-- `TFTP`
-##### Připojení na dálku
-- `SHH`
-- `Telnet`
-- `RDP`
-##### Emailové služby
-- `SMTP`
-- `IMAP`
-- `POP3`
-##### Adresářové služby a autentizace
-- `LDAP`
-- `Kerberos`
-- `RADIUS`
-##### Doménová jména
-- `DNS`
-##### Síťová správa a monitoring
-- `NTP`
-- `SYSLOG`
-##### Hlasová a multimediální komunikace
-- `SIP`
-- `RTP`
 #### 3) Výběr transportního protokolu pro aplikace
 ##### Kritéria volby
 - Požadavky na spolehlivost, rychlost a latenci přenosu

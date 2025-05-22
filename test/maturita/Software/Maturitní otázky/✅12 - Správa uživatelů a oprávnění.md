@@ -3,11 +3,6 @@
 - **Soubor složek** a **dat obsahujících prostředí plochy** a **nastavení aplikací**
 - Ukládají se v něm **použitá síťová připojení**
 	- Při přihlášení má uživatel k dispozici namapované jednoty vedoucí ke sdíleným složkám
-##### Účty počítačů
-- Podobné jako uživatelské účty
-- **Ověření** a audit **přistupu** počítače k síti Windows a k **prostředkům domény**
-- Každý počítač **musí mít jedinečný účet** počítače
-- Lze také použít pro **audit**
 ##### Správa uživatelů v OS Windows
 - **Přihlásit** se do **počítače** nebo do **domény**
 - **Ověření identity uživatele** a k zjišťování, k čemu bude **uživatel přistupovat** a **jakou úroveň pověření** vlastní

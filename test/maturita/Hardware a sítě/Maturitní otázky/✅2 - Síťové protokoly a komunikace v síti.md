@@ -97,7 +97,7 @@
     - `TCP` (segment) a `UDP` (datagram)
 5. **Relační vrstva**
     - Funkcí této vrstvy je organizovat a synchronizovat komunikaci mezi spolupracujícími relačními vrstvami obou systémů a řídit výměnu dat mezi nimi. (Vytvoření a ukončení relačního spojení)
-    - `NetBIOS`, `RPC`
+    - `SMB`,`SIP`, `RPC`
 6. **Prezentační vrstva**
     - Transformuje data do tvaru, který aplikace používají (šifrování, konvertování, komprimace)
     - `SLL`, `TLS`, `MP3`, `MP4`, `JPEG`, `GIF`
